@@ -1,0 +1,1299 @@
+fileFormatVersion: 2
+guid: a5b2e047b28ad994fb37246708b0a3d3
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: Guardians of Darkness_Frame_0
+    originalName: 
+    pivot: {x: 0.48524305, y: 0.15865384}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 576
+      height: 208
+    spriteID: d0dd1e52221830248821af8a5345c9c4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: Guardians of Darkness_Frame_1
+    originalName: 
+    pivot: {x: 0.48524305, y: 0.15865384}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 220
+      width: 576
+      height: 208
+    spriteID: 97b41d188a24d2b4bb3da6c877fd9e77
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 220}
+  - name: Guardians of Darkness_Frame_2
+    originalName: 
+    pivot: {x: 0.48524305, y: 0.15865384}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 436
+      width: 576
+      height: 208
+    spriteID: 5543da6ed9cb73840bb9a35fa947d528
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 436}
+  - name: Guardians of Darkness_Frame_3
+    originalName: 
+    pivot: {x: 0.48524305, y: 0.15865384}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 652
+      width: 576
+      height: 208
+    spriteID: 4126b36e111324e48ba9349ec8af4696
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 652}
+  - name: Guardians of Darkness_Frame_4
+    originalName: 
+    pivot: {x: 0.48524305, y: 0.15865384}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 868
+      width: 576
+      height: 208
+    spriteID: 38a1b82d95958c240a99d9dc7591a366
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 868}
+  - name: Guardians of Darkness_Frame_5
+    originalName: 
+    pivot: {x: 0.48524305, y: 0.15865384}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1084
+      width: 576
+      height: 208
+    spriteID: 924052de8026ace448b163e49155ef11
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1084}
+  - name: Guardians of Darkness_Frame_6
+    originalName: 
+    pivot: {x: 0.48524305, y: 0.15865384}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1300
+      width: 576
+      height: 208
+    spriteID: 00f3179b4229a9e41ae0ebb680d3765a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1300}
+  - name: Guardians of Darkness_Frame_7
+    originalName: 
+    pivot: {x: 0.48524305, y: 0.15865384}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1516
+      width: 576
+      height: 208
+    spriteID: 82cb0d7502e1cb643b25b4ce674f2db6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1516}
+  - name: Guardians of Darkness_Frame_8
+    originalName: 
+    pivot: {x: 0.48524305, y: 0.15865384}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1732
+      width: 576
+      height: 208
+    spriteID: c59fdb761bd11ce48bbd48e556f5f064
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1732}
+  - name: Guardians of Darkness_Frame_9
+    originalName: 
+    pivot: {x: 0.48524305, y: 0.15865384}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1948
+      width: 576
+      height: 208
+    spriteID: 6e1162c667083264caa302840dc28d95
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1948}
+  - name: Guardians of Darkness_Frame_10
+    originalName: 
+    pivot: {x: 0.48524305, y: 0.15865384}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2164
+      width: 576
+      height: 208
+    spriteID: 5a86787e406ed43448b4c710c73fc13b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 2164}
+  - name: Guardians of Darkness_Frame_11
+    originalName: 
+    pivot: {x: 0.48524305, y: 0.15865384}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2380
+      width: 576
+      height: 208
+    spriteID: 357dd797193294e4c9448b98fe93953a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 2380}
+  - name: Guardians of Darkness_Frame_12
+    originalName: 
+    pivot: {x: 0.48524305, y: 0.15865384}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2596
+      width: 576
+      height: 208
+    spriteID: a8254225c47525b4aa99014314fb1bb9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 2596}
+  - name: Guardians of Darkness_Frame_13
+    originalName: 
+    pivot: {x: 0.48524305, y: 0.15865384}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2812
+      width: 576
+      height: 208
+    spriteID: 582e6e95c20519a42b07b1409af28ecd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 2812}
+  - name: Guardians of Darkness_Frame_14
+    originalName: 
+    pivot: {x: 0.48524305, y: 0.15865384}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 3028
+      width: 576
+      height: 208
+    spriteID: d26b98338caad3645a74dfc0b0279801
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 3028}
+  - name: Guardians of Darkness_Frame_15
+    originalName: 
+    pivot: {x: 0.48524305, y: 0.15865384}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 3244
+      width: 576
+      height: 208
+    spriteID: 7270a4685ff456246b443a03bad99e03
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 3244}
+  - name: Guardians of Darkness_Frame_16
+    originalName: 
+    pivot: {x: 0.48524305, y: 0.15865384}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 3460
+      width: 576
+      height: 208
+    spriteID: ec488b0825c853445b1226f455cfcecd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 3460}
+  - name: Guardians of Darkness_Frame_17
+    originalName: 
+    pivot: {x: 0.48524305, y: 0.15865384}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 3676
+      width: 576
+      height: 208
+    spriteID: 1b697f6c71880734a9c9d9855f8c211d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 3676}
+  - name: Guardians of Darkness_Frame_18
+    originalName: 
+    pivot: {x: 0.48524305, y: 0.15865384}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 588
+      y: 4
+      width: 576
+      height: 208
+    spriteID: dd30b8362ebb9f34b890f457df8f07f9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 588, y: 4}
+  - name: Guardians of Darkness_Frame_19
+    originalName: 
+    pivot: {x: 0.48524305, y: 0.15865384}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 588
+      y: 220
+      width: 576
+      height: 208
+    spriteID: 0285c412d0ba1c94aa673dc89334daab
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 588, y: 220}
+  - name: Guardians of Darkness_Frame_20
+    originalName: 
+    pivot: {x: 0.48524305, y: 0.15865384}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 588
+      y: 436
+      width: 576
+      height: 208
+    spriteID: 95c90fd4b9ce0894693349eb055eba9d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 588, y: 436}
+  - name: Guardians of Darkness_Frame_21
+    originalName: 
+    pivot: {x: 0.48524305, y: 0.15865384}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 588
+      y: 652
+      width: 576
+      height: 208
+    spriteID: ca16b3014b34a7449b67742666dc40c3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 588, y: 652}
+  - name: Guardians of Darkness_Frame_22
+    originalName: 
+    pivot: {x: 0.48524305, y: 0.15865384}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 588
+      y: 868
+      width: 576
+      height: 208
+    spriteID: f987b1bfc08e49d429e819dbd5a63143
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 588, y: 868}
+  - name: Guardians of Darkness_Frame_23
+    originalName: 
+    pivot: {x: 0.48524305, y: 0.15865384}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 588
+      y: 1084
+      width: 576
+      height: 208
+    spriteID: 97eb5e8314f26c145b9426d81f00d35a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 588, y: 1084}
+  - name: Guardians of Darkness_Frame_24
+    originalName: 
+    pivot: {x: 0.48524305, y: 0.15865384}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 588
+      y: 1300
+      width: 576
+      height: 208
+    spriteID: 6ef5a6de7d53dac4fa7b89ebee448967
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 588, y: 1300}
+  - name: Guardians of Darkness_Frame_25
+    originalName: 
+    pivot: {x: 0.48524305, y: 0.15865384}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 588
+      y: 1516
+      width: 576
+      height: 208
+    spriteID: 9822591fadb80384bad3ae965dd524a9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 588, y: 1516}
+  - name: Guardians of Darkness_Frame_26
+    originalName: 
+    pivot: {x: 0.48524305, y: 0.15865384}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 588
+      y: 1732
+      width: 576
+      height: 208
+    spriteID: dfba04dee2fa8fd4aa3c2a24ed3ee116
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 588, y: 1732}
+  - name: Guardians of Darkness_Frame_27
+    originalName: 
+    pivot: {x: 0.48524305, y: 0.15865384}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 588
+      y: 1948
+      width: 576
+      height: 208
+    spriteID: bf5aebfce10c38b40a1f65c61b1a87ad
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 588, y: 1948}
+  - name: Guardians of Darkness_Frame_28
+    originalName: 
+    pivot: {x: 0.48524305, y: 0.15865384}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 588
+      y: 2164
+      width: 576
+      height: 208
+    spriteID: c5dc6ad4f5bfe024492ce214c3c8d52b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 588, y: 2164}
+  - name: Guardians of Darkness_Frame_29
+    originalName: 
+    pivot: {x: 0.48524305, y: 0.15865384}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 588
+      y: 2380
+      width: 576
+      height: 208
+    spriteID: 9d251e898eb188a4c8824c736ee1f86f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 588, y: 2380}
+  - name: Guardians of Darkness_Frame_30
+    originalName: 
+    pivot: {x: 0.48524305, y: 0.15865384}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 588
+      y: 2596
+      width: 576
+      height: 208
+    spriteID: 5d64189f52edc454eb34bb4dc5aa9cf4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 588, y: 2596}
+  - name: Guardians of Darkness_Frame_31
+    originalName: 
+    pivot: {x: 0.48524305, y: 0.15865384}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 588
+      y: 2812
+      width: 576
+      height: 208
+    spriteID: 17a875cdcb5bea943b07bced162824f1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 588, y: 2812}
+  - name: Guardians of Darkness_Frame_32
+    originalName: 
+    pivot: {x: 0.48524305, y: 0.15865384}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 588
+      y: 3028
+      width: 576
+      height: 208
+    spriteID: a9770317701f527488828ae02b8bf5aa
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 588, y: 3028}
+  - name: Guardians of Darkness_Frame_33
+    originalName: 
+    pivot: {x: 0.48524305, y: 0.15865384}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 588
+      y: 3244
+      width: 576
+      height: 208
+    spriteID: a3f9671cc8b90cb46b20f3a07f087d1c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 588, y: 3244}
+  - name: Guardians of Darkness_Frame_34
+    originalName: 
+    pivot: {x: 0.48524305, y: 0.15865384}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 588
+      y: 3460
+      width: 576
+      height: 208
+    spriteID: c23a5e1f88bca9d419721a453fe18020
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 588, y: 3460}
+  - name: Guardians of Darkness_Frame_35
+    originalName: 
+    pivot: {x: 0.48524305, y: 0.15865384}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 588
+      y: 3676
+      width: 576
+      height: 208
+    spriteID: 6754d5b181eaa0f499d12f564f9f02bb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 588, y: 3676}
+  - name: Guardians of Darkness_Frame_36
+    originalName: 
+    pivot: {x: 0.48524305, y: 0.15865384}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1172
+      y: 4
+      width: 576
+      height: 208
+    spriteID: 5ad8bfdc37723af40b97ebed97ffdce2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1172, y: 4}
+  - name: Guardians of Darkness_Frame_37
+    originalName: 
+    pivot: {x: 0.48524305, y: 0.15865384}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1172
+      y: 220
+      width: 576
+      height: 208
+    spriteID: 26f1d8db323a1da4790b5b988e11ac9b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1172, y: 220}
+  - name: Guardians of Darkness_Frame_38
+    originalName: 
+    pivot: {x: 0.48524305, y: 0.15865384}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1172
+      y: 436
+      width: 576
+      height: 208
+    spriteID: ddb7c9d34a0d5bd4cbedd46aeee3cfcc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1172, y: 436}
+  - name: Guardians of Darkness_Frame_39
+    originalName: 
+    pivot: {x: 0.48524305, y: 0.15865384}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1172
+      y: 652
+      width: 576
+      height: 208
+    spriteID: a2e24f4e9f3aa63429d15e7b2ec26336
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1172, y: 652}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 622083318
+    name: Guardians of Darkness
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Frame_0
+      frameIndex: 0
+      additiveSortOrder: 0
+      cellRect:
+        x: -134
+        y: -33
+        width: 576
+        height: 208
+      spriteId: d0dd1e52221830248821af8a5345c9c4
+    - name: Frame_1
+      frameIndex: 1
+      additiveSortOrder: 0
+      cellRect:
+        x: -134
+        y: -33
+        width: 576
+        height: 208
+      spriteId: 97b41d188a24d2b4bb3da6c877fd9e77
+    - name: Frame_2
+      frameIndex: 2
+      additiveSortOrder: 0
+      cellRect:
+        x: -134
+        y: -33
+        width: 576
+        height: 208
+      spriteId: 5543da6ed9cb73840bb9a35fa947d528
+    - name: Frame_3
+      frameIndex: 3
+      additiveSortOrder: 0
+      cellRect:
+        x: -134
+        y: -33
+        width: 576
+        height: 208
+      spriteId: 4126b36e111324e48ba9349ec8af4696
+    - name: Frame_4
+      frameIndex: 4
+      additiveSortOrder: 0
+      cellRect:
+        x: -134
+        y: -33
+        width: 576
+        height: 208
+      spriteId: 38a1b82d95958c240a99d9dc7591a366
+    - name: Frame_5
+      frameIndex: 5
+      additiveSortOrder: 0
+      cellRect:
+        x: -134
+        y: -33
+        width: 576
+        height: 208
+      spriteId: 924052de8026ace448b163e49155ef11
+    - name: Frame_6
+      frameIndex: 6
+      additiveSortOrder: 0
+      cellRect:
+        x: -134
+        y: -33
+        width: 576
+        height: 208
+      spriteId: 00f3179b4229a9e41ae0ebb680d3765a
+    - name: Frame_7
+      frameIndex: 7
+      additiveSortOrder: 0
+      cellRect:
+        x: -134
+        y: -33
+        width: 576
+        height: 208
+      spriteId: 82cb0d7502e1cb643b25b4ce674f2db6
+    - name: Frame_8
+      frameIndex: 8
+      additiveSortOrder: 0
+      cellRect:
+        x: -134
+        y: -33
+        width: 576
+        height: 208
+      spriteId: c59fdb761bd11ce48bbd48e556f5f064
+    - name: Frame_9
+      frameIndex: 9
+      additiveSortOrder: 0
+      cellRect:
+        x: -134
+        y: -33
+        width: 576
+        height: 208
+      spriteId: 6e1162c667083264caa302840dc28d95
+    - name: Frame_10
+      frameIndex: 10
+      additiveSortOrder: 0
+      cellRect:
+        x: -134
+        y: -33
+        width: 576
+        height: 208
+      spriteId: 5a86787e406ed43448b4c710c73fc13b
+    - name: Frame_11
+      frameIndex: 11
+      additiveSortOrder: 0
+      cellRect:
+        x: -134
+        y: -33
+        width: 576
+        height: 208
+      spriteId: 357dd797193294e4c9448b98fe93953a
+    - name: Frame_12
+      frameIndex: 12
+      additiveSortOrder: 0
+      cellRect:
+        x: -134
+        y: -33
+        width: 576
+        height: 208
+      spriteId: a8254225c47525b4aa99014314fb1bb9
+    - name: Frame_13
+      frameIndex: 13
+      additiveSortOrder: 0
+      cellRect:
+        x: -134
+        y: -33
+        width: 576
+        height: 208
+      spriteId: 582e6e95c20519a42b07b1409af28ecd
+    - name: Frame_14
+      frameIndex: 14
+      additiveSortOrder: 0
+      cellRect:
+        x: -134
+        y: -33
+        width: 576
+        height: 208
+      spriteId: d26b98338caad3645a74dfc0b0279801
+    - name: Frame_15
+      frameIndex: 15
+      additiveSortOrder: 0
+      cellRect:
+        x: -134
+        y: -33
+        width: 576
+        height: 208
+      spriteId: 7270a4685ff456246b443a03bad99e03
+    - name: Frame_16
+      frameIndex: 16
+      additiveSortOrder: 0
+      cellRect:
+        x: -134
+        y: -33
+        width: 576
+        height: 208
+      spriteId: ec488b0825c853445b1226f455cfcecd
+    - name: Frame_17
+      frameIndex: 17
+      additiveSortOrder: 0
+      cellRect:
+        x: -134
+        y: -33
+        width: 576
+        height: 208
+      spriteId: 1b697f6c71880734a9c9d9855f8c211d
+    - name: Frame_18
+      frameIndex: 18
+      additiveSortOrder: 0
+      cellRect:
+        x: -134
+        y: -33
+        width: 576
+        height: 208
+      spriteId: dd30b8362ebb9f34b890f457df8f07f9
+    - name: Frame_19
+      frameIndex: 19
+      additiveSortOrder: 0
+      cellRect:
+        x: -134
+        y: -33
+        width: 576
+        height: 208
+      spriteId: 0285c412d0ba1c94aa673dc89334daab
+    - name: Frame_20
+      frameIndex: 20
+      additiveSortOrder: 0
+      cellRect:
+        x: -134
+        y: -33
+        width: 576
+        height: 208
+      spriteId: 95c90fd4b9ce0894693349eb055eba9d
+    - name: Frame_21
+      frameIndex: 21
+      additiveSortOrder: 0
+      cellRect:
+        x: -134
+        y: -33
+        width: 576
+        height: 208
+      spriteId: ca16b3014b34a7449b67742666dc40c3
+    - name: Frame_22
+      frameIndex: 22
+      additiveSortOrder: 0
+      cellRect:
+        x: -134
+        y: -33
+        width: 576
+        height: 208
+      spriteId: f987b1bfc08e49d429e819dbd5a63143
+    - name: Frame_23
+      frameIndex: 23
+      additiveSortOrder: 0
+      cellRect:
+        x: -134
+        y: -33
+        width: 576
+        height: 208
+      spriteId: 97eb5e8314f26c145b9426d81f00d35a
+    - name: Frame_24
+      frameIndex: 24
+      additiveSortOrder: 0
+      cellRect:
+        x: -134
+        y: -33
+        width: 576
+        height: 208
+      spriteId: 6ef5a6de7d53dac4fa7b89ebee448967
+    - name: Frame_25
+      frameIndex: 25
+      additiveSortOrder: 0
+      cellRect:
+        x: -134
+        y: -33
+        width: 576
+        height: 208
+      spriteId: 9822591fadb80384bad3ae965dd524a9
+    - name: Frame_26
+      frameIndex: 26
+      additiveSortOrder: 0
+      cellRect:
+        x: -134
+        y: -33
+        width: 576
+        height: 208
+      spriteId: dfba04dee2fa8fd4aa3c2a24ed3ee116
+    - name: Frame_27
+      frameIndex: 27
+      additiveSortOrder: 0
+      cellRect:
+        x: -134
+        y: -33
+        width: 576
+        height: 208
+      spriteId: bf5aebfce10c38b40a1f65c61b1a87ad
+    - name: Frame_28
+      frameIndex: 28
+      additiveSortOrder: 0
+      cellRect:
+        x: -134
+        y: -33
+        width: 576
+        height: 208
+      spriteId: c5dc6ad4f5bfe024492ce214c3c8d52b
+    - name: Frame_29
+      frameIndex: 29
+      additiveSortOrder: 0
+      cellRect:
+        x: -134
+        y: -33
+        width: 576
+        height: 208
+      spriteId: 9d251e898eb188a4c8824c736ee1f86f
+    - name: Frame_30
+      frameIndex: 30
+      additiveSortOrder: 0
+      cellRect:
+        x: -134
+        y: -33
+        width: 576
+        height: 208
+      spriteId: 5d64189f52edc454eb34bb4dc5aa9cf4
+    - name: Frame_31
+      frameIndex: 31
+      additiveSortOrder: 0
+      cellRect:
+        x: -134
+        y: -33
+        width: 576
+        height: 208
+      spriteId: 17a875cdcb5bea943b07bced162824f1
+    - name: Frame_32
+      frameIndex: 32
+      additiveSortOrder: 0
+      cellRect:
+        x: -134
+        y: -33
+        width: 576
+        height: 208
+      spriteId: a9770317701f527488828ae02b8bf5aa
+    - name: Frame_33
+      frameIndex: 33
+      additiveSortOrder: 0
+      cellRect:
+        x: -134
+        y: -33
+        width: 576
+        height: 208
+      spriteId: a3f9671cc8b90cb46b20f3a07f087d1c
+    - name: Frame_34
+      frameIndex: 34
+      additiveSortOrder: 0
+      cellRect:
+        x: -134
+        y: -33
+        width: 576
+        height: 208
+      spriteId: c23a5e1f88bca9d419721a453fe18020
+    - name: Frame_35
+      frameIndex: 35
+      additiveSortOrder: 0
+      cellRect:
+        x: -134
+        y: -33
+        width: 576
+        height: 208
+      spriteId: 6754d5b181eaa0f499d12f564f9f02bb
+    - name: Frame_36
+      frameIndex: 36
+      additiveSortOrder: 0
+      cellRect:
+        x: -134
+        y: -33
+        width: 576
+        height: 208
+      spriteId: 5ad8bfdc37723af40b97ebed97ffdce2
+    - name: Frame_37
+      frameIndex: 37
+      additiveSortOrder: 0
+      cellRect:
+        x: -134
+        y: -33
+        width: 576
+        height: 208
+      spriteId: 26f1d8db323a1da4790b5b988e11ac9b
+    - name: Frame_38
+      frameIndex: 38
+      additiveSortOrder: 0
+      cellRect:
+        x: -134
+        y: -33
+        width: 576
+        height: 208
+      spriteId: ddb7c9d34a0d5bd4cbedd46aeee3cfcc
+    - name: Frame_39
+      frameIndex: 39
+      additiveSortOrder: 0
+      cellRect:
+        x: -134
+        y: -33
+        width: 576
+        height: 208
+      spriteId: a2e24f4e9f3aa63429d15e7b2ec26336
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 291, y: 175}
