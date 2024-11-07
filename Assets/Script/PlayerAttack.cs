@@ -25,7 +25,7 @@ public class PlayerAttack : MonoBehaviour
         }
         else if (Input.GetAxisRaw("Horizontal") == 1)
         {
-            boxCollider2D.offset = new Vector2(Math.Abs(boxCollider2D.offset.x) * -1, boxCollider2D.offset.y);
+            boxCollider2D.offset = new Vector2(Math.Abs(boxCollider2D.offset.x) * 1, boxCollider2D.offset.y);
         }
         if (Input.GetKeyDown(KeyCode.X) && delay)
         {

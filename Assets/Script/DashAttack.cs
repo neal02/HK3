@@ -21,17 +21,17 @@ public class DashAttack : MonoBehaviour
     {
         if (Input.GetAxisRaw("Horizontal") == -1)
         {
-            boxCollider2D.offset = new Vector2(Math.Abs(boxCollider2D.offset.x) * -1, boxCollider2D.offset.y);
+            boxCollider2D.offset = new Vector2(Math.Abs(boxCollider2D.offset.x) , boxCollider2D.offset.y);
         }
         else if (Input.GetAxisRaw("Horizontal") == 1)
         {
-            boxCollider2D.offset = new Vector2(Math.Abs(boxCollider2D.offset.x), boxCollider2D.offset.y);
+            boxCollider2D.offset = new Vector2(Math.Abs(boxCollider2D.offset.x) * -1, boxCollider2D.offset.y);
         }
         if (Input.GetKeyDown(KeyCode.Z) && delay)
         {
             delay = false;
             boxCollider2D.enabled = true;
-            boxCollider2D.size = new Vector2(0.17f, 0.14f);
+            boxCollider2D.size = new Vector2(0.59f, 0.09f);
             StartCoroutine(Delay());
         }
         else
