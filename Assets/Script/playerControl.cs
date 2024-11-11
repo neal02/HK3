@@ -23,6 +23,7 @@ public class playerControl : MonoBehaviour
     Rigidbody2D rigid2D;
     SpriteRenderer spriteRenderer;
     Animator animator;
+    public float flip;
 
     void Start()
     {
@@ -30,7 +31,6 @@ public class playerControl : MonoBehaviour
         rigid2D = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
-
     }
 
     void Update()
@@ -38,10 +38,12 @@ public class playerControl : MonoBehaviour
         if (rigid2D.velocity.normalized.x < 0)  //ÁÂ¿ì¹ÝÀü
         {
             spriteRenderer.flipX = true;
+            flip = -1;
         }
         else if (rigid2D.velocity.normalized.x > 0)
         {
             spriteRenderer.flipX = false;
+            flip = 1;
         }
 
         float horizontal = Input.GetAxis("Horizontal");
