@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8a2a4c0e02c71414baeab7d2851fb4e8
+guid: eaa6eda750aa4424bb54125014f13268
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -121,7 +121,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Tileset
+  - name: hp_bar
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -130,9 +130,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 256
-      height: 224
-    spriteID: 3aa53797d4f1c304980d1f1db596b16f
+      width: 32
+      height: 32
+    spriteID: df9785ab4c4243c49a62c71ed9321f9d
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -144,21 +144,21 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1060484802
-    name: Tileset
+    guid: 1960463132
+    name: hp_bar
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Tileset
+    - name: hp_bar
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
-        width: 256
-        height: 224
-      spriteId: 3aa53797d4f1c304980d1f1db596b16f
+        width: 32
+        height: 32
+      spriteId: df9785ab4c4243c49a62c71ed9321f9d
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -177,4 +177,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 256, y: 224}
+  canvasSize: {x: 32, y: 32}

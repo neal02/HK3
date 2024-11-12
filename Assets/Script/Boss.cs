@@ -1,111 +1,187 @@
+using System.Collections;
+using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
-public abstract class Boss : MonoBehaviour
+public class Boss : MonoBehaviour
 {
-    // 보스의 체력
-    protected float health;
-    
-    // 페이즈 단계
-    protected int phase;
-
-    // 보스의 공격 속도 및 패턴 설정
-    protected float attackSpeed;
-    protected float movementSpeed;
-
-    // 보스가 현재 공격 중인지 여부
-    protected bool isAttacking;
-
-    //보스가 플레이어를 감지했는지 여부
-    protected bool isDetecting;
-
-    //보스 리지드바디
-    protected Rigidbody2D bossRigid;
-
-    //충돌 관련 변수
-    private Collider2D bossCollider;
+    // 보스 스텟
+    public float moveSpeed;
+    public float bossHp;
+    public float currentHp;
+    // 컴포넌트
+    private Rigidbody2D rigid;
+    private Animator anim;
+    public GameObject player;
     private Collider2D playerCollider;
+    private Collider2D[] colliders;
+    private SpriteRenderer sprite;
+    // 충돌 관련
+    private bool isGrounded;
+    // 애니메이션 관련
+    //private bool isMoving;
+    private bool isFlipping = false;
+    private bool isAttacking = false;
+    //감지 관련
+    private bool isDetecting;
+    //거리 관련
 
-    protected Transform playerTransform;
- 
-    //애니매이션 관련 변수
-    protected Animator bossAnim;
-    protected bool isWalking;
-    // 초기화 메서드
-    protected virtual void Start()
+    //UI 관련
+    public Image hpBarImage;
+
+
+    
+
+    void Start()
     {
-        health = 100f; // 기본 체력
-        phase = 1;     // 시작 페이즈
-        attackSpeed = 1.0f;
-        movementSpeed = 2.0f;
-        bossCollider = GetComponent<Collider2D>();
-        bossRigid = GetComponent<Rigidbody2D>();
-        bossAnim = GetComponent<Animator>();
+        moveSpeed = 1.5f;
+        bossHp = 100.0f;
+        currentHp = bossHp;
+        UpdateHpBar();
 
-        isWalking = true;
+        rigid = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
+        sprite = GetComponent<SpriteRenderer>();
+        player = GameObject.Find("player");
+        isGrounded = false;
+        isDetecting = false;
 
-        GameObject player = GameObject.FindWithTag("Player");
-        if(player != null)
+        Collider2D playerCollider = player.GetComponent<Collider2D>();
+        colliders = GetComponents<Collider2D>();
+
+        Physics2D.IgnoreCollision(colliders[0], playerCollider, true);
+    }
+
+    void FixedUpdate()
+    {
+        
+        if(!isAttacking)
         {
-            playerTransform = player.transform;
-            playerCollider = player.GetComponent<Collider2D>();
-            Physics2D.IgnoreCollision(bossCollider, playerCollider, true);
+            if (player.transform.position.x < transform.position.x)
+            {
+                if (!isFlipping) // 이미 지연이 진행 중이면 중복 실행 방지
+                {
+                    StartCoroutine(FlipBoss(true));
+                }
+            }
+            else if (player.transform.position.x > transform.position.x)
+            {
+                if (!isFlipping) // 이미 지연이 진행 중이면 중복 실행 방지
+                {
+                    StartCoroutine(FlipBoss(false));
+                }
+            }
+        }
+        
+        if (isGrounded && isDetecting && !isAttacking)
+        {
+            Move();
         }
     }
 
-    // 공격 행동을 정의할 추상 메서드
-    public abstract void Attack();
-
-    // 이동 행동을 정의할 추상 메서드
-    public abstract void Move();
-
-    // 페이즈 변경 로직을 정의할 추상 메서드
-    public abstract void ChangePhase();
-
-    // 보스가 피격되었을 때 호출되는 메서드
-    public virtual void TakeDamage(float damage)
+    public void UpdateHpBar()
     {
-        health -= damage;
-        if (health <= 0)
+        hpBarImage.fillAmount = currentHp / bossHp;
+    }
+
+    public void TakeDamage(float damage)
+    {
+        currentHp -= damage;
+        currentHp = Mathf.Clamp(currentHp, 0, bossHp);
+        UpdateHpBar();
+    }
+
+    void Move()
+    {
+        if (!isAttacking)
+        {   
+            anim.SetBool("isMoving", true);
+            Vector3 targetPosition = new Vector3(player.transform.position.x, transform.position.y, transform.position.z);
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed / 50);
+            float distance = Mathf.Abs(transform.position.x - targetPosition.x);
+
+            if (distance <= 5)
+            {
+                isAttacking = true;
+                anim.SetBool("isAttacking", true);
+                Attack();
+                return;
+            }
+            else
+            {
+                isAttacking = false;
+                anim.SetBool("isAttacking", false);
+            }
+        } 
+    }
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.CompareTag("Ground"))
         {
-            Die();
+            isGrounded = true;
+            //isMoving = true;        
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.layer == LayerMask.NameToLayer("Player") && !isDetecting)
+            {
+                isDetecting = true;
+                Debug.Log("플레이어 감지함");
+            }
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.layer == LayerMask.NameToLayer("Player") && isDetecting && other.CompareTag("Player")) //어택이나 대쉬가 나갔을 때 풀리면 안됨
+        {
+            isDetecting = false;
+            Debug.Log("플레이어 벗어남");
+        }
+    }
+
+    IEnumerator FlipBoss(bool flipLeft)
+    {
+        isFlipping = true;
+
+        if (isAttacking)
+        {
+            isFlipping = false;
+            yield break;
+        }
+
+        yield return new WaitForSeconds(1.2f);
+        if (flipLeft)
+        {
+            sprite.flipX = true;  
         }
         else
         {
-            // 체력에 따라 페이즈 변경
-            if (health < 50 && phase == 1)
-            {
-                phase = 2;
-                ChangePhase();
-            }
+            sprite.flipX = false;   
         }
+        isFlipping = false;
     }
 
-    // 보스가 사망할 때 실행되는 메서드
-    protected virtual void Die()
+    void Attack()
     {
-        // 보스 사망 처리 로직
-        Debug.Log("Boss has been defeated!");
-        Destroy(gameObject);
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
+        if(anim.GetBool("isAttacking"))
         {
-            // 플레이어와의 트리거 이벤트 처리
-            Debug.Log("Boss triggered by player!");
-            // 예: 플레이어에게 데미지 주기 등
-            isDetecting = true;
+            anim.SetBool("isMoving", false);  // 공격 시 이동 애니메이션 비활성화
+            // 공격이 끝난 후 이동으로 돌아가게 하려면
+            StartCoroutine(EndAttack());  // 공격 끝날 때까지 기다리기
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    IEnumerator EndAttack()
     {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Map"))
-        {
-            // 맵과의 충돌 처리
-            Debug.Log("Boss collided with map element.");
-            isWalking = true;
-        }
+        // 공격 애니메이션이 끝날 때까지 대기
+        yield return new WaitForSeconds(1.85f); // 애니메이션 지속 시간 (애니메이션 길이에 맞게 조정)
+    
+        // 애니메이션이 끝나면 이동을 다시 시작
+        isAttacking = false;
+        anim.SetBool("isAttacking", false);
     }
 }
