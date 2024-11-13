@@ -2,7 +2,27 @@ fileFormatVersion: 2
 guid: 827b74b8feb8a7a479b756899669a222
 ScriptedImporter:
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: attack
+    second: {fileID: 7400000, guid: 1e28c591da6a4064e885d2d6d00bf5b1, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: death
+    second: {fileID: 7400000, guid: 0bf186cb36d564a4e84f155bf706711d, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: hit
+    second: {fileID: 7400000, guid: 2dc93a9f5891b214cac8c74679d9e558, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: move
+    second: {fileID: 7400000, guid: 4235bac68f77a724a976c9f599dbe5bd, type: 2}
   serializedVersion: 2
   userData: 
   assetBundleName: 
@@ -97,7 +117,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 0
+  platformSettingsDirtyTick: 638667065195683668
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -123,15 +143,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Flower Enemy_Frame_0
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5833334, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 4
-      width: 32
-      height: 32
+      x: 60
+      y: 35
+      width: 12
+      height: 11
     spriteID: b07e6b070c6884d428b951d560488a03
     spriteBone: []
     spriteOutline: []
@@ -140,18 +160,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 4}
+    uvTransform: {x: 60, y: 35}
   - name: Flower Enemy_Frame_1
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.54545456, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 44
-      width: 32
-      height: 32
+      x: 81
+      y: 95
+      width: 11
+      height: 11
     spriteID: 3ccc4a1b52412f443bda69688876ab13
     spriteBone: []
     spriteOutline: []
@@ -160,18 +180,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 44}
+    uvTransform: {x: 81, y: 95}
   - name: Flower Enemy_Frame_2
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5833334, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 84
-      width: 32
-      height: 32
+      y: 114
+      width: 12
+      height: 10
     spriteID: bc457d3a2172c0f40bc2110625c353e9
     spriteBone: []
     spriteOutline: []
@@ -180,18 +200,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 84}
+    uvTransform: {x: 4, y: 114}
   - name: Flower Enemy_Frame_3
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5714286, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 124
-      width: 32
-      height: 32
+      x: 38
+      y: 35
+      width: 14
+      height: 11
     spriteID: 318ca7735a7195046aca96085a73379a
     spriteBone: []
     spriteOutline: []
@@ -200,18 +220,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 124}
+    uvTransform: {x: 38, y: 35}
   - name: Flower Enemy_Frame_4
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5833334, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 164
-      width: 32
-      height: 32
+      x: 80
+      y: 35
+      width: 12
+      height: 11
     spriteID: 3d93baeea54a3824588f319f24e8efa5
     spriteBone: []
     spriteOutline: []
@@ -220,18 +240,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 164}
+    uvTransform: {x: 80, y: 35}
   - name: Flower Enemy_Frame_5
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.54545456, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 204
-      width: 32
-      height: 32
+      x: 113
+      y: 63
+      width: 11
+      height: 12
     spriteID: 925373fb9d27f6f4b92d8311b916a2ca
     spriteBone: []
     spriteOutline: []
@@ -240,18 +260,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 204}
+    uvTransform: {x: 113, y: 63}
   - name: Flower Enemy_Frame_6
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.53846157, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 44
-      y: 4
-      width: 32
-      height: 32
+      x: 92
+      y: 63
+      width: 13
+      height: 13
     spriteID: afdcffa96fba75143b447a8848fc306a
     spriteBone: []
     spriteOutline: []
@@ -260,18 +280,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 44, y: 4}
+    uvTransform: {x: 92, y: 63}
   - name: Flower Enemy_Frame_7
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5294118, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 44
-      y: 44
-      width: 32
-      height: 32
+      x: 107
+      y: 4
+      width: 17
+      height: 17
     spriteID: fe842a815cca4f247b4d58e613b3dd92
     spriteBone: []
     spriteOutline: []
@@ -280,7 +300,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 44, y: 44}
+    uvTransform: {x: 107, y: 4}
   - name: Flower Enemy_Frame_8
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -288,10 +308,10 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 44
-      y: 84
-      width: 32
-      height: 32
+      x: 62
+      y: 63
+      width: 22
+      height: 19
     spriteID: 536bd9f355cd29945bdf1fa304dbbe0b
     spriteBone: []
     spriteOutline: []
@@ -300,18 +320,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 44, y: 84}
+    uvTransform: {x: 62, y: 63}
   - name: Flower Enemy_Frame_9
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.4615385, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 44
-      y: 124
-      width: 32
-      height: 32
+      x: 4
+      y: 35
+      width: 26
+      height: 20
     spriteID: 194a3c4c8d88dbd43a77c37984de7b5a
     spriteBone: []
     spriteOutline: []
@@ -320,18 +340,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 44, y: 124}
+    uvTransform: {x: 4, y: 35}
   - name: Flower Enemy_Frame_10
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.44444445, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 44
-      y: 164
-      width: 32
-      height: 32
+      x: 4
+      y: 4
+      width: 27
+      height: 23
     spriteID: 679e950f5bf484f4aa760441786eda68
     spriteBone: []
     spriteOutline: []
@@ -340,18 +360,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 44, y: 164}
+    uvTransform: {x: 4, y: 4}
   - name: Flower Enemy_Frame_11
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.44444445, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 44
-      y: 204
-      width: 32
-      height: 32
+      x: 39
+      y: 4
+      width: 27
+      height: 23
     spriteID: b04a25d5a4be12847ba4b2bd9e61864d
     spriteBone: []
     spriteOutline: []
@@ -360,18 +380,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 44, y: 204}
+    uvTransform: {x: 39, y: 4}
   - name: Flower Enemy_Frame_12
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.48, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 84
+      x: 74
       y: 4
-      width: 32
-      height: 32
+      width: 25
+      height: 23
     spriteID: 2daaab4b97a29b34e89cff2b7186a10f
     spriteBone: []
     spriteOutline: []
@@ -380,18 +400,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 84, y: 4}
+    uvTransform: {x: 74, y: 4}
   - name: Flower Enemy_Frame_13
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.52380955, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 84
-      y: 44
-      width: 32
-      height: 32
+      x: 33
+      y: 63
+      width: 21
+      height: 23
     spriteID: f6c470a3f05c3b846b017474c5d67c66
     spriteBone: []
     spriteOutline: []
@@ -400,18 +420,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 84, y: 44}
+    uvTransform: {x: 33, y: 63}
   - name: Flower Enemy_Frame_14
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.52380955, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 84
-      y: 84
-      width: 32
-      height: 32
+      x: 4
+      y: 63
+      width: 21
+      height: 24
     spriteID: cf3eab47497a37844a89d077d7bec853
     spriteBone: []
     spriteOutline: []
@@ -420,7 +440,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 84, y: 84}
+    uvTransform: {x: 4, y: 63}
   - name: Flower Enemy_Frame_15
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -428,10 +448,10 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 84
-      y: 124
-      width: 32
-      height: 32
+      x: 100
+      y: 35
+      width: 12
+      height: 11
     spriteID: 87df768ae5219dc41b7bb006984c4f54
     spriteBone: []
     spriteOutline: []
@@ -440,7 +460,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 84, y: 124}
+    uvTransform: {x: 100, y: 35}
   - name: Flower Enemy_Frame_16
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -448,10 +468,10 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 84
-      y: 164
-      width: 32
-      height: 32
+      x: 4
+      y: 95
+      width: 12
+      height: 11
     spriteID: 2e560c94345ad4b4fba37717d6b10e37
     spriteBone: []
     spriteOutline: []
@@ -460,18 +480,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 84, y: 164}
+    uvTransform: {x: 4, y: 95}
   - name: Flower Enemy_Frame_17
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.54545456, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 84
-      y: 204
-      width: 32
-      height: 32
+      x: 100
+      y: 95
+      width: 11
+      height: 11
     spriteID: 175edb44cda8cf84480db0ba296da8fa
     spriteBone: []
     spriteOutline: []
@@ -480,18 +500,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 84, y: 204}
+    uvTransform: {x: 100, y: 95}
   - name: Flower Enemy_Frame_18
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.54545456, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 124
-      y: 4
-      width: 32
-      height: 32
+      x: 24
+      y: 95
+      width: 11
+      height: 12
     spriteID: 5f6a8418cb279954682b99faafcc6bb1
     spriteBone: []
     spriteOutline: []
@@ -500,18 +520,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 124, y: 4}
+    uvTransform: {x: 24, y: 95}
   - name: Flower Enemy_Frame_19
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.54545456, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 124
-      y: 44
-      width: 32
-      height: 32
+      x: 43
+      y: 95
+      width: 11
+      height: 12
     spriteID: 815ddc4071a4b6c42844a531c7f94925
     spriteBone: []
     spriteOutline: []
@@ -520,18 +540,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 124, y: 44}
+    uvTransform: {x: 43, y: 95}
   - name: Flower Enemy_Frame_20
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.54545456, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 124
-      y: 84
-      width: 32
-      height: 32
+      x: 62
+      y: 95
+      width: 11
+      height: 12
     spriteID: 726e1e581b5bd5a45b876254b093d7ce
     spriteBone: []
     spriteOutline: []
@@ -540,18 +560,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 124, y: 84}
+    uvTransform: {x: 62, y: 95}
   - name: Flower Enemy_Frame_21
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5833334, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 124
-      y: 124
-      width: 32
-      height: 32
+      x: 100
+      y: 114
+      width: 12
+      height: 9
     spriteID: c7d8b639a4563b44fa0ed3a2c2cf4619
     spriteBone: []
     spriteOutline: []
@@ -560,7 +580,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 124, y: 124}
+    uvTransform: {x: 100, y: 114}
   - name: Flower Enemy_Frame_22
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -568,10 +588,10 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 124
-      y: 164
-      width: 32
-      height: 32
+      x: 24
+      y: 115
+      width: 10
+      height: 8
     spriteID: cf1a190965924a440a461e8508fb0e5d
     spriteBone: []
     spriteOutline: []
@@ -580,7 +600,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 124, y: 164}
+    uvTransform: {x: 24, y: 115}
   - name: Flower Enemy_Frame_23
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -588,10 +608,10 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 124
-      y: 204
-      width: 32
-      height: 32
+      x: 43
+      y: 115
+      width: 10
+      height: 8
     spriteID: 8316e18e6e21c8f4ab184b800500bf06
     spriteBone: []
     spriteOutline: []
@@ -600,7 +620,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 124, y: 204}
+    uvTransform: {x: 43, y: 115}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -614,221 +634,257 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 0
+        x: 9
         y: 0
-        width: 32
-        height: 32
+        width: 12
+        height: 11
       spriteId: b07e6b070c6884d428b951d560488a03
     - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
-        x: 0
+        x: 10
         y: 0
-        width: 32
-        height: 32
+        width: 11
+        height: 11
       spriteId: 3ccc4a1b52412f443bda69688876ab13
     - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
-        x: 0
+        x: 9
         y: 0
-        width: 32
-        height: 32
+        width: 12
+        height: 10
       spriteId: bc457d3a2172c0f40bc2110625c353e9
     - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
-        x: 0
+        x: 8
         y: 0
-        width: 32
-        height: 32
+        width: 14
+        height: 11
       spriteId: 318ca7735a7195046aca96085a73379a
     - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
-        x: 0
+        x: 9
         y: 0
-        width: 32
-        height: 32
+        width: 12
+        height: 11
       spriteId: 3d93baeea54a3824588f319f24e8efa5
     - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
-        x: 0
+        x: 10
         y: 0
-        width: 32
-        height: 32
+        width: 11
+        height: 12
       spriteId: 925373fb9d27f6f4b92d8311b916a2ca
     - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
-        x: 0
+        x: 9
         y: 0
-        width: 32
-        height: 32
+        width: 13
+        height: 13
       spriteId: afdcffa96fba75143b447a8848fc306a
     - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
-        x: 0
+        x: 7
         y: 0
-        width: 32
-        height: 32
+        width: 17
+        height: 17
       spriteId: fe842a815cca4f247b4d58e613b3dd92
     - name: Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
-        x: 0
+        x: 5
         y: 0
-        width: 32
-        height: 32
+        width: 22
+        height: 19
       spriteId: 536bd9f355cd29945bdf1fa304dbbe0b
     - name: Frame_9
       frameIndex: 9
       additiveSortOrder: 0
       cellRect:
-        x: 0
+        x: 4
         y: 0
-        width: 32
-        height: 32
+        width: 26
+        height: 20
       spriteId: 194a3c4c8d88dbd43a77c37984de7b5a
     - name: Frame_10
       frameIndex: 10
       additiveSortOrder: 0
       cellRect:
-        x: 0
+        x: 4
         y: 0
-        width: 32
-        height: 32
+        width: 27
+        height: 23
       spriteId: 679e950f5bf484f4aa760441786eda68
     - name: Frame_11
       frameIndex: 11
       additiveSortOrder: 0
       cellRect:
-        x: 0
+        x: 4
         y: 0
-        width: 32
-        height: 32
+        width: 27
+        height: 23
       spriteId: b04a25d5a4be12847ba4b2bd9e61864d
     - name: Frame_12
       frameIndex: 12
       additiveSortOrder: 0
       cellRect:
-        x: 0
+        x: 4
         y: 0
-        width: 32
-        height: 32
+        width: 25
+        height: 23
       spriteId: 2daaab4b97a29b34e89cff2b7186a10f
     - name: Frame_13
       frameIndex: 13
       additiveSortOrder: 0
       cellRect:
-        x: 0
+        x: 5
         y: 0
-        width: 32
-        height: 32
+        width: 21
+        height: 23
       spriteId: f6c470a3f05c3b846b017474c5d67c66
     - name: Frame_14
       frameIndex: 14
       additiveSortOrder: 0
       cellRect:
-        x: 0
+        x: 5
         y: 0
-        width: 32
-        height: 32
+        width: 21
+        height: 24
       spriteId: cf3eab47497a37844a89d077d7bec853
     - name: Frame_15
       frameIndex: 15
       additiveSortOrder: 0
       cellRect:
-        x: 0
+        x: 10
         y: 0
-        width: 32
-        height: 32
+        width: 12
+        height: 11
       spriteId: 87df768ae5219dc41b7bb006984c4f54
     - name: Frame_16
       frameIndex: 16
       additiveSortOrder: 0
       cellRect:
-        x: 0
+        x: 10
         y: 0
-        width: 32
-        height: 32
+        width: 12
+        height: 11
       spriteId: 2e560c94345ad4b4fba37717d6b10e37
     - name: Frame_17
       frameIndex: 17
       additiveSortOrder: 0
       cellRect:
-        x: 0
+        x: 10
         y: 0
-        width: 32
-        height: 32
+        width: 11
+        height: 11
       spriteId: 175edb44cda8cf84480db0ba296da8fa
     - name: Frame_18
       frameIndex: 18
       additiveSortOrder: 0
       cellRect:
-        x: 0
+        x: 10
         y: 0
-        width: 32
-        height: 32
+        width: 11
+        height: 12
       spriteId: 5f6a8418cb279954682b99faafcc6bb1
     - name: Frame_19
       frameIndex: 19
       additiveSortOrder: 0
       cellRect:
-        x: 0
+        x: 10
         y: 0
-        width: 32
-        height: 32
+        width: 11
+        height: 12
       spriteId: 815ddc4071a4b6c42844a531c7f94925
     - name: Frame_20
       frameIndex: 20
       additiveSortOrder: 0
       cellRect:
-        x: 0
+        x: 10
         y: 0
-        width: 32
-        height: 32
+        width: 11
+        height: 12
       spriteId: 726e1e581b5bd5a45b876254b093d7ce
     - name: Frame_21
       frameIndex: 21
       additiveSortOrder: 0
       cellRect:
-        x: 0
+        x: 9
         y: 0
-        width: 32
-        height: 32
+        width: 12
+        height: 9
       spriteId: c7d8b639a4563b44fa0ed3a2c2cf4619
     - name: Frame_22
       frameIndex: 22
       additiveSortOrder: 0
       cellRect:
-        x: 0
+        x: 11
         y: 0
-        width: 32
-        height: 32
+        width: 10
+        height: 8
       spriteId: cf1a190965924a440a461e8508fb0e5d
     - name: Frame_23
       frameIndex: 23
       additiveSortOrder: 0
       cellRect:
-        x: 0
+        x: 11
         y: 0
-        width: 32
-        height: 32
+        width: 10
+        height: 8
       spriteId: 8316e18e6e21c8f4ab184b800500bf06
     linkedCells: []
     parentIndex: -1
-  platformSettings: []
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Android
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 

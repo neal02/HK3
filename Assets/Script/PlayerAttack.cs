@@ -7,7 +7,6 @@ public class PlayerAttack : MonoBehaviour
 {
     BoxCollider2D boxCollider2D;
 
-
     private bool delay = true;
 
     void Start()
