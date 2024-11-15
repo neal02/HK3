@@ -70,9 +70,10 @@ public class playerControl : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Z) && isDashCool)    //대쉬
         {
+            rigid2D.AddForce(Vector2.right * dashSpeed*flip, ForceMode2D.Impulse); 
             dashcon = -0.5f;
             animator.SetFloat("isDash", dashcon);   //대쉬 애니매이션이 모두 출력될 수 있도록 대쉬콘을 -0.5디폴트 값으로 하고 이게 0 밑일때 애니매이션 출력. 
-            transform.position += new Vector3(dashSpeed * Input.GetAxisRaw("Horizontal"), 0, 0);
+            //transform.position += new Vector3(dashSpeed * Input.GetAxisRaw("Horizontal"), 0, 0);
             isDashCool = false;
             Debug.Log("이제부터 쿨");
             StartCoroutine(CooldownDash());
