@@ -297,7 +297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04ac660c794d90a45b653cdb2767a9f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationTriggerName: Spider death
+  animationTriggerName: Hit
   currentTilemap: {fileID: 2019348595}
   nextTilemap: {fileID: 0}
 --- !u!61 &78970356
@@ -587,7 +587,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.44, y: 4.12, z: 0}
-  m_LocalScale: {x: 7, y: 7, z: 1}
+  m_LocalScale: {x: 7.1, y: 7.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -671,7 +671,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.1654997, y: 2.8537998, z: 15}
-  m_LocalScale: {x: 7, y: 7, z: 1}
+  m_LocalScale: {x: 7.1, y: 7.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -755,7 +755,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.6689, y: 2.0604, z: 18}
-  m_LocalScale: {x: 7, y: 7, z: 1}
+  m_LocalScale: {x: 7.1, y: 7.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -863,7 +863,7 @@ Transform:
   m_GameObject: {fileID: 422381843}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.61, y: -2.02, z: 0}
+  m_LocalPosition: {x: -10.65, y: -2.38, z: 0}
   m_LocalScale: {x: 6, y: 6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1527,7 +1527,7 @@ TilemapCollider2D:
   m_GameObject: {fileID: 469687524}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: caf0b0bd51ddb924cb44c6435048c609, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1905,7 +1905,7 @@ Transform:
   m_GameObject: {fileID: 675746705}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.63, y: -4.47, z: 0}
+  m_LocalPosition: {x: 18.96, y: -4.24, z: 0}
   m_LocalScale: {x: 6, y: 6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2126,7 +2126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04ac660c794d90a45b653cdb2767a9f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationTriggerName: Spider death
+  animationTriggerName: Hit
   currentTilemap: {fileID: 2096090201}
   nextTilemap: {fileID: 469687527}
 --- !u!1 &920824279
@@ -2176,7 +2176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04ac660c794d90a45b653cdb2767a9f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationTriggerName: Spider death
+  animationTriggerName: Hit
   currentTilemap: {fileID: 469687527}
   nextTilemap: {fileID: 2019348595}
 --- !u!61 &920824282
@@ -2687,7 +2687,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.1555, y: 3.3238, z: 17}
-  m_LocalScale: {x: 7, y: 7, z: 1}
+  m_LocalScale: {x: 7.1, y: 7.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2974,7 +2974,6 @@ GameObject:
   - component: {fileID: 1674432297}
   - component: {fileID: 1674432296}
   - component: {fileID: 1674432295}
-  - component: {fileID: 1674432298}
   m_Layer: 0
   m_Name: Tilemap
   m_TagString: Untagged
@@ -3006,7 +3005,7 @@ TilemapCollider2D:
   m_GameObject: {fileID: 1674432293}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: caf0b0bd51ddb924cb44c6435048c609, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -5434,33 +5433,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!50 &1674432298
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1674432293}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 7
 --- !u!1 &2019043805
 GameObject:
   m_ObjectHideFlags: 0
@@ -5540,7 +5512,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.0855, y: 2.8638, z: 16}
-  m_LocalScale: {x: 7, y: 7, z: 1}
+  m_LocalScale: {x: 7.1, y: 7.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -6371,7 +6343,7 @@ TilemapCollider2D:
   m_GameObject: {fileID: 2019348593}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: caf0b0bd51ddb924cb44c6435048c609, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -6590,6 +6562,36 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: -17, y: 0, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: -16, y: 0, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: -15, y: 0, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: 3, y: 1, z: 0}
     second:
       serializedVersion: 2
@@ -6762,13 +6764,13 @@ Tilemap:
       m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 22
+  - m_RefCount: 25
     m_Data: {fileID: 11400000, guid: bacc4e47984629d4c83ed1b7e6161d50, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 22
+  - m_RefCount: 25
     m_Data: {fileID: 21300000, guid: d1e1004446815a3468d2ff90f913b14b, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 22
+  - m_RefCount: 25
     m_Data:
       e00: 1
       e01: 0
@@ -6787,13 +6789,13 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 22
+  - m_RefCount: 25
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: -13, y: -2, z: 0}
-  m_Size: {x: 23, y: 9, z: 1}
+  m_Origin: {x: -17, y: -2, z: 0}
+  m_Size: {x: 27, y: 9, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -6822,7 +6824,7 @@ TilemapCollider2D:
   m_GameObject: {fileID: 2096090198}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: caf0b0bd51ddb924cb44c6435048c609, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0

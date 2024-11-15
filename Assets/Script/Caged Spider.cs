@@ -6,7 +6,7 @@ using UnityEngine.Tilemaps;
 public class CagedSpider : MonoBehaviour
 {
     private Animator animator;
-    public string animationTriggerName = "Spider death";  // 애니메이션 트리거 이름
+    public string animationTriggerName = "Hit";  // 애니메이션 트리거 이름
     public Tilemap currentTilemap;  // 현재 타일맵
     public Tilemap nextTilemap;     // 다음 타일맵
 
@@ -27,8 +27,7 @@ public class CagedSpider : MonoBehaviour
             // 애니메이션 길이 확인 후 파괴
             AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
             float animationLength = stateInfo.length;
-            Destroy(gameObject, animationLength);// 애니메이션이 끝난 후 오브젝트 파괴
-            OnDestroy();
+            Destroy(gameObject, 0.6f);// 애니메이션이 끝난 후 오브젝트 파괴
         }
     }
 
