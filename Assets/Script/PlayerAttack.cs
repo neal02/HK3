@@ -14,6 +14,7 @@ public class PlayerAttack : MonoBehaviour
     {
         Application.targetFrameRate = 60;
         boxCollider2D = GetComponent<BoxCollider2D>();
+        boxCollider2D.tag = "PlayerAttack"; // 공격 판정을 위해 태그 설정
     }
 
     
