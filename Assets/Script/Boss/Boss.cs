@@ -12,7 +12,7 @@ public class Boss : MonoBehaviour
     public float currentHp;
     // 컴포넌트
     private Rigidbody2D rigid;
-    private Animator anim;
+    public Animator anim;
     public GameObject player;
     private Collider2D playerCollider;
     private Collider2D[] colliders;
@@ -22,7 +22,7 @@ public class Boss : MonoBehaviour
     // 애니메이션 관련
     //private bool isMoving;
     private bool isFlipping = false;
-    private bool isAttacking = false;
+    public bool isAttacking = false;
     //감지 관련
     private bool isDetecting;
     //거리 관련
@@ -107,20 +107,6 @@ public class Boss : MonoBehaviour
             anim.SetBool("isMoving", true);
             Vector3 targetPosition = new Vector3(player.transform.position.x, transform.position.y, transform.position.z);
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed / 50);
-            float distance = Mathf.Abs(transform.position.x - targetPosition.x);
-
-            if (distance <= 5)
-            {
-                isAttacking = true;
-                anim.SetBool("isAttacking", true);
-                Attack();
-                return;
-            }
-            else
-            {
-                isAttacking = false;
-                anim.SetBool("isAttacking", false);
-            }
         } 
     }
 
@@ -173,7 +159,7 @@ public class Boss : MonoBehaviour
         isFlipping = false;
     }
 
-    void Attack()
+    public void Attack()
     {
         if(anim.GetBool("isAttacking"))
         {
@@ -183,7 +169,7 @@ public class Boss : MonoBehaviour
         }
     }
 
-    IEnumerator EndAttack()
+    public IEnumerator EndAttack()
     {
         // 공격 애니메이션이 끝날 때까지 대기
         yield return new WaitForSeconds(1.85f); // 애니메이션 지속 시간 (애니메이션 길이에 맞게 조정)

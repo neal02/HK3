@@ -23,9 +23,22 @@ public class Attack_Trigger : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag.Equals("Player"))
+        if (other.gameObject.tag.Equals("Player") && bossScript != null)
         {
             Debug.Log("플레이어 공격범위 들어옴");
+            bossScript.isAttacking = true;
+            bossScript.anim.SetBool("isAttacking", true);
+            bossScript.Attack();
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.tag.Equals("Player") && bossScript != null)
+        {
+            Debug.Log("플레이어 공격범위 나감");
+            bossScript.isAttacking = false;
+            bossScript.anim.SetBool("isAttacking", false);
         }
     }
 }
