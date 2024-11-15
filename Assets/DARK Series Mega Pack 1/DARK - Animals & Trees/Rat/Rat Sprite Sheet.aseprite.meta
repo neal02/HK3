@@ -2,7 +2,22 @@ fileFormatVersion: 2
 guid: f90200576f2fe3749b059e46684a2c91
 ScriptedImporter:
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Eat
+    second: {fileID: 7400000, guid: df8375e967d598e4099dfe71fab3e9fe, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Run
+    second: {fileID: 7400000, guid: d4ae84a4fd326e64a83c455fa3a4f67e, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: death
+    second: {fileID: 7400000, guid: d683804c0a04b2e40a2a8c721c65f34f, type: 2}
   serializedVersion: 2
   userData: 
   assetBundleName: 
@@ -97,7 +112,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 0
+  platformSettingsDirtyTick: 638672736412669071
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -123,15 +138,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Rat Sprite Sheet_Frame_0
     originalName: 
-    pivot: {x: 0.6875, y: 0.16666667}
-    alignment: 9
+    pivot: {x: 0.5, y: 0}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 97
-      width: 16
-      height: 6
+      y: 90
+      width: 15
+      height: 5
     spriteID: ac9c19f174d1d9a43a76b9539bd093c2
     spriteBone: []
     spriteOutline: []
@@ -140,18 +155,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 97}
+    uvTransform: {x: 4, y: 90}
   - name: Rat Sprite Sheet_Frame_1
     originalName: 
-    pivot: {x: 0.6875, y: 0.14285715}
-    alignment: 9
+    pivot: {x: 0.5, y: 0}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 53
-      width: 16
-      height: 7
+      y: 34
+      width: 15
+      height: 6
     spriteID: c394c8621a9d6324491b3c036772b38e
     spriteBone: []
     spriteOutline: []
@@ -160,18 +175,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 53}
+    uvTransform: {x: 4, y: 34}
   - name: Rat Sprite Sheet_Frame_2
     originalName: 
-    pivot: {x: 0.6875, y: 0.125}
-    alignment: 9
+    pivot: {x: 0.5, y: 0}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 37
-      width: 16
-      height: 8
+      y: 19
+      width: 15
+      height: 7
     spriteID: 1b491a9672a27324fa01ca1a0b9b4ae2
     spriteBone: []
     spriteOutline: []
@@ -180,17 +195,17 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 37}
+    uvTransform: {x: 4, y: 19}
   - name: Rat Sprite Sheet_Frame_3
     originalName: 
-    pivot: {x: 0.6875, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 111
-      width: 16
+      y: 48
+      width: 15
       height: 6
     spriteID: 827ddb027471eae45a09fd1510129e9b
     spriteBone: []
@@ -200,17 +215,17 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 111}
+    uvTransform: {x: 4, y: 48}
   - name: Rat Sprite Sheet_Frame_4
     originalName: 
-    pivot: {x: 0.6666667, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 30
-      y: 57
-      width: 15
+      x: 4
+      y: 76
+      width: 14
       height: 6
     spriteID: 8b98124407f7d3a4992247eb13040e7b
     spriteBone: []
@@ -220,18 +235,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 30, y: 57}
+    uvTransform: {x: 4, y: 76}
   - name: Rat Sprite Sheet_Frame_5
     originalName: 
-    pivot: {x: 0.6666667, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 30
-      y: 71
-      width: 15
-      height: 6
+      x: 4
+      y: 103
+      width: 14
+      height: 5
     spriteID: 4a62e36d47498db4e8e6cd5cf0fa3454
     spriteBone: []
     spriteOutline: []
@@ -240,18 +255,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 30, y: 71}
+    uvTransform: {x: 4, y: 103}
   - name: Rat Sprite Sheet_Frame_6
     originalName: 
-    pivot: {x: 0.625, y: 0.14285715}
+    pivot: {x: 0.64285713, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 68
-      width: 16
-      height: 7
+      y: 116
+      width: 14
+      height: 5
     spriteID: 708d1aa7b552820478d76382ecc6e1ca
     spriteBone: []
     spriteOutline: []
@@ -260,18 +275,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 68}
+    uvTransform: {x: 4, y: 116}
   - name: Rat Sprite Sheet_Frame_7
     originalName: 
-    pivot: {x: 0.64705884, y: 0.125}
+    pivot: {x: 0.6666667, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 21
-      width: 17
-      height: 8
+      y: 62
+      width: 15
+      height: 6
     spriteID: 590272e8791e0564183d33b878d2ed36
     spriteBone: []
     spriteOutline: []
@@ -280,18 +295,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 21}
+    uvTransform: {x: 4, y: 62}
   - name: Rat Sprite Sheet_Frame_8
     originalName: 
-    pivot: {x: 0.61111116, y: 0.11111111}
+    pivot: {x: 0.625, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 18
-      height: 9
+      width: 16
+      height: 7
     spriteID: d02ef76ccb51197418dc72cd30a446c8
     spriteBone: []
     spriteOutline: []
@@ -303,15 +318,15 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: Rat Sprite Sheet_Frame_9
     originalName: 
-    pivot: {x: 0.6, y: 0.125}
+    pivot: {x: 0.61111116, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 30
+      x: 28
       y: 4
-      width: 20
-      height: 8
+      width: 18
+      height: 6
     spriteID: 36bcb087ce38f5c4b8baeae9be67bd88
     spriteBone: []
     spriteOutline: []
@@ -320,18 +335,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 30, y: 4}
+    uvTransform: {x: 28, y: 4}
   - name: Rat Sprite Sheet_Frame_10
     originalName: 
-    pivot: {x: 0.5, y: 0.16666667}
+    pivot: {x: 0.49999997, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 83
-      width: 18
-      height: 6
+      x: 28
+      y: 18
+      width: 16
+      height: 4
     spriteID: 27af5ea1b57a1e7498cd3a57dd9fce59
     spriteBone: []
     spriteOutline: []
@@ -340,18 +355,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 83}
+    uvTransform: {x: 28, y: 18}
   - name: Rat Sprite Sheet_Frame_11
     originalName: 
-    pivot: {x: 0.4736842, y: 0.25}
+    pivot: {x: 0.4705882, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 30
-      y: 85
-      width: 19
-      height: 4
+      x: 28
+      y: 61
+      width: 17
+      height: 2
     spriteID: f4624301ecc06ed48bb14e633fa46917
     spriteBone: []
     spriteOutline: []
@@ -360,18 +375,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 30, y: 85}
+    uvTransform: {x: 28, y: 61}
   - name: Rat Sprite Sheet_Frame_12
     originalName: 
-    pivot: {x: 0.47619048, y: 0.2}
+    pivot: {x: 0.4736842, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 30
-      y: 20
-      width: 21
-      height: 5
+      x: 28
+      y: 30
+      width: 19
+      height: 3
     spriteID: 3146e62ca3858704f9707c1acc01f279
     spriteBone: []
     spriteOutline: []
@@ -380,18 +395,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 30, y: 20}
+    uvTransform: {x: 28, y: 30}
   - name: Rat Sprite Sheet_Frame_13
     originalName: 
-    pivot: {x: 0.47826087, y: 0.25}
+    pivot: {x: 0.47619048, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 30
-      y: 45
-      width: 23
-      height: 4
+      x: 28
+      y: 51
+      width: 21
+      height: 2
     spriteID: 6f426692183ccaf49bf4c7f740cd2115
     spriteBone: []
     spriteOutline: []
@@ -400,18 +415,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 30, y: 45}
+    uvTransform: {x: 28, y: 51}
   - name: Rat Sprite Sheet_Frame_14
     originalName: 
-    pivot: {x: 0.5, y: 0.25}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 30
-      y: 33
-      width: 24
-      height: 4
+      x: 28
+      y: 41
+      width: 22
+      height: 2
     spriteID: f1d3b3bd04e4ce943accd2eaa2f5d688
     spriteBone: []
     spriteOutline: []
@@ -420,7 +435,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 30, y: 33}
+    uvTransform: {x: 28, y: 41}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -434,140 +449,164 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 1
-        y: -1
-        width: 16
-        height: 6
+        x: 2
+        y: 0
+        width: 15
+        height: 5
       spriteId: ac9c19f174d1d9a43a76b9539bd093c2
     - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
-        x: 1
-        y: -1
-        width: 16
-        height: 7
+        x: 2
+        y: 0
+        width: 15
+        height: 6
       spriteId: c394c8621a9d6324491b3c036772b38e
     - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
-        x: 1
-        y: -1
-        width: 16
-        height: 8
+        x: 2
+        y: 0
+        width: 15
+        height: 7
       spriteId: 1b491a9672a27324fa01ca1a0b9b4ae2
     - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
-        x: 1
+        x: 2
         y: 0
-        width: 16
+        width: 15
         height: 6
       spriteId: 827ddb027471eae45a09fd1510129e9b
     - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
-        x: 2
+        x: 3
         y: 0
-        width: 15
+        width: 14
         height: 6
       spriteId: 8b98124407f7d3a4992247eb13040e7b
     - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
-        x: 2
+        x: 3
         y: 0
-        width: 15
-        height: 6
+        width: 14
+        height: 5
       spriteId: 4a62e36d47498db4e8e6cd5cf0fa3454
     - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
-        x: 2
-        y: -1
-        width: 16
-        height: 7
+        x: 3
+        y: 0
+        width: 14
+        height: 5
       spriteId: 708d1aa7b552820478d76382ecc6e1ca
     - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
-        x: 1
-        y: -1
-        width: 17
-        height: 8
+        x: 2
+        y: 0
+        width: 15
+        height: 6
       spriteId: 590272e8791e0564183d33b878d2ed36
     - name: Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
-        x: 1
-        y: -1
-        width: 18
-        height: 9
+        x: 2
+        y: 0
+        width: 16
+        height: 7
       spriteId: d02ef76ccb51197418dc72cd30a446c8
     - name: Frame_9
       frameIndex: 9
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: -1
-        width: 20
-        height: 8
+        x: 1
+        y: 0
+        width: 18
+        height: 6
       spriteId: 36bcb087ce38f5c4b8baeae9be67bd88
     - name: Frame_10
       frameIndex: 10
       additiveSortOrder: 0
       cellRect:
-        x: 3
-        y: -1
-        width: 18
-        height: 6
+        x: 4
+        y: 0
+        width: 16
+        height: 4
       spriteId: 27af5ea1b57a1e7498cd3a57dd9fce59
     - name: Frame_11
       frameIndex: 11
       additiveSortOrder: 0
       cellRect:
-        x: 3
-        y: -1
-        width: 19
-        height: 4
+        x: 4
+        y: 0
+        width: 17
+        height: 2
       spriteId: f4624301ecc06ed48bb14e633fa46917
     - name: Frame_12
       frameIndex: 12
       additiveSortOrder: 0
       cellRect:
-        x: 2
-        y: -1
-        width: 21
-        height: 5
+        x: 3
+        y: 0
+        width: 19
+        height: 3
       spriteId: 3146e62ca3858704f9707c1acc01f279
     - name: Frame_13
       frameIndex: 13
       additiveSortOrder: 0
       cellRect:
-        x: 1
-        y: -1
-        width: 23
-        height: 4
+        x: 2
+        y: 0
+        width: 21
+        height: 2
       spriteId: 6f426692183ccaf49bf4c7f740cd2115
     - name: Frame_14
       frameIndex: 14
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: -1
-        width: 24
-        height: 4
+        x: 1
+        y: 0
+        width: 22
+        height: 2
       spriteId: f1d3b3bd04e4ce943accd2eaa2f5d688
     linkedCells: []
     parentIndex: -1
-  platformSettings: []
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 

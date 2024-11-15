@@ -15,7 +15,7 @@ public class FlowerGenerator : MonoBehaviour
     void Start()
     {
         Generator();
-        Instantiate(flowerPrefab, pos, rotation);
+        Invoke("Generate",6);
     }
 
     void Update()
@@ -25,7 +25,16 @@ public class FlowerGenerator : MonoBehaviour
 
     void Generator()
     {
-        randposX = Random.Range(-4.0f, -3.0f);
-        pos = new Vector3(randposX, 0, transform.position.z);
+        randposX = Random.Range(-6.0f, 6.0f);
+        randposY = Random.Range(-3.5f, -2.5f);
+        pos = new Vector3(randposX, randposY, transform.position.z);
+    }
+
+    void Generate()
+    {
+        
+        Instantiate(flowerPrefab, pos, rotation);
+        Generator();
+        Invoke("Generate", 8);
     }
 }

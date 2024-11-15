@@ -8,15 +8,16 @@ public class fireFlower : MonoBehaviour
     Animator animator;
 
     public GameObject firePrefab;
-    public float fireGap = 3.0f;
+    public float fireGap = 5.0f;
     public float flowerSpeed = 0.01f;
     public int flowerHP = 2;
 
-
+    private float firecon = -0.5f;
     private float deathcon = -0.5f;
     private float hitcon = -0.5f;
     private bool isdelay = true;
     private int randdir = 0;
+    private float invisible;
     Quaternion rotation = Quaternion.identity;
     Vector3 pos;
     void Start()
@@ -24,7 +25,8 @@ public class fireFlower : MonoBehaviour
         pos = transform.position;
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
-        Invoke("Think", 5);
+        Invoke("Think", 2);
+        spriteRenderer.color = new Color(213f / 255f, 73f / 255f, 74f / 255f, invisible);
     }
 
     void Update()
@@ -49,6 +51,8 @@ public class fireFlower : MonoBehaviour
 
     private void FixedUpdate()
     {
+        invisible += 0.05f;
+        spriteRenderer.color = new Color(213f / 255f, 73f / 255f, 74f / 255f, invisible);
         if (animator.GetFloat("isHit") < 1)
         {
             hitcon += 0.03f;
@@ -59,13 +63,21 @@ public class fireFlower : MonoBehaviour
             deathcon += 0.03f;
             animator.SetFloat("isDeath", deathcon);
         }
+        if(animator.GetFloat("isFire") < 1)
+        {
+            firecon += 0.03f;
+            animator.SetFloat("isFire", firecon);
+        }
     }
 
     IEnumerator SpawnFire()
     {
         isdelay = false;
-        Instantiate(firePrefab, pos, rotation);
+        firecon = -0.5f;
+        animator.SetFloat("isFire", firecon);
         yield return new WaitForSeconds(fireGap);
+        Instantiate(firePrefab, pos, rotation);
+        
         isdelay = true;
     }
 
@@ -94,6 +106,11 @@ public class fireFlower : MonoBehaviour
             {
                 deathcon = -0.5f;
             }
+        }
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+            Debug.Log("º®");
+            randdir *= -1;
         }
     }
 }

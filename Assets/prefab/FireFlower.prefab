@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 900054074002307260, guid: 827b74b8feb8a7a479b756899669a222, type: 3}
-  m_Color: {r: 1, g: 0.33018857, b: 0.33018857, a: 1}
+  m_Color: {r: 0.8352941, g: 0.28627452, b: 0.2901961, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -166,6 +166,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePrefab: {fileID: 6939431912840557837, guid: 2d224aab8e7b78741bedc59a861cec52, type: 3}
-  fireGap: 3
+  fireGap: 5
   flowerSpeed: 0.01
-  flowerHP: 5
+  flowerHP: 2
