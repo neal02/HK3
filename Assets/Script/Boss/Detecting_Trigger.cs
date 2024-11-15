@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Attack_Trigger : MonoBehaviour
+public class Detecting_Trigger : MonoBehaviour
 {
     public GameObject boss;
     private Boss bossObject;
@@ -23,21 +24,17 @@ public class Attack_Trigger : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Player") && other.CompareTag("Player"))
+        if(other.gameObject.layer == LayerMask.NameToLayer("Player") && other.CompareTag("Player")) //플레이어의 무기에 반응하진 않음
         {
-            Debug.Log("플레이어 공격범위 들어옴");
-            bossObject.isAttacking = true;
-            bossObject.anim.SetBool("isAttacking", true);
+            bossObject.isDetecting = true;
         }
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Player") && other.CompareTag("Player"))
+        if(other.gameObject.layer == LayerMask.NameToLayer("Player") && other.CompareTag("Player")) //플레이어의 무기에 반응하진 않음
         {
-            Debug.Log("플레이어 공격범위 나감");
-            bossObject.isAttacking = false;
-            bossObject.anim.SetBool("isAttacking", false);
+            bossObject.isDetecting = false;
         }
     }
 }
