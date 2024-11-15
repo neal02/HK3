@@ -55,29 +55,37 @@ public class Boss : MonoBehaviour
 
     void FixedUpdate()
     {
-        
-        if(!isAttacking)
+        if(!isDetecting)
         {
-            if (player.transform.position.x < transform.position.x)
+            //RandomMoving(); 발견 못했을 때 무작위 움직임
+
+        }
+        else if (isDetecting)
+        {
+            if(!isAttacking)
             {
-                if (!isFlipping) // 이미 지연이 진행 중이면 중복 실행 방지
+                if (player.transform.position.x < transform.position.x)
                 {
-                    StartCoroutine(FlipBoss(true));
+                    if (!isFlipping) // 이미 지연이 진행 중이면 중복 실행 방지
+                    {
+                        StartCoroutine(FlipBoss(true));
+                    }
+                }
+                else if (player.transform.position.x > transform.position.x)
+                {
+                    if (!isFlipping) // 이미 지연이 진행 중이면 중복 실행 방지
+                    {
+                        StartCoroutine(FlipBoss(false));
+                    }
                 }
             }
-            else if (player.transform.position.x > transform.position.x)
+        
+            if (isGrounded && isDetecting && !isAttacking)
             {
-                if (!isFlipping) // 이미 지연이 진행 중이면 중복 실행 방지
-                {
-                    StartCoroutine(FlipBoss(false));
-                }
+                Move();
             }
         }
         
-        if (isGrounded && isDetecting && !isAttacking)
-        {
-            Move();
-        }
     }
 
     public void UpdateHpBar()

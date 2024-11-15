@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Detection_Trigger : MonoBehaviour
+public class Attack_Trigger : MonoBehaviour
 {
     public GameObject boss;
     private Boss bossScript;
@@ -23,11 +23,9 @@ public class Detection_Trigger : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag.Equals("Attack"))
+        if (other.gameObject.tag.Equals("Player"))
         {
-            Debug.Log("공격");
-            bossScript.TakeDamage(10);
-            Debug.Log(bossScript.currentHp);
+            Debug.Log("플레이어 공격범위 들어옴");
         }
     }
 }
