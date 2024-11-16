@@ -22,6 +22,8 @@ public class BossEnemy : MonoBehaviour
         if (collision.gameObject.tag.Equals("Attack"))
         {
             animator.SetTrigger("Hit");
+            Destroy(gameObject, 1.1f);// 애니메이션이 끝난 후 오브젝트 파괴
+
         }
     }
 }
