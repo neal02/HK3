@@ -21,7 +21,7 @@ public class Attack_Trigger : MonoBehaviour
         rigid.MovePosition(bossPosition);
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    /*void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Player") && other.CompareTag("Player"))
         {
@@ -39,5 +39,5 @@ public class Attack_Trigger : MonoBehaviour
             bossObject.isAttacking = false;
             bossObject.anim.SetBool("isAttacking", false);
         }
-    }
+    }*/
 }

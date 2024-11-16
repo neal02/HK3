@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class playerControl : MonoBehaviour
 {
@@ -35,7 +36,7 @@ public class playerControl : MonoBehaviour
 
     void Update()
     {
-        if (rigid2D.velocity.normalized.x < 0)  //ÁÂ¿ì¹ÝÀü
+        if (rigid2D.velocity.normalized.x < 0)  //ï¿½Â¿ï¿½ï¿½ï¿½ï¿½
         {
             spriteRenderer.flipX = true;
         }
@@ -47,7 +48,7 @@ public class playerControl : MonoBehaviour
         float horizontal = Input.GetAxis("Horizontal");
         rigid2D.velocity = new Vector2(horizontal * moveSpeed, rigid2D.velocity.y);
 
-        if (horizontal == 0) //´Þ¸®±â
+        if (horizontal == 0) //ï¿½Þ¸ï¿½ï¿½ï¿½
         {
             animator.SetBool("isRun", false);
         }
@@ -60,31 +61,31 @@ public class playerControl : MonoBehaviour
             animator.SetBool("isRun", true);
         }
 
-        if (rigid2D.velocity.normalized.y == 0) //ÂøÁöÇß´Â°¡
+        if (rigid2D.velocity.normalized.y == 0) //ï¿½ï¿½ï¿½ï¿½ï¿½ß´Â°ï¿½
         {
             animator.SetBool("isJump", false);
             maxjump = 2;
         }
 
-        if (Input.GetKeyDown(KeyCode.Z) && isDashCool)    //´ë½¬
+        if (Input.GetKeyDown(KeyCode.Z) && isDashCool)    //ï¿½ë½¬
         {
             dashcon = -0.5f;
-            animator.SetFloat("isDash", dashcon);   //´ë½¬ ¾Ö´Ï¸ÅÀÌ¼ÇÀÌ ¸ðµÎ Ãâ·ÂµÉ ¼ö ÀÖµµ·Ï ´ë½¬ÄÜÀ» -0.5µðÆúÆ® °ªÀ¸·Î ÇÏ°í ÀÌ°Ô 0 ¹ØÀÏ¶§ ¾Ö´Ï¸ÅÀÌ¼Ç Ãâ·Â. 
+            animator.SetFloat("isDash", dashcon);   //ï¿½ë½¬ ï¿½Ö´Ï¸ï¿½ï¿½Ì¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½Âµï¿½ ï¿½ï¿½ ï¿½Öµï¿½ï¿½ï¿½ ï¿½ë½¬ï¿½ï¿½ï¿½ï¿½ -0.5ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ï°ï¿½ ï¿½Ì°ï¿½ 0 ï¿½ï¿½ï¿½Ï¶ï¿½ ï¿½Ö´Ï¸ï¿½ï¿½Ì¼ï¿½ ï¿½ï¿½ï¿½. 
             transform.position += new Vector3(dashSpeed * Input.GetAxisRaw("Horizontal"), 0, 0);
             isDashCool = false;
-            Debug.Log("ÀÌÁ¦ºÎÅÍ Äð");
+            Debug.Log("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½");
             StartCoroutine(CooldownDash());
         }
-        else if (Input.GetKeyDown(KeyCode.X) && maxAttack > 0 && isAttackCool && AttackDelay)   //°ø°Ý
+        else if (Input.GetKeyDown(KeyCode.X) && maxAttack > 0 && isAttackCool && AttackDelay)   //ï¿½ï¿½ï¿½ï¿½
         {
             firstattackcon = -0.5f;
             maxAttack--;
             animator.SetFloat("isAttack", firstattackcon);
             AttackDelay = false;
-            Debug.Log("°ø°Ý");
+            Debug.Log("ï¿½ï¿½ï¿½ï¿½");
             StartCoroutine(AttDelay());
         }
-        else if (Input.GetKeyDown(KeyCode.C) && maxjump > 0)   //Á¡ÇÁ
+        else if (Input.GetKeyDown(KeyCode.C) && maxjump > 0)   //ï¿½ï¿½ï¿½ï¿½
         {
             maxjump--;
             animator.SetBool("isJump", true);
@@ -109,7 +110,7 @@ public class playerControl : MonoBehaviour
     {
         yield return new WaitForSeconds(DashcoolTime);
         isDashCool = true;
-        Debug.Log("´ë½¬»ç¿ë°¡´É");
+        Debug.Log("ï¿½ë½¬ï¿½ï¿½ë°¡ï¿½ï¿½");
     }
 
     IEnumerator AttDelay()
