@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossAttack : MonoBehaviour
+public class BossAttack1 : MonoBehaviour
 {
     CapsuleCollider2D CapsuleCollider2D;
     BoxCollider2D BoxCollider2D;
@@ -16,7 +16,7 @@ public class BossAttack : MonoBehaviour
         Application.targetFrameRate = 60;
         BoxCollider2D = GetComponent<BoxCollider2D>();
         CapsuleCollider2D = GetComponent<CapsuleCollider2D>();
-        //Bossflip = GameObject.Find("Boss");
+        Bossflip = GameObject.Find("Boss (1)");
         bossAnimator = Bossflip.GetComponent<Animator>();
 
     }
@@ -24,9 +24,9 @@ public class BossAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float bossFlipValue = Bossflip.GetComponent<BossController>().Bossflip;
+        float bossFlipValue = Bossflip.GetComponent<BossController2>().Bossflip;
 
-        float Bossf = Bossflip.GetComponent<BossController>().Bossflip;
+        float Bossf = Bossflip.GetComponent<BossController2>().Bossflip;
         if (Bossf ==1)  // 보스가 좌우 반전되었을 때
                {
             BoxCollider2D.offset = new Vector2(0.29f, 0);

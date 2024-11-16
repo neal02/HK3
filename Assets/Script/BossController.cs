@@ -7,6 +7,8 @@ using UnityEngine.UIElements;
 
 public class BossController : MonoBehaviour
 {
+    CapsuleCollider2D CapsuleCollider2D;
+    BoxCollider2D BoxCollider2D;
     Rigidbody2D rigid2D;
     SpriteRenderer spriteRenderer;
     GameObject playerflip;
@@ -18,7 +20,9 @@ public class BossController : MonoBehaviour
     Vector2 colider = new Vector2(0.25f, 0);
 
     private void Start()
-    {        
+    {
+        BoxCollider2D = GetComponent<BoxCollider2D>();
+        CapsuleCollider2D = GetComponent<CapsuleCollider2D>();
         Application.targetFrameRate = 60;
         rigid2D = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -65,5 +69,19 @@ public class BossController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Bossflip == 1)  // 보스가 좌우 반전되었을 때
+{
+            BoxCollider2D.offset = new Vector2(-0.25f, 0.95f);
+
+            //CapsuleCollider2D.enabled = false
+
+
+        }
+        else if (Bossflip == -1) {
+            BoxCollider2D.offset = new Vector2(0.25f, 0.95f);
+
+            //CapsuleCollider2D.enabled = true;
+
+        }
     }
 }

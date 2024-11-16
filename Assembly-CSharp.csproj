@@ -68,8 +68,8 @@
     <Compile Include="Assets\Script\playerControl.cs" />
     <Compile Include="Assets\Script\DashAttack.cs" />
     <Compile Include="Assets\Script\BossController.cs" />
-    <Compile Include="Assets\Script\BossController3paze.cs" />
     <Compile Include="Assets\Script\BossController2.cs" />
+    <Compile Include="Assets\Script\BossAttack1.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
