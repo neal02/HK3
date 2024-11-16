@@ -11,7 +11,10 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
     private Collider2D playerCollider, bossCollider;
     private SpriteRenderer sprite;
 
+    public GameObject jumpAttackTrigger;
+
     public bool isDetecting;
+    private bool isGrounded;
 
     public bool isAttacking = false;
     public bool isJumpAttacking = false;
@@ -30,9 +33,9 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
         playerCollider = player.GetComponent<Collider2D>();
         bossCollider = GetComponent<Collider2D>();
         sprite = GetComponent<SpriteRenderer>();
-
         Physics2D.IgnoreCollision(bossCollider, playerCollider, true);
-
+        jumpAttackTrigger.SetActive(false);
+        
         moveSpeed = 1.0f;
         isDetecting = false;
 
@@ -84,7 +87,6 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
         }
 
         isJumpAttacking = true;
-
         // 초기 상태 설정
         anim.SetBool("isMoving", false);
         anim.SetBool("isAttacking", false);
@@ -113,21 +115,22 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
         sprite.enabled = true;
         bossCollider.enabled = true;
 
-        yield return new WaitForSeconds(0.9f);
-
         // 애니메이션 처리
         anim.SetTrigger("landTrigger");
 
         // 1.0초 대기 (land 애니메이션이 끝날 때까지 기다림)
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(0.1f);
 
-        // 애니메이션이 끝난 후 플립 재개
+        jumpAttackTrigger.SetActive(true);
+        yield return new WaitForSeconds(0.3f);
+        jumpAttackTrigger.SetActive(false);
+
+        anim.SetBool("isStanding", true);
+        isJumpAttacking = false;  
         isFlippingBlocked = false;
         CheckFliping();
 
-        // 마지막 상태 전환
-        anim.SetBool("isStanding", true);
-        isJumpAttacking = false;
+                
     }
 
 
@@ -200,6 +203,17 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
 
     void OnCollisionEnter2D(Collision2D other)
     {
+        if(other.gameObject.CompareTag("Ground"))
+        {
+            isGrounded = true;
+        }
+    }
 
+    void OnCollisionExit2D(Collision2D other)
+    {
+        if(other.gameObject.CompareTag("Ground"))
+        {
+            isGrounded = false;
+        }
     }
 }
