@@ -12,9 +12,10 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
     private SpriteRenderer sprite;
 
     public GameObject jumpAttackTrigger;
+    public GameObject attackTrigger;
+    Attack_Trigger attackTriggerScript;
 
     public bool isDetecting;
-    private bool isGrounded;
 
     public bool isAttacking = false;
     public bool isJumpAttacking = false;
@@ -35,6 +36,7 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
         sprite = GetComponent<SpriteRenderer>();
         Physics2D.IgnoreCollision(bossCollider, playerCollider, true);
         jumpAttackTrigger.SetActive(false);
+        attackTriggerScript = attackTrigger.GetComponent<Attack_Trigger>();
         
         moveSpeed = 1.0f;
         isDetecting = false;
@@ -118,19 +120,16 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
         // 애니메이션 처리
         anim.SetTrigger("landTrigger");
 
-        // 1.0초 대기 (land 애니메이션이 끝날 때까지 기다림)
         yield return new WaitForSeconds(0.1f);
 
         jumpAttackTrigger.SetActive(true);
         yield return new WaitForSeconds(0.3f);
+        anim.SetBool("isStanding", true); 
         jumpAttackTrigger.SetActive(false);
 
-        anim.SetBool("isStanding", true);
-        isJumpAttacking = false;  
         isFlippingBlocked = false;
         CheckFliping();
-
-                
+        isJumpAttacking = false; 
     }
 
 
@@ -144,6 +143,11 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
             yield break;
         }
 
+        if(!attackTriggerScript.isDetecting)
+        {
+            yield break;
+        }
+
         isAttacking = true;
 
         anim.SetBool("isMoving", false);
@@ -151,10 +155,9 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
         anim.SetBool("isAttacking", true);
 
         isFlippingBlocked = true; // 애니메이션 진행 중 플립을 차단
-
-        // 1.9초 대기
-        yield return new WaitForSeconds(1.9f);
-        // GetDamage(damage);
+        yield return new WaitForSeconds(0.8f);
+        attackTriggerScript.attackDamageTriggerScript.isAttacking = true;
+        StartCoroutine(attackTriggerScript.attackDamageTriggerScript.GetDamage());
 
         // 애니메이션이 끝난 후 플립 재개
         isFlippingBlocked = false;
@@ -167,7 +170,7 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
 
     IEnumerator AttackSplit()
     {
-        Debug.Log("기본 공격 테스트");
+        Debug.Log("원거리 공격 테스트");
 
         if (isMoving || isAttacking || isAttackSpliting || isJumpAttacking) 
         {
@@ -203,17 +206,11 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        if(other.gameObject.CompareTag("Ground"))
-        {
-            isGrounded = true;
-        }
+        
     }
 
     void OnCollisionExit2D(Collision2D other)
     {
-        if(other.gameObject.CompareTag("Ground"))
-        {
-            isGrounded = false;
-        }
+        
     }
 }
