@@ -26,6 +26,7 @@ public class Detecting_Trigger : MonoBehaviour
     {
         if(other.gameObject.layer == LayerMask.NameToLayer("Player") && other.CompareTag("Player")) //플레이어의 무기에 반응하진 않음
         {
+            bossObject.isFirstDetecting = true;
             bossObject.isDetecting = true;
         }
     }

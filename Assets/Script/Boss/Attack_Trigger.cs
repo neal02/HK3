@@ -25,7 +25,6 @@ public class Attack_Trigger : MonoBehaviour
         if (other.gameObject.layer == LayerMask.NameToLayer("Player") && other.CompareTag("Player") && !isDetecting && !attackDamageTriggerScript.isAttacking)
         {
             isDetecting = true;
-            Debug.Log("우선 감지됨");
             attackDamageTriggerScript.isAttacking = true;
         }
     }
