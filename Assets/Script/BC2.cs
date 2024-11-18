@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class BossController2 : MonoBehaviour
+public class BC2 : MonoBehaviour
 {
     CapsuleCollider2D CapsuleCollider2D;
     BoxCollider2D BoxCollider2D;

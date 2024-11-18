@@ -8,6 +8,7 @@ public class CagedSpider : MonoBehaviour
     private Animator animator;
     public string animationTriggerName = "Hit";  // 애니메이션 트리거 이름
     public Tilemap currentTilemap;  // 현재 타일맵
+    public Tilemap DestroyTilemap;  // 현재 타일맵
     public Tilemap nextTilemap;     // 다음 타일맵
 
     private void Start()
@@ -38,6 +39,9 @@ public class CagedSpider : MonoBehaviour
             currentTilemap.gameObject.SetActive(false);  // 현재 타일맵 비활성화
         }
 
+        if (DestroyTilemap != null) {
+            DestroyTilemap.gameObject.SetActive(false);  // 현재 타일맵 비활성화
+        }
         if (nextTilemap != null) {
             nextTilemap.gameObject.SetActive(true);      // 다음 타일맵 활성화
         }

@@ -63,13 +63,15 @@
     <Compile Include="Assets\Script\BossEnemy.cs" />
     <Compile Include="Assets\Script\Enemy.cs" />
     <Compile Include="Assets\Script\Caged Spider.cs" />
-    <Compile Include="Assets\Script\BossAttack.cs" />
     <Compile Include="Assets\Script\PlayerAttack.cs" />
     <Compile Include="Assets\Script\playerControl.cs" />
+    <Compile Include="Assets\Script\BA2.cs" />
+    <Compile Include="Assets\Script\EndBA.cs" />
+    <Compile Include="Assets\Script\BC.cs" />
     <Compile Include="Assets\Script\DashAttack.cs" />
-    <Compile Include="Assets\Script\BossController.cs" />
-    <Compile Include="Assets\Script\BossController2.cs" />
-    <Compile Include="Assets\Script\BossAttack1.cs" />
+    <Compile Include="Assets\Script\EndBC.cs" />
+    <Compile Include="Assets\Script\BC2.cs" />
+    <Compile Include="Assets\Script\BA.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
