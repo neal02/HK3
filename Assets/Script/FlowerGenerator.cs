@@ -9,18 +9,44 @@ public class FlowerGenerator : MonoBehaviour
     private float randposX = 0;
     private float randposY = 0;
 
+    private GameObject[] currentPrefab;
+    private int currentIndex = 0;
+    private bool isGen = true;
     Quaternion rotation = Quaternion.identity;
     Vector3 pos;
 
     void Start()
     {
-        Generator();
-        Invoke("Generate",6);
+        currentPrefab = new GameObject[3];
     }
 
     void Update()
     {
         
+    }
+
+    private void FixedUpdate()
+    {
+        
+        if (currentPrefab[0] == null && isGen)
+        {
+            isGen = false;
+            currentIndex = 0;
+            Invoke("Generate", 3);
+        }
+        else if (currentPrefab[1] == null && isGen)
+        {
+            isGen = false;
+            currentIndex = 1;
+            Invoke("Generate", 3);
+        }
+        else if (currentPrefab[2] == null && isGen)
+        {
+            isGen = false;
+            currentIndex = 2;
+            Invoke("Generate", 3);
+        }
+
     }
 
     void Generator()
@@ -32,9 +58,9 @@ public class FlowerGenerator : MonoBehaviour
 
     void Generate()
     {
-        
-        Instantiate(flowerPrefab, pos, rotation);
         Generator();
-        Invoke("Generate", 8);
+        currentPrefab[currentIndex] = Instantiate(flowerPrefab, pos, rotation);
+        currentIndex++;
+        isGen = true;
     }
 }

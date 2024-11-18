@@ -8,7 +8,7 @@ public class StraightFire : MonoBehaviour
     Rigidbody2D rigid2D;
     public float XfireSpeed = 0.05f;
 
-    int fireHp = 5;
+    int fireHp = 2;
 
     void Start()
     {

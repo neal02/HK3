@@ -6,15 +6,20 @@ using UnityEngine;
 public class fireEnemy : MonoBehaviour
 {
     GameObject player;
+    SpriteRenderer spriteRenderer;
 
     public float XfireSpeed = 0.01f;
     public float YfireSpeed = 0.005f;
 
+    private bool isInvisible = false;
+    private float invisible = 1;
     void Start()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+
         Application.targetFrameRate = 60;
         player = GameObject.Find("player");
-        Destroy(gameObject, 9);
+        Invoke("fireDestroy", 8);
     }
 
     void Update()
@@ -46,6 +51,19 @@ public class fireEnemy : MonoBehaviour
         }
     }
 
+    private void FixedUpdate()
+    {
+        if (isInvisible)
+        {
+            invisible -= 0.05f;
+            spriteRenderer.color = new Color(spriteRenderer.color.g, spriteRenderer.color.b, spriteRenderer.color.a, invisible);
+            if(invisible <= 0)
+            {
+                Destroy(gameObject);
+            }
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.CompareTag("Player"))
@@ -54,4 +72,10 @@ public class fireEnemy : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void fireDestroy()
+    {
+        isInvisible = true;
+    }
+
 }

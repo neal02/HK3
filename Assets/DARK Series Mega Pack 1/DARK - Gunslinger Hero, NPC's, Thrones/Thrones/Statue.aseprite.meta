@@ -7,7 +7,7 @@ ScriptedImporter:
       type: UnityEngine:AnimationClip
       assembly: UnityEngine.AnimationModule
       name: blood
-    second: {fileID: 7400000, guid: e8ae80ecc7aac6e42af05034ec019ba3, type: 2}
+    second: {fileID: 7400000, guid: 54db9fd807e36d047b614cdb61c076ad, type: 2}
   serializedVersion: 2
   userData: 
   assetBundleName: 
@@ -102,7 +102,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638672804700430474
+  platformSettingsDirtyTick: 638674574416070568
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -376,7 +376,7 @@ ScriptedImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     forceMaximumCompressionQuality_BC6H_BC7: 0
     crunchedCompression: 0

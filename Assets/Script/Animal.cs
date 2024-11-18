@@ -7,15 +7,21 @@ public class Animal : MonoBehaviour
 {
     SpriteRenderer spriteRenderer;
     Rigidbody2D rigid2D;
+    Animator animator;
+
+    public GameObject Lefttree;
 
     public float speed = 0;
 
     private float invisible = 0;
     private int randdir;
+    
     void Start()
     {
         rigid2D = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
+        Lefttree = GameObject.Find("LeftTree");
         Think();
         spriteRenderer.color = new Color(spriteRenderer.color.g, spriteRenderer.color.b, spriteRenderer.color.a, invisible);
     }
@@ -57,7 +63,7 @@ public class Animal : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Attack"))
         {
-            Destroy(gameObject);
+            StartCoroutine(Death());
         }
         if (collision.CompareTag("Wall"))
         {
@@ -73,4 +79,12 @@ public class Animal : MonoBehaviour
         }
     }
 
+
+    IEnumerator Death()
+    {
+        BloodTree.isSeal = true;
+        animator.SetBool("isDeath", true);
+        yield return new WaitForSeconds(0.8f);
+        Destroy(gameObject);
+    }
 }

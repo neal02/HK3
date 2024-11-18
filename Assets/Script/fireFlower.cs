@@ -6,10 +6,11 @@ public class fireFlower : MonoBehaviour
 {
     SpriteRenderer spriteRenderer;
     Animator animator;
+    Rigidbody2D rigid2D;
 
     public GameObject firePrefab;
     public float fireGap = 5.0f;
-    public float flowerSpeed = 0.01f;
+    public float flowerSpeed = 1f;
     public int flowerHP = 2;
 
     private float firecon = -0.5f;
@@ -25,13 +26,23 @@ public class fireFlower : MonoBehaviour
         pos = transform.position;
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+        rigid2D = GetComponent<Rigidbody2D>();
         Invoke("Think", 2);
         spriteRenderer.color = new Color(213f / 255f, 73f / 255f, 74f / 255f, invisible);
     }
 
     void Update()
     {
-        transform.position += new Vector3(randdir * flowerSpeed,0,0);
+        rigid2D.velocity = new Vector3(flowerSpeed * randdir, 0, 0);
+
+        if(rigid2D.velocity.x < 0)
+        {
+            spriteRenderer.flipX = true;
+        } else
+        {
+            spriteRenderer.flipX = false;
+        }
+
         pos = transform.position;
         if (isdelay)
         {
