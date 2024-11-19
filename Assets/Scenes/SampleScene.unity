@@ -412,6 +412,7 @@ MonoBehaviour:
   player: {fileID: 0}
   jumpAttackTrigger: {fileID: 1700138638}
   attackTrigger: {fileID: 648385719}
+  thrustTrigger: {fileID: 1705041149}
   currentState: 0
   isDetecting: 0
   isFirstDetecting: 0
@@ -2473,6 +2474,7 @@ GameObject:
   - component: {fileID: 1705041150}
   - component: {fileID: 1705041152}
   - component: {fileID: 1705041151}
+  - component: {fileID: 1705041153}
   m_Layer: 6
   m_Name: thrust_Trigger
   m_TagString: Untagged
@@ -2567,6 +2569,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1705041153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1705041149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664f9699424e2af45aa89de6dd3440b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: {fileID: 0}
+  stayTime: 0
+  isInTrigger: 0
+  player: {fileID: 0}
 --- !u!1 &1737561166
 GameObject:
   m_ObjectHideFlags: 0

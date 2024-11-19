@@ -6,7 +6,7 @@ using UnityEngine;
 public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크립트에선 보스의 에니메이션과 변수, 함수, 그리고 충돌 콜라이더 구현, 다른 기믹에 대한 구현은 자식 오브젝트에서 함
 {
 
-    private Rigidbody2D rigid;
+    private Rigidbody2D rigid, playerRigid;
     public Animator anim;
     public GameObject player;
     private Collider2D playerCollider, bossCollider;
@@ -14,7 +14,9 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
 
     public GameObject jumpAttackTrigger;
     public GameObject attackTrigger;
+    public GameObject thrustTrigger;
     Attack_Trigger attackTriggerScript;
+    Thrust_Trigger thrustTriggerScript;
 
     public enum BossState { idle, move, attack, jumpAttack, attackSplit, thrust }
     public BossState currentState = BossState.idle;
@@ -44,6 +46,8 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
         Physics2D.IgnoreCollision(bossCollider, playerCollider, true);
         jumpAttackTrigger.SetActive(false);
         attackTriggerScript = attackTrigger.GetComponent<Attack_Trigger>();
+        thrustTriggerScript = thrustTrigger.GetComponent<Thrust_Trigger>();
+        playerRigid = player.GetComponent<Rigidbody2D>();
         
         moveSpeed = 2.0f;
         isDetecting = false;
@@ -51,9 +55,6 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
         isAlive = true;
 
         StartCoroutine(StateMachine());
-
-        anim.SetBool("isStanding", true);
-
     }
 
     IEnumerator StateMachine()
@@ -75,6 +76,7 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
                     StartCoroutine(JumpAttack());
                     break;
                 case BossState.thrust:
+                    StartCoroutine(Thrust());
                     break;
                 /*case BossState.death:
                     Death();
@@ -89,6 +91,7 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
         anim.SetBool("isStanding", true);
         if (isFirstDetecting)
         {
+            ActivateJumpAttackTrigger();
             ChangeState(BossState.move);
         }
     }
@@ -96,7 +99,7 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
     void MoveToPlayer()
     {
         anim.SetBool("isStanding", false);
-        anim.Play("move");   
+        anim.SetBool("isMoving", true);   
         isMoving = true;
 
         Vector3 playerPosition = player.transform.position;
@@ -106,7 +109,10 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
 
         if(isDetecting)
         {
-            anim.SetBool("isMoving", true);
+            if (isThrusting)
+            {
+                return;
+            }
 
             if(attackTriggerScript.isDetecting)
             {
@@ -114,6 +120,15 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
                 anim.SetBool("isStanding", true);
                 isMoving = false;
                 ChangeState(BossState.attack);
+            }
+
+            if(thrustTriggerScript.isInTrigger)
+            {
+                anim.SetBool("isMoving", false);
+                anim.SetBool("isThrusting", true);
+                isMoving = false;
+                ChangeState(BossState.thrust);
+                return;
             }
 
             if(math.abs(direction.x) >= 0.2f)
@@ -159,6 +174,7 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
         else
             return false;
     }
+    
     IEnumerator JumpAttack()
     {
         if (OtherAct()) 
@@ -198,9 +214,11 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
         yield return new WaitForSeconds(0.1f);
         jumpAttackTrigger.SetActive(true);
 
-        yield return new WaitForSeconds(0.9f);
+        yield return new WaitForSeconds(0.7f);
 
-        anim.SetBool("isStanding", true); 
+        anim.SetBool("isStanding", true);
+        anim.SetBool("isJumpAttackLand", true);
+        anim.SetTrigger("moveTrigger"); 
         jumpAttackTrigger.SetActive(false);
 
         isFlippingBlocked = false;
@@ -215,8 +233,6 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
         attackTrigger.SetActive(true);
         attackTriggerScript.attackDamageTrigger.SetActive(true);
     }
-
-
 
     IEnumerator Attack()
     {
@@ -252,36 +268,59 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
 
     IEnumerator Thrust()
     {
-        if (OtherAct()) 
+        if (OtherAct() || isThrusting) 
+        {
+            yield break;
+        }
+                
+        if(!thrustTriggerScript.isInTrigger)
         {
             yield break;
         }
 
-        if(!attackTriggerScript.isDetecting)
-        {
-            yield break;
-        }
-
+        thrustTriggerScript.isInTrigger = false;
         isThrusting = true;
 
         anim.SetBool("isMoving", false);
         anim.SetBool("isStanding", false);
         anim.SetBool("isThrusting", true);
+        anim.SetTrigger("thrustTrigger");
 
         isFlippingBlocked = true;
-        yield return new WaitForSeconds(0.8f);
-        attackTriggerScript.attackDamageTriggerScript.isAttacking = true;
-        StartCoroutine(attackTriggerScript.attackDamageTriggerScript.GetDamage());
-
+        yield return new WaitForSeconds(1.1f);
+        PushPlayer();
+        yield return new WaitForSeconds(0.2f);
         isFlippingBlocked = false;
         CheckFliping();
 
-        anim.SetBool("isAttacking", false);
+        anim.SetBool("isThrusting", false);
         anim.SetBool("isStanding", true);
-        isAttacking = false;
+        isThrusting = false;
         ChangeState(BossState.idle);
     }
-    
+
+    void PushPlayer()
+    {
+        if (playerRigid != null)
+        {
+            Vector2 pushDirection; // 왼쪽으로 밀기
+            float pushForce = 1500f; // 힘의 크기
+            float pushDuration = 0.5f; // 밀리는 지속 시간
+
+            if (player.transform.position.x < transform.position.x)
+            {
+                pushDirection = new Vector2(-1, 0);
+                StartCoroutine(PushPlayerSmoothly(playerRigid, pushDirection, pushForce, pushDuration));
+
+            }
+            else if (player.transform.position.x > transform.position.x)
+            {
+                pushDirection = new Vector2(1, 0);
+                StartCoroutine(PushPlayerSmoothly(playerRigid, pushDirection, pushForce, pushDuration));
+            }    
+        }
+    }
+
     IEnumerator AttackSplit()
     {
         if (OtherAct()) 
@@ -310,6 +349,19 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
         anim.SetBool("isStanding", true);
         isAttackSpliting = false;
     }
+
+IEnumerator PushPlayerSmoothly(Rigidbody2D playerRigidbody, Vector2 direction, float pushForce, float duration)
+    {
+        float elapsedTime = 0f;
+
+        while (elapsedTime < duration)
+        {
+            playerRigidbody.AddForce(direction * pushForce * Time.deltaTime, ForceMode2D.Impulse);
+            elapsedTime += Time.deltaTime;
+            yield return null; // 다음 프레임까지 대기
+        }
+    }
+
 
     void OnTriggerEnter2D(Collider2D other)
     {

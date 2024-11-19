@@ -5,40 +5,47 @@ using UnityEngine;
 public class Thrust_Trigger : MonoBehaviour
 {
     public Boss boss;
-    public bool isDetecting;
-    public bool isChecked;
+    public float stayTime;
+    public bool isInTrigger;
+    public GameObject player;
 
     void Start()
     {
-        isDetecting = false;
-    }
-
-    void FixedUpdate()
-    {
-        
+        stayTime = 0f; // 초기화
+        isInTrigger = false;
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Player") && other.CompareTag("Player") && !isDetecting)
+        if (other.CompareTag("Player"))
         {
-            isDetecting = true;
+            stayTime = 0f; // 플레이어가 들어오면 타이머 초기화
         }
     }
 
     void OnTriggerStay2D(Collider2D other)
     {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Player") && other.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
-            isDetecting = true;
+            stayTime += Time.deltaTime; // 플레이어가 트리거에 머무는 동안 시간 증가
+
+            if (stayTime >= 2.0f)
+            {
+                Debug.Log("2초 이상 머무름");
+                isInTrigger = true;
+                stayTime = 0f; // 2초가 지나면 타이머 초기화
+            }
+
+            player = other.gameObject;
         }
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Player") && other.CompareTag("Player") && isDetecting)
+        if (other.CompareTag("Player"))
         {
-            isDetecting = false;
+            stayTime = 0f; // 플레이어가 나가면 타이머 초기화
+            isInTrigger = false;
         }
     }
 }
