@@ -228,7 +228,7 @@ GameObject:
   - component: {fileID: 374753507}
   m_Layer: 6
   m_Name: boss
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -422,6 +422,7 @@ MonoBehaviour:
   isAttackSpliting: 0
   isThrusting: 0
   moveSpeed: 0
+  hp: 0
 --- !u!1 &422381843
 GameObject:
   m_ObjectHideFlags: 0
@@ -2581,10 +2582,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 664f9699424e2af45aa89de6dd3440b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boss: {fileID: 0}
+  boss: {fileID: 374753507}
   stayTime: 0
   isInTrigger: 0
   player: {fileID: 0}
+  thrustDuration: 2
 --- !u!1 &1737561166
 GameObject:
   m_ObjectHideFlags: 0

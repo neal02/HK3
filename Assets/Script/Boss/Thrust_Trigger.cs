@@ -8,35 +8,31 @@ public class Thrust_Trigger : MonoBehaviour
     public float stayTime;
     public bool isInTrigger;
     public GameObject player;
+    public float thrustDuration = 2f;
+    bool isPlayerInTrigger = false;
+    Boss bossScript;
 
     void Start()
     {
-        stayTime = 0f; // 초기화
+        stayTime = -1f; // 초기화
         isInTrigger = false;
+        bossScript = boss.GetComponent<Boss>();
+    }
+
+    void Update()
+    {
+        if(isPlayerInTrigger && !bossScript.isThrusting && Time.time >= stayTime + thrustDuration)
+        {
+            isInTrigger = true;
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            stayTime = 0f; // 플레이어가 들어오면 타이머 초기화
-        }
-    }
-
-    void OnTriggerStay2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            stayTime += Time.deltaTime; // 플레이어가 트리거에 머무는 동안 시간 증가
-
-            if (stayTime >= 2.0f)
-            {
-                Debug.Log("2초 이상 머무름");
-                isInTrigger = true;
-                stayTime = 0f; // 2초가 지나면 타이머 초기화
-            }
-
-            player = other.gameObject;
+            stayTime = Time.time;
+            isPlayerInTrigger = true;
         }
     }
 
@@ -44,7 +40,8 @@ public class Thrust_Trigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            stayTime = 0f; // 플레이어가 나가면 타이머 초기화
+            isPlayerInTrigger = false;
+            stayTime = -1f;
             isInTrigger = false;
         }
     }

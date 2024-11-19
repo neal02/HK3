@@ -45,4 +45,12 @@ public class DashAttack : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         delay = true;
     }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.CompareTag("Boss"))
+        {
+            Debug.Log("보스 때림");
+        }
+    }
 }

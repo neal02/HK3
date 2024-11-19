@@ -33,6 +33,7 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
     private bool isFlippingBlocked = false;
 
     public float moveSpeed;
+    public float hp;
 
     void Start()
     {
@@ -48,11 +49,14 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
         attackTriggerScript = attackTrigger.GetComponent<Attack_Trigger>();
         thrustTriggerScript = thrustTrigger.GetComponent<Thrust_Trigger>();
         playerRigid = player.GetComponent<Rigidbody2D>();
-        
-        moveSpeed = 2.0f;
+
         isDetecting = false;
         isFirstDetecting = false;
         isAlive = true;
+        
+        moveSpeed = 2.0f;
+        hp = 100.0f;
+        
 
         StartCoroutine(StateMachine());
     }
@@ -360,12 +364,6 @@ IEnumerator PushPlayerSmoothly(Rigidbody2D playerRigidbody, Vector2 direction, f
             elapsedTime += Time.deltaTime;
             yield return null; // 다음 프레임까지 대기
         }
-    }
-
-
-    void OnTriggerEnter2D(Collider2D other)
-    {
-
     }
 
     void OnCollisionEnter2D(Collision2D other)
