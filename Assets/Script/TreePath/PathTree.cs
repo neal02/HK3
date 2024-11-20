@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BloodTree : MonoBehaviour
+public class PathTree : MonoBehaviour
 {
     Animator animator;
     SpriteRenderer spriteRenderer;
@@ -12,13 +12,13 @@ public class BloodTree : MonoBehaviour
     public int test;
 
     private bool isClearing;
-    private bool isPerfectCalled; 
+    private bool isPerfectCalled;
 
     void Start()
     {
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        clearSeal = 90;
+        clearSeal = 20;
         isPerfectCalled = false;
     }
 
@@ -26,7 +26,7 @@ public class BloodTree : MonoBehaviour
     {
         test = clearSeal;
 
-        if (isSeal && !isClearing && clearSeal % 10 == 0 && clearSeal >= -80) 
+        if (isSeal && !isClearing && clearSeal % 10 == 0 && clearSeal >= -80)
         {
             StartCoroutine(Clearing());
         }
@@ -35,7 +35,7 @@ public class BloodTree : MonoBehaviour
         {
             //Debug.Log("¿ÞÂÊ ³¡");
             animator.SetBool("isPerfect", true);
-            isPerfectCalled = true; 
+            isPerfectCalled = true;
         }
     }
 
@@ -57,8 +57,7 @@ public class BloodTree : MonoBehaviour
         if (clearSeal < -90)
         {
             clearSeal = -90;
-            isSeal = false; 
+            isSeal = false;
         }
     }
 }
-

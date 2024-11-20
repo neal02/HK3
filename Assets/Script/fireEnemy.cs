@@ -8,7 +8,7 @@ public class fireEnemy : MonoBehaviour
     GameObject player;
     SpriteRenderer spriteRenderer;
 
-    public float XfireSpeed = 0.01f;
+    public float XfireSpeed = 1.5f;
     public float YfireSpeed = 0.005f;
 
     private bool isInvisible = false;

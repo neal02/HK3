@@ -6,7 +6,7 @@ public class StraightFire : MonoBehaviour
 {
     GameObject player;
     Rigidbody2D rigid2D;
-    public float XfireSpeed = 0.05f;
+    public float XfireSpeed = 2f;
 
     int fireHp = 2;
 

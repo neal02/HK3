@@ -17,7 +17,6 @@ public class TreeFireGenerator : MonoBehaviour
     private bool RisDDDD = true;
     private int Rindex = 0;
 
-
     Quaternion rotation = Quaternion.identity;
     Vector3[] Leftpos;
     Vector3[] Rightpos;
@@ -36,6 +35,7 @@ public class TreeFireGenerator : MonoBehaviour
         {
             Destroy(animalGenerator);
             Destroy(flowerGenerator);
+            
         } 
         if(BloodTree.clearSeal <= 0)
         {
@@ -92,7 +92,7 @@ public class TreeFireGenerator : MonoBehaviour
 
     IEnumerator SpawnDelay()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.5f);
         isDelay = false;
         index++;
         yield return new WaitForSeconds(0.5f);
@@ -102,13 +102,13 @@ public class TreeFireGenerator : MonoBehaviour
     IEnumerator CycleDelay()
     {
         isDDDD = false;
-        yield return new WaitForSeconds(8);
+        yield return new WaitForSeconds(6);
         isDDDD = true;
     }
 
     IEnumerator RSpawnDelay()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.5f);
         RisDelay = false;
         Rindex++;
         yield return new WaitForSeconds(0.5f);
@@ -118,7 +118,7 @@ public class TreeFireGenerator : MonoBehaviour
     IEnumerator RCycleDelay()
     {
         RisDDDD = false;
-        yield return new WaitForSeconds(8);
+        yield return new WaitForSeconds(6);
         RisDDDD = true;
     }
 }

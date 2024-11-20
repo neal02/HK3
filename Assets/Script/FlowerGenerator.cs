@@ -32,19 +32,19 @@ public class FlowerGenerator : MonoBehaviour
         {
             isGen = false;
             currentIndex = 0;
-            Invoke("Generate", 3);
+            Invoke("Generate", 5);
         }
         else if (currentPrefab[1] == null && isGen)
         {
             isGen = false;
             currentIndex = 1;
-            Invoke("Generate", 3);
+            Invoke("Generate", 5);
         }
         else if (currentPrefab[2] == null && isGen)
         {
             isGen = false;
             currentIndex = 2;
-            Invoke("Generate", 3);
+            Invoke("Generate", 5);
         }
 
     }

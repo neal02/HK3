@@ -23,7 +23,7 @@ public class BloodTTTT : MonoBehaviour
     void Update()
     {
         test = BloodTree.clearSeal;
-        if (BloodTree.isSeal && !isClearing && BloodTree.clearSeal % 10 == 0 && BloodTree.clearSeal <= 0 && BloodTree.clearSeal >= -90)
+        if (BloodTree.isSeal && !isClearing && BloodTree.clearSeal % 10 == 0 && BloodTree.clearSeal <= 0 && BloodTree.clearSeal >= -80)
         {
             StartCoroutine(Clearing());
         }
