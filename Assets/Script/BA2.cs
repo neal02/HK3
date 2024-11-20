@@ -46,7 +46,18 @@ public class BA2 : MonoBehaviour
 
         }
         bool isAttacking = bossAnimator.GetCurrentAnimatorStateInfo(0).IsName("Attack"); // "BossAttackAnimation"은 애니메이션 이름
-        BoxCollider2D.enabled = isAttacking;
+        if (isAttacking) {
+            StartCoroutine(EnableBoxColliderWithDelay(0.5f)); // 1초 딜레이 후 BoxCollider 활성화
+        }
+        else {
+            StopAllCoroutines(); // 공격이 중단되면 코루틴 중지
+            BoxCollider2D.enabled = false;
+        }
 
+    }
+    private IEnumerator EnableBoxColliderWithDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        BoxCollider2D.enabled = true;
     }
 }
