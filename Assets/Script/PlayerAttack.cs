@@ -6,6 +6,8 @@ using UnityEngine;
 public class PlayerAttack : MonoBehaviour
 {
     BoxCollider2D boxCollider2D;
+    public GameObject boss;
+    Boss bossScript;
 
 
     private bool delay = true;
@@ -14,6 +16,7 @@ public class PlayerAttack : MonoBehaviour
     {
         Application.targetFrameRate = 60;
         boxCollider2D = GetComponent<BoxCollider2D>();
+        bossScript = boss.GetComponent<Boss>();
     }
 
     
@@ -50,6 +53,8 @@ public class PlayerAttack : MonoBehaviour
         if(other.CompareTag("Boss"))
         {
             Debug.Log("보스 때림");
+            bossScript.hp -= 10;
+            Debug.Log("현재 체력: " + bossScript.hp);
         }
     }
 }
