@@ -8,6 +8,8 @@ TagManager:
   - Attack
   - PlayerAttack
   - PlayerDamaged
+  - Ground
+  - Target
   layers:
   - Default
   - TransparentFX
@@ -50,4 +52,7 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 3293945969
+    locked: 0
+  - name: Effect
+    uniqueID: 2001373611
     locked: 0

@@ -60,6 +60,7 @@ public class BossAI : MonoBehaviour
     private void Idle()
     {
         animator.SetBool("moving", false);
+        animator.SetBool("isAlive", true);
 
         // 시야 범위에 플레이어가 들어오면 이동 상태로 전환
         if (Vector3.Distance(transform.position, player.position) <= fieldOfVision)

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;  // 씬 전환을 위해 추가
 using UnityEngine;
 
 public class playerControl : MonoBehaviour
@@ -108,15 +109,33 @@ public class playerControl : MonoBehaviour
         }
     }
 
-    // 체력 감소 메서드 추가
     public void TakeDamage(int damage)
     {
         health -= damage;  // 체력 감소
         if (health <= 0)
         {
             health = 0;
-            
+            // 체력이 0일 때 "death" 애니메이션 트리거
+            animator.SetTrigger("death");
+            Die();  // 사망 함수 호출
         }
+        else
+        {
+            // 체력이 0이 아니면 "hit" 애니메이션 트리거
+            animator.SetTrigger("hit");
+        }
+    }
+
+    void Die()
+    {
+        // 사망 처리 후 2초 뒤에 시작 씬으로 이동
+        // 이 시간을 조정하여 사망 애니메이션 후 씬 전환
+        Invoke("LoadStartScene", 1f);
+    }
+
+    void LoadStartScene()
+    {
+        SceneManager.LoadScene("boss1");  
     }
 
     IEnumerator CooldownDash()
