@@ -25,9 +25,11 @@ public class playerControl : MonoBehaviour
     SpriteRenderer spriteRenderer;
     Animator animator;
 
-    // 체력 관련 변수 추가
+    // 체력 관련 변수
     public int health = 100;  // 초기 체력 설정
     public int maxHealth = 100;  // 최대 체력
+
+    GameDirector gameDirector; // GameDirector 참조
 
     void Start()
     {
@@ -35,6 +37,9 @@ public class playerControl : MonoBehaviour
         rigid2D = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+
+        // GameDirector 컴포넌트 찾기
+        gameDirector = GameObject.FindObjectOfType<GameDirector>();
     }
 
     void Update()
@@ -112,17 +117,22 @@ public class playerControl : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;  // 체력 감소
+
+        // GameDirector를 통해 체력 게이지 업데이트
+        if (gameDirector != null)
+        {
+            gameDirector.UpdateHpGauge(health, maxHealth);
+        }
+
         if (health <= 0)
         {
             health = 0;
-            // 체력이 0일 때 "death" 애니메이션 트리거
             animator.SetTrigger("death");
-            Die();  // 사망 함수 호출
+            Die();  // 사망 처리
         }
         else
         {
-            // 체력이 0이 아니면 "hit" 애니메이션 트리거
-            animator.SetTrigger("hit");
+            animator.SetTrigger("hit");  // 맞는 애니메이션 출력
         }
     }
 
@@ -135,7 +145,7 @@ public class playerControl : MonoBehaviour
 
     void LoadStartScene()
     {
-        SceneManager.LoadScene("boss1");  
+        SceneManager.LoadScene("boss1");
     }
 
     IEnumerator CooldownDash()
