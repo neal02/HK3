@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using Unity.Burst.Intrinsics;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크립트에선 보스의 에니메이션과 변수, 함수, 그리고 충돌 콜라이더 구현, 다른 기믹에 대한 구현은 자식 오브젝트에서 함
 {
@@ -19,7 +21,7 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
     Attack_Trigger attackTriggerScript;
     Thrust_Trigger thrustTriggerScript;
 
-    public enum BossState { idle, move, attack, jumpAttack, attackSplit, thrust }
+    public enum BossState { idle, move, attack, jumpAttack, attackSplit, thrust, death, exit }
     public BossState currentState = BossState.idle;
 
     public bool isDetecting;
@@ -60,7 +62,7 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
         isAlive = true;
         
         moveSpeed = 2.0f;
-        hp = 100.0f;
+        hp = 10.0f;
         StartCoroutine(StateMachine());
     }
 
@@ -88,12 +90,16 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
                 case BossState.attackSplit:
                     StartCoroutine(AttackSplit());
                     break;
-                /*case BossState.death:
+                case BossState.death:
                     Death();
-                    break;*/
+                    break;
+                case BossState.exit:
+                    isAlive = false;
+                    break;
             }
             yield return null;
         }
+       
     }
 
     void Idle()
@@ -105,23 +111,39 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
         }
     }
 
+    void Death()
+    {
+        anim.SetBool("isDied", true);
+        StartCoroutine(DeathSequence());
+        
+    }
+
     void Update()
     {
-        Vector3 playerPosition = player.transform.position;
-        Vector3 bossPosition = transform.position;
-
-        Vector3 direction = new Vector3((playerPosition.x - bossPosition.x), 0, 0);
-
-        if (attackCooldown > 0)
+        if(hp <= 0)
         {
-            attackCooldown -= Time.deltaTime;
+            ChangeState(BossState.death);
+            hp = 1;
         }
 
-        if(isGrounded && isMoving)
+        if(currentState != BossState.exit)
         {
-            transform.position += direction.normalized * moveSpeed * Time.deltaTime;
-        }
+            Vector3 playerPosition = player.transform.position;
+            Vector3 bossPosition = transform.position;
 
+            Vector3 direction = new Vector3((playerPosition.x - bossPosition.x), 0, 0);
+
+            if (attackCooldown > 0)
+            {
+                attackCooldown -= Time.deltaTime;
+            }
+
+            if(isGrounded && isMoving)
+            {
+                transform.position += direction.normalized * moveSpeed * Time.deltaTime;
+            }
+
+        } 
     }
 
     void MoveToPlayer()
@@ -202,6 +224,13 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
     void ChangeState(BossState newState)
     {
         currentState = newState;
+
+        if(newState == BossState.exit)
+        {
+            // 보스 사망 시 호출
+            FindObjectOfType<SceneTransition>().EndBattleAndFadeOut("ClearScene");
+
+        }
     }
 
     void CheckFliping()
@@ -360,7 +389,7 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
         if (playerRigid != null)
         {
             Vector2 pushDirection; // 왼쪽으로 밀기
-            float pushForce = 1500f; // 힘의 크기
+            float pushForce = 2000f; // 힘의 크기
             float pushDuration = 0.5f; // 밀리는 지속 시간
 
             if (player.transform.position.x < transform.position.x)
@@ -430,5 +459,13 @@ IEnumerator PushPlayerSmoothly(Rigidbody2D playerRigidbody, Vector2 direction, f
         {
             isGrounded = false;
         }
+    }
+
+    IEnumerator DeathSequence()
+    {
+        yield return new WaitForSeconds(1.5f);
+        anim.enabled = false;
+        gameObject.SetActive(false);
+        ChangeState(BossState.exit);
     }
 }

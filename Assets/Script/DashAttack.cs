@@ -6,7 +6,8 @@ using UnityEngine;
 public class DashAttack : MonoBehaviour
 {
     BoxCollider2D boxCollider2D;
-
+    public GameObject boss;
+    Boss bossScript;
 
     private bool delay = true;
 
@@ -14,6 +15,7 @@ public class DashAttack : MonoBehaviour
     {
         Application.targetFrameRate = 60;
         boxCollider2D = GetComponent<BoxCollider2D>();
+        bossScript = boss.GetComponent<Boss>();
     }
 
 
@@ -46,11 +48,23 @@ public class DashAttack : MonoBehaviour
         delay = true;
     }
 
+    IEnumerator AttackedAnimation()
+    {
+        Debug.Log("되나");
+        bossScript.anim.SetTrigger("isAttacked");
+        yield return new WaitForSeconds(0.1f);
+        bossScript.anim.SetTrigger("attackedReturn");
+        
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if(other.CompareTag("Boss"))
         {
             Debug.Log("보스 때림");
+            bossScript.hp -= 20;
+            StartCoroutine(AttackedAnimation());
+            Debug.Log("현재 체력: " + bossScript.hp);
         }
     }
 }

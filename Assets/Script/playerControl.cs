@@ -73,7 +73,6 @@ public class playerControl : MonoBehaviour
             animator.SetFloat("isDash", dashcon);   //�뽬 �ִϸ��̼��� ��� ��µ� �� �ֵ��� �뽬���� -0.5����Ʈ ������ �ϰ� �̰� 0 ���϶� �ִϸ��̼� ���. 
             transform.position += new Vector3(dashSpeed * Input.GetAxisRaw("Horizontal"), 0, 0);
             isDashCool = false;
-            Debug.Log("�������� ��");
             StartCoroutine(CooldownDash());
         }
         else if (Input.GetKeyDown(KeyCode.X) && maxAttack > 0 && isAttackCool && AttackDelay)   //����
@@ -82,7 +81,6 @@ public class playerControl : MonoBehaviour
             maxAttack--;
             animator.SetFloat("isAttack", firstattackcon);
             AttackDelay = false;
-            Debug.Log("����");
             StartCoroutine(AttDelay());
         }
         else if (Input.GetKeyDown(KeyCode.C) && maxjump > 0)   //����
@@ -110,7 +108,6 @@ public class playerControl : MonoBehaviour
     {
         yield return new WaitForSeconds(DashcoolTime);
         isDashCool = true;
-        Debug.Log("�뽬��밡��");
     }
 
     IEnumerator AttDelay()
