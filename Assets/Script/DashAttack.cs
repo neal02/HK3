@@ -50,7 +50,6 @@ public class DashAttack : MonoBehaviour
 
     IEnumerator AttackedAnimation()
     {
-        Debug.Log("되나");
         bossScript.anim.SetTrigger("isAttacked");
         yield return new WaitForSeconds(0.1f);
         bossScript.anim.SetTrigger("attackedReturn");

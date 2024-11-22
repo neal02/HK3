@@ -60,7 +60,6 @@ public class PlayerAttack : MonoBehaviour
     {
         if(other.CompareTag("Boss"))
         {
-            Debug.Log("보스 때림");
             bossScript.hp -= 10;
             StartCoroutine(AttackedAnimation());
             Debug.Log("현재 체력: " + bossScript.hp);

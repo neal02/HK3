@@ -114,8 +114,7 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
     void Death()
     {
         anim.SetBool("isDied", true);
-        StartCoroutine(DeathSequence());
-        
+        StartCoroutine(DeathSequence());   
     }
 
     void Update()
@@ -430,7 +429,7 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
         ChangeState(BossState.idle);
     }
 
-IEnumerator PushPlayerSmoothly(Rigidbody2D playerRigidbody, Vector2 direction, float pushForce, float duration)
+    IEnumerator PushPlayerSmoothly(Rigidbody2D playerRigidbody, Vector2 direction, float pushForce, float duration)
     {
         float elapsedTime = 0f;
 
