@@ -21,7 +21,7 @@ public class TreePathCamera : MonoBehaviour
         {
             gameObject.transform.position = new Vector3(MimCameraX, 0, -10);
         } 
-        else if (player.transform.position.x >= 15)
+        else if (player.transform.position.x >= 40)
         {
             gameObject.transform.position = new Vector3(MaxCameraX, 0, -10);
         } else

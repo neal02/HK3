@@ -52,6 +52,12 @@ public class RedTreeController : MonoBehaviour
                 spriteRenderer.color = new Color(treeColor, treeColor, treeColor);
             }
         }
+        if(MaxTreeHp < 0)
+        {
+            treeColor -= 0.01f;
+            spriteRenderer.color = new Color(treeColor, treeColor, treeColor);
+            poly2D.enabled = false;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -60,10 +66,6 @@ public class RedTreeController : MonoBehaviour
         {
             MaxTreeHp -= 10;
             StartCoroutine(Delay());
-        }
-        if(MaxTreeHp < 0)
-        {
-            spriteRenderer.color = new Color(0, 0, 0);
         }
     }
 
