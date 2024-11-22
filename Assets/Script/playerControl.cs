@@ -25,6 +25,21 @@ public class playerControl : MonoBehaviour
     SpriteRenderer spriteRenderer;
     Animator animator;
 
+    private static playerControl instance;
+
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
     void Start()
     {
         Application.targetFrameRate = 60;

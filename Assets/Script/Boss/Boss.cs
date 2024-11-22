@@ -126,7 +126,7 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
             hp = 1;
         }
 
-        if(currentState != BossState.exit)
+        if(currentState != BossState.exit || currentState != BossState.thrust)
         {
             Vector3 playerPosition = player.transform.position;
             Vector3 bossPosition = transform.position;
@@ -160,9 +160,7 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
                 return;
             }
 
-            if (hp >= 50)
-            {
-                if(math.abs(player.transform.position.x - transform.position.x) <= 5.0f)
+            if(math.abs(player.transform.position.x - transform.position.x) <= 5.0f)
                 {
                     attackTrigger.SetActive(true);
                     attackTriggerScript.isDetecting = true;
@@ -178,9 +176,8 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
                             ChangeState(BossState.attack);
                         } 
                     }
-                }   
-            }
-            else
+                }
+            /*else
             {
                 if(math.abs(player.transform.position.x - transform.position.x) <= 10.0f)
                 {
@@ -198,7 +195,7 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
                         } 
                     }
                 }    
-            }
+            }*/
 
             if(thrustTriggerScript.isInTrigger)
             {
