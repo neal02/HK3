@@ -424,6 +424,8 @@ MonoBehaviour:
   isThrusting: 0
   moveSpeed: 0
   hp: 0
+  attackCooldownDuration: 1.5
+  attackSplitCooldownDuration: 3
 --- !u!1 &422381843
 GameObject:
   m_ObjectHideFlags: 0
@@ -611,7 +613,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   jumpSpeed: 5
-  dashSpeed: 1
+  dashSpeed: 3
   DashcoolTime: 3
   AttackcoolTime: 1.5
 --- !u!1 &481104470
