@@ -131,4 +131,14 @@ public class playerControl : MonoBehaviour
         AttackDelay = true;
         
     }
+    public void StopMovement()
+    {
+        rigid2D.velocity = Vector2.zero;  // Rigidbody의 속도를 0으로 설정
+    }
+
+    // 이동을 재개하는 함수
+    public void ResumeMovement()
+    {
+        rigid2D.velocity = new Vector2(0, 0); // 원래대로 속도 설정 (혹은 원래 속도를 적용)
+    }
 }
