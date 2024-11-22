@@ -23,12 +23,12 @@ public class BloodTTTT : MonoBehaviour
     void Update()
     {
         test = BloodTree.clearSeal;
-        if (BloodTree.isSeal && !isClearing && BloodTree.clearSeal % 10 == 0 && BloodTree.clearSeal <= 0 && BloodTree.clearSeal >= -80)
+        if (BloodTree.isSeal && !isClearing && BloodTree.clearSeal % 10 == 0  && BloodTree.clearSeal >= -40)
         {
             StartCoroutine(Clearing());
         }
 
-        if (BloodTree.clearSeal == -90 && !isComplete)
+        if (BloodTree.clearSeal == -50 && !isComplete)
         {
             //Debug.Log("-100");
             animator.SetBool("isPerfect", true);
@@ -39,18 +39,16 @@ public class BloodTTTT : MonoBehaviour
     IEnumerator Clearing()
     {
         isClearing = true;
-        if (BloodTree.clearSeal != -90)
+        yield return new WaitForEndOfFrame();
+        if (BloodTree.clearSeal != -50)
             animator.SetBool("isClear", true);
-        //Debug.Log("안녕하세요");
-
         yield return new WaitForSeconds(1.33f);
         animator.SetBool("isClear", false);
-        //Debug.Log("세요");
-        yield return new WaitForEndOfFrame();
+        
 
         isClearing = false;
 
-        if (BloodTree.clearSeal <= -90)
+        if (BloodTree.clearSeal < -50)
         {
             BloodTree.isSeal = false; 
         }

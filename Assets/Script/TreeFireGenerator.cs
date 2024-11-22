@@ -23,15 +23,15 @@ public class TreeFireGenerator : MonoBehaviour
 
     void Start()
     {
-        Leftpos = new Vector3[7];
-        Rightpos = new Vector3[7];
+        Leftpos = new Vector3[5];
+        Rightpos = new Vector3[5];
         DecideLeftPos();
         DecideRightPos();
     }
 
     void Update()
     {
-        if(BloodTree.clearSeal <= -90)
+        if(BloodTree.clearSeal <= -50)
         {
             Destroy(animalGenerator);
             Destroy(flowerGenerator);
@@ -46,13 +46,13 @@ public class TreeFireGenerator : MonoBehaviour
                 StartCoroutine(SpawnDelay());
             }
         }
-        if (index == 7)
+        if (index == 5)
         {
             StartCoroutine(CycleDelay());
             index = 0;
         }
 
-        if (BloodTree.clearSeal <= -90)
+        if (BloodTree.clearSeal <= -50)
         {
             if (RisDelay && RisDDDD)
             {
@@ -61,7 +61,7 @@ public class TreeFireGenerator : MonoBehaviour
                 StartCoroutine(RSpawnDelay());
             }
         }
-        if (Rindex == 7)
+        if (Rindex == 5)
         {
             StartCoroutine(RCycleDelay());
             Rindex = 0;
@@ -70,24 +70,20 @@ public class TreeFireGenerator : MonoBehaviour
 
     void DecideLeftPos()
     {
-        Leftpos[0] = new Vector3(-7.1f, -1.5f, 0);
-        Leftpos[1] = new Vector3(-7.1f, 0.9f, 0);
-        Leftpos[2] = new Vector3(-6.3f, 0.7f, 0);
-        Leftpos[3] = new Vector3(-3.5f, 0.6f, 0);
-        Leftpos[4] = new Vector3(-6.7f, 2, 0);
-        Leftpos[5] = new Vector3(-5, 2, 0);
-        Leftpos[6] = new Vector3(-1.6f, 1.2f, 0);
+        Leftpos[0] = new Vector3(-7.2f, 3.6f, 0);
+        Leftpos[1] = new Vector3(-7.2f, 2.1f, 0);
+        Leftpos[2] = new Vector3(-7.2f, 0.6f, 0);
+        Leftpos[3] = new Vector3(-7.2f, -0.9f, 0);
+        Leftpos[4] = new Vector3(-7.2f, -1.4f, 0);
     }
 
     void DecideRightPos()
     {
-        Rightpos[0] = new Vector3(7.1f, -1.5f, 0);
-        Rightpos[1] = new Vector3(7.1f, 0.9f, 0);
-        Rightpos[2] = new Vector3(6.3f, 0.7f, 0);
-        Rightpos[3] = new Vector3(3.5f, 0.6f, 0);
-        Rightpos[4] = new Vector3(6.7f, 2, 0);
-        Rightpos[5] = new Vector3(5, 2, 0);
-        Rightpos[6] = new Vector3(1.6f, 1.2f, 0);
+        Rightpos[0] = new Vector3(7.2f, 3.6f, 0);
+        Rightpos[1] = new Vector3(7.2f, 2.1f, 0);
+        Rightpos[2] = new Vector3(7.2f, 0.6f, 0);
+        Rightpos[3] = new Vector3(7.2f, -0.9f, 0);
+        Rightpos[4] = new Vector3(7.2f, -1.4f, 0);
     }
 
     IEnumerator SpawnDelay()

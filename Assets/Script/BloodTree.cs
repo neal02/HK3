@@ -18,7 +18,7 @@ public class BloodTree : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        clearSeal = 90;
+        clearSeal = 50;
         isPerfectCalled = false;
     }
 
@@ -26,12 +26,12 @@ public class BloodTree : MonoBehaviour
     {
         test = clearSeal;
 
-        if (isSeal && !isClearing && clearSeal % 10 == 0 && clearSeal >= -80) 
+        if (isSeal && !isClearing && clearSeal % 10 == 0 && clearSeal >= -50) 
         {
             StartCoroutine(Clearing());
         }
 
-        if (clearSeal == 0 && !isPerfectCalled)
+        if (clearSeal == -50 && !isPerfectCalled)
         {
             //Debug.Log("¿ÞÂÊ ³¡");
             animator.SetBool("isPerfect", true);
@@ -54,9 +54,9 @@ public class BloodTree : MonoBehaviour
         //Debug.Log("qq");
         isClearing = false;
 
-        if (clearSeal < -90)
+        if (clearSeal < -50)
         {
-            clearSeal = -90;
+            clearSeal = -50;
             isSeal = false; 
         }
     }
