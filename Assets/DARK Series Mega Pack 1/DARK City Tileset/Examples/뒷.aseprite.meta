@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5463850d3d9364a43936e5d9e1e7c29c
+guid: 73031d3a419d84c4790bd0736d2d14b4
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,7 +97,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638679138916979066
+  platformSettingsDirtyTick: 638679164369920810
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -121,7 +121,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: DARK City
+  - name: "\uB4B7"
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -132,7 +132,7 @@ ScriptedImporter:
       y: 4
       width: 498
       height: 250
-    spriteID: 3d1628709b5807d45bf5ccc727bb3485
+    spriteID: 63b2ed2444041db49aed7fe4814e6ac0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -144,13 +144,13 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -825563521
-    name: DARK City
+    guid: 1648408591
+    name: "\uB4B7"
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: DARK City
+    - name: "\uB4B7"
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -158,10 +158,22 @@ ScriptedImporter:
         y: 0
         width: 498
         height: 250
-      spriteId: 3d1628709b5807d45bf5ccc727bb3485
+      spriteId: 63b2ed2444041db49aed7fe4814e6ac0
     linkedCells: []
     parentIndex: -1
   platformSettings:
+  - name: Default
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
   - name: DefaultTexturePlatform
     overridden: 0
     ignorePlatformSupport: 0
