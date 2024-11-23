@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Burst.Intrinsics;
-using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -15,14 +15,20 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
     private Collider2D playerCollider, bossCollider;
     private SpriteRenderer sprite;
 
-    public GameObject jumpAttackTrigger;
-    public GameObject attackTrigger;
-    public GameObject thrustTrigger;
-    Attack_Trigger attackTriggerScript;
-    Thrust_Trigger thrustTriggerScript;
+    public GameObject jumpAttackTriggerObject;
+    public GameObject attackTriggerObject;
+    public GameObject thrustTriggerObject;
+    public GameObject poisonTriggerObject;
+    public GameObject summonObject;
 
-    public enum BossState { idle, move, attack, jumpAttack, attackSplit, thrust, death, exit }
+    Thrust_Trigger thrustTrigger;
+    playerControl playerScript;
+    Summoned summonScript;
+
+    public enum BossState { idle, attack, jumpAttack, move, attackSplit, thrust, poison, death, exit }
     public BossState currentState = BossState.idle;
+
+    public List<Transform> triggers;
 
     public bool isDetecting;
     public bool isFirstDetecting;
@@ -33,14 +39,19 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
     public bool isMoving = false;
     public bool isAttackSpliting = false;
     public bool isThrusting = false;
+    public bool isPoison = false;
     private bool isFlippingBlocked = false;
-    private bool isGrounded = false;
 
     public float moveSpeed;
     public float hp;
-    private float attackCooldown = 0f;
     public float attackCooldownDuration = 1.5f;
     public float attackSplitCooldownDuration = 3.0f;
+    private bool isFacingRight = true;
+
+    private float patternChangeTime = 2f;
+    private bool isCooldown;        // 쿨타임 여부 확인
+    private float cooldownDuration = 5f; // 쿨타임 지속 시간
+    private float cooldownTimer;    // 쿨타임 타이머
 
     void Start()
     {
@@ -52,63 +63,103 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
         bossCollider = GetComponent<Collider2D>();
         sprite = GetComponent<SpriteRenderer>();
         Physics2D.IgnoreCollision(bossCollider, playerCollider, true);
-        jumpAttackTrigger.SetActive(false);
-        attackTriggerScript = attackTrigger.GetComponent<Attack_Trigger>();
-        thrustTriggerScript = thrustTrigger.GetComponent<Thrust_Trigger>();
+        jumpAttackTriggerObject.SetActive(false);
+        poisonTriggerObject.SetActive(false);
         playerRigid = player.GetComponent<Rigidbody2D>();
+        summonObject.SetActive(false);
+
 
         isDetecting = false;
         isFirstDetecting = false;
         isAlive = true;
-        
-        moveSpeed = 2.0f;
-        hp = 10.0f;
-        StartCoroutine(StateMachine());
+
+        foreach (Transform child in transform)
+        {
+            if (child.CompareTag("Trigger"))
+            {
+                triggers.Add(child);
+            }
+        }
+
+        thrustTrigger = thrustTriggerObject.GetComponent<Thrust_Trigger>();
+        playerScript = player.GetComponent<playerControl>();
+        summonScript = summonObject.GetComponent<Summoned>();
+
+        moveSpeed = 10.0f;
+        hp = 1000.0f;
+        StartCoroutine(RandomPatternRoutine());
     }
 
-    IEnumerator StateMachine()
+    IEnumerator RandomPatternRoutine()
     {
         while (isAlive)
         {
-            switch (currentState)
+            // 일정 시간마다 랜덤으로 패턴을 선택
+            yield return new WaitForSeconds(patternChangeTime);
+
+            // 랜덤으로 4개 패턴 중 하나를 선택
+            int pattern = Random.Range(0, 5);
+
+            switch (pattern)
             {
-                case BossState.idle:
-                    Idle();
+                case 0:
+                    ChangeState(BossState.attack);
                     break;
-                case BossState.move:
-                    MoveToPlayer();
+                case 1:
+                    ChangeState(BossState.jumpAttack);
                     break;
-                case BossState.attack:
-                    StartCoroutine(Attack());
+                case 2:
+                    ChangeState(BossState.thrust);
                     break;
-                case BossState.jumpAttack:
-                    StartCoroutine(JumpAttack());
+                case 3:
+                    ChangeState(BossState.poison);
                     break;
-                case BossState.thrust:
-                    StartCoroutine(Thrust());
-                    break;
-                case BossState.attackSplit:
-                    StartCoroutine(AttackSplit());
-                    break;
-                case BossState.death:
-                    Death();
-                    break;
-                case BossState.exit:
-                    isAlive = false;
+                case 4:
+                    ChangeState(BossState.move);
                     break;
             }
-            yield return null;
         }
-       
+    }
+
+    void StateMachine()
+    {
+        switch (currentState)
+        {
+            case BossState.idle:
+                Idle();
+                break;
+            case BossState.attack:
+                StartCoroutine(Attack());
+                break;
+            case BossState.jumpAttack:
+                StartCoroutine(JumpAttack());
+                break;
+            case BossState.thrust:
+                StartCoroutine(Thrust());
+                break;
+            case BossState.attackSplit:
+                //StartCoroutine(AttackSplit());
+                break;
+            case BossState.poison:
+                StartCoroutine(Poison());
+                break;
+            case BossState.move:
+                StartCoroutine(Move());
+                break;
+            case BossState.death:
+                Death();
+                break;
+            case BossState.exit:
+                isAlive = false;
+                break;
+        }  
     }
 
     void Idle()
     {
-        anim.SetBool("isStanding", true);
-        if (isFirstDetecting)
-        {
-            ChangeState(BossState.move);
-        }
+        CheckFliping();
+
+        if (!isFirstDetecting) return;
     }
 
     void Death()
@@ -119,102 +170,139 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
 
     void Update()
     {
-        if(hp <= 0)
+        if (isAlive)
         {
-            ChangeState(BossState.death);
-            hp = 1;
-        }
+            StateMachine();
 
-        if(currentState != BossState.exit || currentState != BossState.thrust)
-        {
-            Vector3 playerPosition = player.transform.position;
-            Vector3 bossPosition = transform.position;
-
-            Vector3 direction = new Vector3((playerPosition.x - bossPosition.x), 0, 0);
-
-            if (attackCooldown > 0)
+            if (!isCooldown)
             {
-                attackCooldown -= Time.deltaTime;
+                StartCoroutine(summonScript.Summon());
+
+                InitializeSummonDirection();
+                
+                StartCooldown();
             }
 
-            if(isGrounded && isMoving)
+            if (isCooldown)
             {
-                transform.position += direction.normalized * moveSpeed * Time.deltaTime;
-            }
-
-        } 
-    }
-
-    void MoveToPlayer()
-    {
-        anim.SetBool("isStanding", false);
-        anim.SetBool("isMoving", true);   
-        isMoving = true;
-        CheckFliping();
-
-        if(isDetecting)
-        {
-            if (isThrusting)
-            {
-                return;
-            }
-
-            if(math.abs(player.transform.position.x - transform.position.x) <= 5.0f)
+                cooldownTimer -= Time.deltaTime;
+                if (cooldownTimer <= 0)
                 {
-                    attackTrigger.SetActive(true);
-                    attackTriggerScript.isDetecting = true;
-                    if(attackTriggerScript.isDetecting)
-                    {
-                        if(attackCooldown <= 0)
-                        {
-                            anim.SetBool("isMoving", false);
-                            anim.SetBool("isStanding", true);
-                            isMoving = false;
-
-                            attackCooldown = attackCooldownDuration;
-                            ChangeState(BossState.attack);
-                        } 
-                    }
+                    isCooldown = false; // 쿨타임 종료
                 }
-            /*else
-            {
-                if(math.abs(player.transform.position.x - transform.position.x) <= 10.0f)
-                {
-                    if(attackTriggerScript.isDetecting)
-                    {
-                        if(attackCooldown <= 0)
-                        {
-                            anim.SetBool("isMoving", false);
-                            anim.SetBool("isStanding", true);
-                            isMoving = false;
-
-                            attackCooldown = attackSplitCooldownDuration;
-                            ChangeState(BossState.attackSplit);
-
-                        } 
-                    }
-                }    
-            }*/
-
-            if(thrustTriggerScript.isInTrigger)
-            {
-                anim.SetBool("isMoving", false);
-                anim.SetBool("isThrusting", true);
-                isMoving = false;
-                ChangeState(BossState.thrust);
-                return;
             }
-
             
         }
-        else
+    }
+
+    void InitializeSummonDirection()
+    {
+        // 소환수의 플립 방향 강제 초기화
+        bool shouldFlip = player.transform.position.x > summonObject.transform.position.x;
+
+        if (shouldFlip != summonScript.isFacingRight)
         {
-            anim.SetBool("isMoving", false);
-            anim.SetBool("isStanding", true);
-            anim.Play("jump_attack_up");
-            isMoving = false;
-            ChangeState(BossState.jumpAttack);    
+            summonScript.isFacingRight = shouldFlip;
+            summonScript.sprite.flipX = shouldFlip;
+
+            foreach (Transform trigger in summonScript.triggers)
+            {
+                Vector3 localPosition = trigger.localPosition;
+                localPosition.x *= -1;
+                trigger.localPosition = localPosition;
+            }
         }
+    }
+
+    void StartCooldown()
+    {
+        isCooldown = true; // 쿨타임 활성화
+        cooldownTimer = cooldownDuration; // 타이머 초기화
+    } 
+
+    IEnumerator Move()
+    {
+        // 다른 행동 중이면 이동하지 않도록 방지
+        if (OtherAct()) yield break;
+
+        // 이동 시작
+        anim.SetBool("isMoving", true);
+        isMoving = true;
+
+        // 플레이어와 보스의 위치 계산
+        Vector3 playerPosition = player.transform.position;
+        Vector3 bossPosition = transform.position;
+
+        // 플레이어 방향으로 벡터 계산
+        Vector3 direction = new Vector3(playerPosition.x - bossPosition.x, transform.position.y, 0).normalized;
+
+        float moveTime = 1.2f;  // 이동 시간
+        float elapsedTime = 0f;
+
+        // 2.4초 동안 플레이어에게 이동
+        while (elapsedTime < moveTime)
+        {
+            transform.position += direction * moveSpeed * Time.deltaTime;
+            elapsedTime += Time.deltaTime;
+
+            // 이동 중 애니메이션 갱신
+            yield return null;
+        }
+
+        // 이동 완료 후
+        anim.SetBool("isMoving", false);
+        isMoving = false;
+
+        // Idle 상태로 전환
+        ChangeState(BossState.idle);
+    }
+
+
+    IEnumerator Attack()
+    {
+        if (OtherAct()) yield break;
+
+        anim.SetBool("isAttacking", true);
+        isAttacking = true;
+
+        isFlippingBlocked = true;
+
+        yield return new WaitForSeconds(1.9f);
+
+        isFlippingBlocked = false;
+
+        anim.SetBool("isAttacking", false);
+        isAttacking = false;
+
+        ChangeState(BossState.idle);
+    }
+
+    IEnumerator Poison()
+    {
+        if (OtherAct()) yield break;
+
+        anim.SetBool("isPoison", true);
+        isPoison = true;
+
+        isFlippingBlocked = true;
+
+        yield return new WaitForSeconds(1.6f);
+
+        isFlippingBlocked = false;
+
+        anim.SetBool("isPoison", false);
+        isPoison = false;
+
+        ChangeState(BossState.idle);
+    }
+
+    IEnumerator ActivateJPoisonTrigger()
+    {
+        poisonTriggerObject.SetActive(true);
+
+        yield return new WaitForSeconds(1.1f);
+
+        poisonTriggerObject.SetActive(false);
     }
 
     void ChangeState(BossState newState)
@@ -231,161 +319,112 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
 
     void CheckFliping()
     {
-        if (isFlippingBlocked) return; // 애니메이션 진행 중일 때는 플립을 하지 않음
+        if (isFlippingBlocked) return; // 애니메이션 진행 중에는 플립 금지
 
-        if (player.transform.position.x < transform.position.x)
+        // 플레이어의 위치에 따라 플립 필요 여부 확인
+        bool shouldFlip = player.transform.position.x < transform.position.x;
+
+        // 현재 상태와 반대면 플립
+        if (shouldFlip != isFacingRight)
         {
-            sprite.flipX = true;
-        }
-        else if (player.transform.position.x > transform.position.x)
-        {
-            sprite.flipX = false;
+            isFacingRight = shouldFlip; // 방향 업데이트
+            sprite.flipX = shouldFlip; // 스프라이트 반전
+
+            // 트리거 위치 및 크기 업데이트
+            foreach (Transform trigger in triggers)
+            {
+                Vector3 localPosition = trigger.localPosition;
+
+                // X축 위치 반전
+                localPosition.x *= -1;
+                trigger.localPosition = localPosition;
+
+                // X축 스케일 반전 (필요한 경우만)
+                Vector3 localScale = trigger.localScale;
+                localScale.x *= -1;
+                trigger.localScale = localScale;
+            }
         }
     }
-    
-    bool OtherAct()
-    {
-        if (isThrusting || isMoving || isAttacking || isAttackSpliting || isJumpAttacking)
-            return true;
-        else
-            return false;
-    }
+
     
     IEnumerator JumpAttack()
     {
-        if (OtherAct()) 
-        {
-            yield break;
-        }
+        if (OtherAct()) yield break;
 
         isJumpAttacking = true;
 
-        anim.SetBool("isMoving", false);
-        anim.SetBool("isAttacking", false);
-        anim.SetBool("isStanding", false);
-        anim.SetBool("isJumpAttackUp", true);
+        anim.SetTrigger("jumpUp");
 
         isFlippingBlocked = true;
 
-        attackTrigger.SetActive(false);
-        attackTriggerScript.attackDamageTrigger.SetActive(false);
+        //attackTrigger.SetActive(false);
 
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(1.6f);
 
-        Vector3 teleportPosition = new Vector3(player.transform.position.x, -5f, player.transform.position.z);
+        anim.SetTrigger("UptoDown");
+        Vector3 teleportPosition = new Vector3(player.transform.position.x, -7f, 0);
 
         sprite.enabled = false;
         bossCollider.enabled = false;
-        anim.SetBool("isJumpAttackUp", false);
-
-        yield return new WaitForSeconds(0.6f);
 
         transform.position = teleportPosition;
 
         sprite.enabled = true;
         bossCollider.enabled = true;
+        yield return new WaitForSeconds(0.9f);
 
-        anim.SetTrigger("landTrigger");
-
-        yield return new WaitForSeconds(0.1f);
-        jumpAttackTrigger.SetActive(true);
-
-        yield return new WaitForSeconds(0.7f);
-
-        anim.SetBool("isStanding", true);
-        anim.SetBool("isJumpAttackLand", false);
-        anim.SetTrigger("moveTrigger"); 
-        jumpAttackTrigger.SetActive(false);
+        anim.SetTrigger("jumpDown");
 
         isFlippingBlocked = false;
         CheckFliping();
         isJumpAttacking = false;
-        isDetecting = true;
         ChangeState(BossState.idle);
     }
 
-    void ActivateJumpAttackTrigger()
+    IEnumerator ActivateJumpAttackTrigger()
     {
-        attackTrigger.SetActive(true);
-        attackTriggerScript.attackDamageTrigger.SetActive(true);
+        jumpAttackTriggerObject.SetActive(true);
+
+        yield return new WaitForSeconds(0.2f);
+
+        jumpAttackTriggerObject.SetActive(false);
     }
 
-    IEnumerator Attack()
+    bool OtherAct()
     {
-        if (OtherAct()) 
-        {
-            yield break;
-        }
-
-        if(!attackTriggerScript.isDetecting)
-        {
-            yield break;
-        }
-
-        isAttacking = true;
-
-        anim.SetBool("isMoving", false);
-        anim.SetBool("isStanding", false);
-        anim.SetBool("isAttacking", true);
-
-        isFlippingBlocked = true;
-        yield return new WaitForSeconds(0.8f);
-        attackTriggerScript.attackDamageTriggerScript.isAttacking = true;
-        StartCoroutine(attackTriggerScript.attackDamageTriggerScript.GetDamage());
-
-        isFlippingBlocked = false;
-        CheckFliping();
-
-        anim.SetBool("isAttacking", false);
-        anim.SetBool("isStanding", true);
-        isAttacking = false;
-        ChangeState(BossState.idle);
+        return isMoving || isAttacking || isThrusting || isJumpAttacking || isPoison;
     }
 
     IEnumerator Thrust()
     {
-        if (OtherAct() || isThrusting) 
-        {
-            yield break;
-        }
-                
-        if(!thrustTriggerScript.isInTrigger)
-        {
-            yield break;
-        }
+        if (OtherAct()) yield break;
 
-        thrustTriggerScript.isInTrigger = false;
+        //if (!thrustTrigger.isInTrigger) yield break;
+
         isThrusting = true;
 
-        anim.SetBool("isMoving", false);
-        anim.SetBool("isStanding", false);
         anim.SetBool("isThrusting", true);
-        anim.SetTrigger("thrustTrigger");
 
         isFlippingBlocked = true;
 
-        yield return new WaitForSeconds(1.1f);
-
-        PushPlayer();
-
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(1.6f);
 
         isFlippingBlocked = false;
+        
+        anim.SetBool("isThrusting", false);
+
         isThrusting = false;
         CheckFliping();
-
-        anim.SetBool("isThrusting", false);
-        anim.SetBool("isStanding", true);
-
         ChangeState(BossState.idle);
     }
 
-    void PushPlayer()
+    void PushPlayer(float force)
     {
         if (playerRigid != null)
         {
             Vector2 pushDirection; // 왼쪽으로 밀기
-            float pushForce = 2000f; // 힘의 크기
+            float pushForce = force;
             float pushDuration = 0.5f; // 밀리는 지속 시간
 
             if (player.transform.position.x < transform.position.x)
@@ -402,7 +441,12 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
         }
     }
 
-    IEnumerator AttackSplit()
+    void PushPlayerY(float force)
+    {
+        playerRigid.AddForce(Vector2.up * force, ForceMode2D.Impulse);
+    }
+
+    /*IEnumerator AttackSplit()
     {
         if (OtherAct() || isAttackSpliting) 
         {
@@ -427,7 +471,7 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
         anim.SetBool("isStanding", true);
         isAttackSpliting = false;
         ChangeState(BossState.idle);
-    }
+    }*/
 
     IEnumerator PushPlayerSmoothly(Rigidbody2D playerRigidbody, Vector2 direction, float pushForce, float duration)
     {
@@ -445,7 +489,7 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
     {
         if(other.gameObject.CompareTag("Ground"))
         {
-            isGrounded = true;
+            
         }
     }
 
@@ -453,7 +497,7 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
     {
         if(other.gameObject.CompareTag("Ground"))
         {
-            isGrounded = false;
+            
         }
     }
 
@@ -464,4 +508,25 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
         gameObject.SetActive(false);
         ChangeState(BossState.exit);
     }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.tag == "Attack")
+        {
+            //StartCoroutine(AttackedAnimation());
+            hp -= 10;
+            Debug.Log("현재 체력: " + hp);
+        }
+    }
+
+    /*IEnumerator AttackedAnimation()
+    {
+        anim.SetTrigger("isAttacked");
+        yield return new WaitForSeconds(0.1f);
+        anim.SetTrigger("attackedReturn");
+        
+    }*/
+
+    
 }
+

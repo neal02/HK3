@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,6 +15,8 @@ public class playerControl : MonoBehaviour
     bool isDashCool = true;
     bool isAttackCool = true;
     bool AttackDelay = true;
+
+    public bool isGrounded = false;
 
     int maxjump = 2;
     int maxAttack = 1;
@@ -133,4 +136,21 @@ public class playerControl : MonoBehaviour
         AttackDelay = true;
         
     }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if(other.gameObject.tag == "Ground")
+        {
+            isGrounded = true;
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D other)
+    {
+        if(other.gameObject.tag == "Ground")
+        {
+            isGrounded = false;
+        }
+    }
+
 }

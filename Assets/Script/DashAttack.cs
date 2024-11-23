@@ -47,23 +47,4 @@ public class DashAttack : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         delay = true;
     }
-
-    IEnumerator AttackedAnimation()
-    {
-        bossScript.anim.SetTrigger("isAttacked");
-        yield return new WaitForSeconds(0.1f);
-        bossScript.anim.SetTrigger("attackedReturn");
-        
-    }
-
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if(other.CompareTag("Boss"))
-        {
-            Debug.Log("보스 때림");
-            bossScript.hp -= 20;
-            StartCoroutine(AttackedAnimation());
-            Debug.Log("현재 체력: " + bossScript.hp);
-        }
-    }
 }
