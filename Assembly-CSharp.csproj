@@ -61,7 +61,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\widerBoss\BossEnemy.cs" />
-    <Compile Include="Assets\Script\SceneTransition.cs" />
     <Compile Include="Assets\Script\widerBoss\EndBA2.cs" />
     <Compile Include="Assets\Script\widerBoss\EndBC4.cs" />
     <Compile Include="Assets\Script\Enemy.cs" />
@@ -70,6 +69,7 @@
     <Compile Include="Assets\Script\QuestTrigger.cs" />
     <Compile Include="Assets\Script\widerBoss\Caged Spider.cs" />
     <Compile Include="Assets\Script\widerBoss\BA2.cs" />
+    <Compile Include="Assets\Script\SceneTransition1chapter.cs" />
     <Compile Include="Assets\Script\PlayerAttack.cs" />
     <Compile Include="Assets\Script\playerControl.cs" />
     <Compile Include="Assets\Script\widerBoss\EndBA3.cs" />

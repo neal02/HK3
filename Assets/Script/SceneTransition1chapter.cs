@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class SceneTransition : MonoBehaviour
+public class SceneTransition1chapter : MonoBehaviour
 {
     public Image fadeImage; // 검은 이미지를 참조
     public float fadeDuration = 1.5f; // 페이드 시간
@@ -34,6 +34,13 @@ public class SceneTransition : MonoBehaviour
         color.a = 0f; // 완전히 투명하게
         fadeImage.color = color;
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag.Equals("Player")) {
+            StartCoroutine(FadeOut("Main"));
+
+        }
+    }
 
     IEnumerator FadeOut(string nextSceneName)
     {
@@ -50,6 +57,6 @@ public class SceneTransition : MonoBehaviour
         fadeImage.color = color;
 
         // 씬 전환
-        SceneManager.LoadScene(nextSceneName);
+        SceneManager.LoadScene("Main");
     }
 }

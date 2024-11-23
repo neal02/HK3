@@ -10,6 +10,7 @@ public class CagedSpider : MonoBehaviour
     public Tilemap currentTilemap;  // 현재 타일맵
     public Tilemap DestroyTilemap;  // 현재 타일맵
     public Tilemap nextTilemap;     // 다음 타일맵
+    public Tilemap nextTilemap2;     // 다음 타일맵
 
     private void Start()
     {
@@ -44,6 +45,9 @@ public class CagedSpider : MonoBehaviour
         }
         if (nextTilemap != null) {
             nextTilemap.gameObject.SetActive(true);      // 다음 타일맵 활성화
+        }
+        if (nextTilemap2 != null) {
+            nextTilemap2.gameObject.SetActive(true);      // 다음 타일맵 활성화
         }
     }
 }
