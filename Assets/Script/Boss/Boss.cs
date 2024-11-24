@@ -23,9 +23,8 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
 
     Thrust_Trigger thrustTrigger;
     playerControl playerScript;
-    Summoned summonScript;
 
-    public enum BossState { idle, attack, jumpAttack, move, attackSplit, thrust, poison, death, exit }
+    public enum BossState { idle, attack, jumpAttack, move, thrust, poison, death, exit }
     public BossState currentState = BossState.idle;
 
     public List<Transform> triggers;
@@ -49,9 +48,6 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
     private bool isFacingRight = true;
 
     private float patternChangeTime = 2f;
-    private bool isCooldown;        // 쿨타임 여부 확인
-    private float cooldownDuration = 5f; // 쿨타임 지속 시간
-    private float cooldownTimer;    // 쿨타임 타이머
 
     void Start()
     {
@@ -83,7 +79,6 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
 
         thrustTrigger = thrustTriggerObject.GetComponent<Thrust_Trigger>();
         playerScript = player.GetComponent<playerControl>();
-        summonScript = summonObject.GetComponent<Summoned>();
 
         moveSpeed = 10.0f;
         hp = 1000.0f;
@@ -137,9 +132,6 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
             case BossState.thrust:
                 StartCoroutine(Thrust());
                 break;
-            case BossState.attackSplit:
-                //StartCoroutine(AttackSplit());
-                break;
             case BossState.poison:
                 StartCoroutine(Poison());
                 break;
@@ -172,53 +164,9 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
     {
         if (isAlive)
         {
-            StateMachine();
-
-            if (!isCooldown)
-            {
-                StartCoroutine(summonScript.Summon());
-
-                InitializeSummonDirection();
-                
-                StartCooldown();
-            }
-
-            if (isCooldown)
-            {
-                cooldownTimer -= Time.deltaTime;
-                if (cooldownTimer <= 0)
-                {
-                    isCooldown = false; // 쿨타임 종료
-                }
-            }
-            
+            StateMachine(); 
         }
     }
-
-    void InitializeSummonDirection()
-    {
-        // 소환수의 플립 방향 강제 초기화
-        bool shouldFlip = player.transform.position.x > summonObject.transform.position.x;
-
-        if (shouldFlip != summonScript.isFacingRight)
-        {
-            summonScript.isFacingRight = shouldFlip;
-            summonScript.sprite.flipX = shouldFlip;
-
-            foreach (Transform trigger in summonScript.triggers)
-            {
-                Vector3 localPosition = trigger.localPosition;
-                localPosition.x *= -1;
-                trigger.localPosition = localPosition;
-            }
-        }
-    }
-
-    void StartCooldown()
-    {
-        isCooldown = true; // 쿨타임 활성화
-        cooldownTimer = cooldownDuration; // 타이머 초기화
-    } 
 
     IEnumerator Move()
     {
