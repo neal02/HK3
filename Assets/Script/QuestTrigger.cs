@@ -11,8 +11,8 @@ public class QuestTrigger : MonoBehaviour
         // 처음에는 "Enter" 이미지를 비활성화
         enterImage.gameObject.SetActive(false);
     }
-
-    private void OnTriggerEnter2D(Collider2D other)
+   
+    private void OnTrigger2D(Collider2D other)
     {
         // 플레이어가 Quest 오브젝트에 닿으면
         if (other.CompareTag("Player")) {
