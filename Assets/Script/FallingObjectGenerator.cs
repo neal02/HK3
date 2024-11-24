@@ -8,7 +8,7 @@ public class FallingObjectGenerator : MonoBehaviour
     private float cooldownDuration = 3f; // 쿨타임 지속 시간
 
     public GameObject fallingObjectPrefab;
-    public int objectCount = 5; // 한 번에 떨어뜨릴 낙하물의 개수
+    public int objectCount = 15; // 한 번에 떨어뜨릴 낙하물의 개수
     public float spawnInterval = 0.5f; // 낙하물 간 생성 간격
     public float minDistance = 2f; // 낙하물 간 최소 거리
 
