@@ -8,7 +8,7 @@ public class AlarmGenerator : MonoBehaviour
     public GameObject BranchAttack;
 
     private int randPos = 0;
-    private bool isOnce = true;
+    //private bool isOnce = true;
     private bool isDelay = true;
 
     Vector3[] pos;
