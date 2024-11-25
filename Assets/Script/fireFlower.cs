@@ -9,8 +9,8 @@ public class fireFlower : MonoBehaviour
     Rigidbody2D rigid2D;
 
     public GameObject firePrefab;
-    public float fireGap = 6.0f;
-    public float flowerSpeed = 1f;
+    public float fireGap = 5.0f;
+    public float flowerSpeed = 0.8f;
     public int flowerHP = 2;
 
     private float firecon = -0.5f;
