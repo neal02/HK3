@@ -7,22 +7,27 @@ ScriptedImporter:
       type: UnityEngine:AnimationClip
       assembly: UnityEngine.AnimationModule
       name: Ancient Markings
-    second: {fileID: 7400000, guid: d0ba54efca089a043804cb76021343a3, type: 2}
+    second: {fileID: 7400000, guid: c7917068bf7e6804c91bc69b540c3511, type: 2}
   - first:
       type: UnityEngine:AnimationClip
       assembly: UnityEngine.AnimationModule
       name: Ancient Markings Blink
-    second: {fileID: 7400000, guid: 12a9f62f69af96e4e954b41baf874e92, type: 2}
+    second: {fileID: 7400000, guid: 47bba29fe91f87a4e85af5197a2bf390, type: 2}
   - first:
       type: UnityEngine:AnimationClip
       assembly: UnityEngine.AnimationModule
       name: Blood
-    second: {fileID: 7400000, guid: b442af76e4f2fb64a96d1dfdbe3ae1db, type: 2}
+    second: {fileID: 7400000, guid: 92d3a4386cacbe24ab5441ec15cbb338, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: None
+    second: {fileID: 7400000, guid: 999ef39ee8519924a8f7045bfdf1b0ed, type: 2}
   - first:
       type: UnityEngine:AnimationClip
       assembly: UnityEngine.AnimationModule
       name: Overgrown
-    second: {fileID: 7400000, guid: 8f5eacb9171d48c4ba4c4b4b4f1a9cad, type: 2}
+    second: {fileID: 7400000, guid: 169b0758fb92b3248987978d77c1c53d, type: 2}
   serializedVersion: 2
   userData: 
   assetBundleName: 
@@ -117,7 +122,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638673591742896058
+  platformSettingsDirtyTick: 638679194210418922
   textureAssetName: 
   singleSpriteImportData:
   - name: 

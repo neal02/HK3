@@ -10,18 +10,20 @@ public class RedTreeController : MonoBehaviour
     SpriteRenderer spriteRenderer;
 
     public GameObject Phase2;
+    public GameObject LastDoor;
     TreeFireGenerator treeFireGenerator;
 
     public int MaxTreeHp = 100;
 
     private float treeColor = 0;
-
+    private bool isInvin = true;
     void Start()
     {
         poly2D = GetComponent<PolygonCollider2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         treeFireGenerator = Phase2.GetComponent<TreeFireGenerator>();
+        LastDoor.SetActive(false);
         spriteRenderer.color = new Color(treeColor, treeColor, treeColor);
         poly2D.enabled = false;
         animator.enabled = false;
@@ -34,17 +36,11 @@ public class RedTreeController : MonoBehaviour
             animator.enabled = true;
             poly2D .enabled = true;
         }    
-        if(MaxTreeHp <= 0)
-        {
-            //Destroy(gameObject);
-            poly2D.enabled = false;
-            treeFireGenerator.enabled = false;
-        }
     }
 
     private void FixedUpdate()
     {
-        if (BloodTree.clearSeal <= -50)
+        if (BloodTree.clearSeal <= -50 && MaxTreeHp > 0)
         {
             if (treeColor <= 1)
             {
@@ -52,17 +48,26 @@ public class RedTreeController : MonoBehaviour
                 spriteRenderer.color = new Color(treeColor, treeColor, treeColor);
             }
         }
-        if(MaxTreeHp < 0)
+
+        if(MaxTreeHp <= 0)
         {
             treeColor -= 0.01f;
             spriteRenderer.color = new Color(treeColor, treeColor, treeColor);
+            poly2D.enabled = false;
+            treeFireGenerator.enabled = false;
+            LastDoor.SetActive(true);
+
+            if(LastDoor.transform.position.y < -4f)
+            {
+                LastDoor.transform.position += new Vector3(0, 0.03f, 0);
+            }
             poly2D.enabled = false;
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Attack"))
+        if (collision.gameObject.CompareTag("Attack") && isInvin)
         {
             MaxTreeHp -= 10;
             StartCoroutine(Delay());
@@ -72,7 +77,9 @@ public class RedTreeController : MonoBehaviour
     IEnumerator Delay()
     {
         animator.SetBool("isHit", true);
+        isInvin = false;
         yield return new WaitForSeconds(0.3f) ;
         animator.SetBool("isHit", false);
+        isInvin = true;
     }
 }

@@ -7,7 +7,7 @@ public class TreePathCamera : MonoBehaviour
     public GameObject player;
 
     private float MimCameraX = 0f;
-    private float MaxCameraX = 15f;
+    private float MaxCameraX = 46f;
 
     void Start()
     {
@@ -17,11 +17,19 @@ public class TreePathCamera : MonoBehaviour
 
     void Update()
     {
-        if(player.transform.position.x <= 0)
+        if (player.transform.position.y >= 21)
+        {
+            gameObject.transform.position = new Vector3(MimCameraX, 21, -10);
+        }
+        else if (player.transform.position.y >= 5)
+        {
+            gameObject.transform.position = new Vector3(MimCameraX, player.transform.position.y, -10);
+        } 
+        else if (player.transform.position.x <= 0)
         {
             gameObject.transform.position = new Vector3(MimCameraX, 0, -10);
         } 
-        else if (player.transform.position.x >= 40)
+        else if (player.transform.position.x >= 46)
         {
             gameObject.transform.position = new Vector3(MaxCameraX, 0, -10);
         } else

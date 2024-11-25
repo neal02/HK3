@@ -7,12 +7,12 @@ ScriptedImporter:
       type: UnityEngine:AnimationClip
       assembly: UnityEngine.AnimationModule
       name: BLue
-    second: {fileID: 7400000, guid: e893ee292108cc74ba4edc50a767b60d, type: 2}
+    second: {fileID: 7400000, guid: 5afee3b6602e4c143bb8931c5ead97fc, type: 2}
   - first:
       type: UnityEngine:AnimationClip
       assembly: UnityEngine.AnimationModule
       name: Green
-    second: {fileID: 7400000, guid: 88e580bc1c6c84b4687b9a9a7b067812, type: 2}
+    second: {fileID: 7400000, guid: 8a6663b13c67f05468f5748f38b14ff2, type: 2}
   serializedVersion: 2
   userData: 
   assetBundleName: 
@@ -107,7 +107,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638677373155838998
+  platformSettingsDirtyTick: 638680794600661950
   textureAssetName: 
   singleSpriteImportData:
   - name: 

@@ -18,7 +18,7 @@ public class BloodTree : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        clearSeal = 50;
+        clearSeal = -40;
         isPerfectCalled = false;
     }
 

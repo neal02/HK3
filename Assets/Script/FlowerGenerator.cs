@@ -12,6 +12,7 @@ public class FlowerGenerator : MonoBehaviour
     private GameObject[] currentPrefab;
     private int currentIndex = 0;
     private bool isGen = true;
+
     Quaternion rotation = Quaternion.identity;
     Vector3 pos;
 
