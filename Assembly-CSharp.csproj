@@ -61,27 +61,38 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\widerBoss\BossEnemy.cs" />
+    <Compile Include="Assets\Script\SH\Boss\FallingObject.cs" />
     <Compile Include="Assets\Script\widerBoss\EndBA2.cs" />
     <Compile Include="Assets\Script\widerBoss\EndBC4.cs" />
     <Compile Include="Assets\Script\Enemy.cs" />
     <Compile Include="Assets\Script\widerBoss\EndBC2.cs" />
     <Compile Include="Assets\Script\widerBoss\EndBA1.cs" />
+    <Compile Include="Assets\Script\SH\Boss\Detecting_Trigger.cs" />
+    <Compile Include="Assets\Script\SH\Boss\Poison_Trigger.cs" />
     <Compile Include="Assets\Script\QuestTrigger.cs" />
     <Compile Include="Assets\Script\widerBoss\Caged Spider.cs" />
     <Compile Include="Assets\Script\widerBoss\BA2.cs" />
     <Compile Include="Assets\Script\SceneTransition1chapter.cs" />
+    <Compile Include="Assets\Script\SH\test.cs" />
     <Compile Include="Assets\Script\PlayerAttack.cs" />
     <Compile Include="Assets\Script\playerControl.cs" />
+    <Compile Include="Assets\Script\SH\Boss\JumpAttack_Trigger.cs" />
     <Compile Include="Assets\Script\widerBoss\EndBA3.cs" />
     <Compile Include="Assets\Script\widerBoss\BC.cs" />
+    <Compile Include="Assets\Script\SH\GameManager.cs" />
+    <Compile Include="Assets\Script\SH\Boss\Thrust_Trigger.cs" />
     <Compile Include="Assets\Script\TextScript.cs" />
     <Compile Include="Assets\Script\widerBoss\EndBA.cs" />
+    <Compile Include="Assets\Script\SH\SceneTransition.cs" />
+    <Compile Include="Assets\Script\SH\FallingObjectGenerator.cs" />
     <Compile Include="Assets\Script\widerBoss\DashAttack.cs" />
     <Compile Include="Assets\Script\widerBoss\BC2.cs" />
     <Compile Include="Assets\Script\widerBoss\EndBC3.cs" />
     <Compile Include="Assets\Script\widerBoss\EndBA4.cs" />
     <Compile Include="Assets\Script\widerBoss\BA.cs" />
     <Compile Include="Assets\Script\widerBoss\EndBC1.cs" />
+    <Compile Include="Assets\Script\SH\Boss\Poison_Damage_Trigger.cs" />
+    <Compile Include="Assets\Script\SH\Boss\Boss.cs" />
     <Compile Include="Assets\Script\widerBoss\EndBC.cs" />
   </ItemGroup>
   <ItemGroup>

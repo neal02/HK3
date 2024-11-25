@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e93df8a3d81022441afca209fee2fa33
+guid: e7fd7d7ed7870784cbd014dc78ae6f6b
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,7 +97,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638681682891653093
+  platformSettingsDirtyTick: 0
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -121,18 +121,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Victorian Parallax_Frame_0
+  - name: Frame_0
     originalName: 
     pivot: {x: 0.5, y: 0.13145539}
     alignment: 9
-    border: {x: 0, y: 3, z: 0, w: 0}
+    border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
       width: 371
       height: 213
-    spriteID: a4a7bb4acf2b67846a3dfb066b0d0504
+    spriteID: e2bfd7f4cdf331343aa66d0ea2a2714b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -141,7 +141,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: Victorian Parallax_Frame_1
+  - name: Frame_1
     originalName: 
     pivot: {x: 0.5, y: 0.13145539}
     alignment: 9
@@ -152,7 +152,7 @@ ScriptedImporter:
       y: 225
       width: 371
       height: 213
-    spriteID: e346541854c200f46af6f8da95e77e9a
+    spriteID: e9ff807329c2545439bbf5169240d214
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -161,7 +161,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 225}
-  - name: Victorian Parallax_Frame_2
+  - name: Frame_2
     originalName: 
     pivot: {x: 0.5, y: 0.13145539}
     alignment: 9
@@ -172,7 +172,7 @@ ScriptedImporter:
       y: 446
       width: 371
       height: 213
-    spriteID: 6b4cc55c67e70a44188b73581c7f1276
+    spriteID: 78d555f6f05498e4388ad859d7c801c1
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -181,7 +181,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 446}
-  - name: Victorian Parallax_Frame_3
+  - name: Frame_3
     originalName: 
     pivot: {x: 0.5, y: 0.13145539}
     alignment: 9
@@ -192,7 +192,7 @@ ScriptedImporter:
       y: 667
       width: 371
       height: 213
-    spriteID: 6d6e59750b11ae748adda389ae6d9fb7
+    spriteID: 9d5dac051f91265448a70f1e7ed63f06
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -201,7 +201,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 667}
-  - name: Victorian Parallax_Frame_4
+  - name: Frame_4
     originalName: 
     pivot: {x: 0.5, y: 0.13145539}
     alignment: 9
@@ -212,7 +212,7 @@ ScriptedImporter:
       y: 888
       width: 371
       height: 213
-    spriteID: f7864875c5f87744ea2820d4f3b8767a
+    spriteID: 5290570fc1a0d3c4a8d10c2c891775e3
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -221,7 +221,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 888}
-  - name: Victorian Parallax_Frame_5
+  - name: Frame_5
     originalName: 
     pivot: {x: 0.5, y: 0.13145539}
     alignment: 9
@@ -232,7 +232,7 @@ ScriptedImporter:
       y: 1109
       width: 371
       height: 213
-    spriteID: fa4422429c84cc54aad1f5f6696d963d
+    spriteID: 683a2de2900353d48bd512cb9be1b989
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -241,7 +241,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 1109}
-  - name: Victorian Parallax_Frame_6
+  - name: Frame_6
     originalName: 
     pivot: {x: 0.5, y: 0.13145539}
     alignment: 9
@@ -252,7 +252,7 @@ ScriptedImporter:
       y: 1330
       width: 371
       height: 213
-    spriteID: 750e5ba5efb3ae043bdfe5ff1e4c653e
+    spriteID: 4590a1f791f12644a98bc561412e8403
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -261,7 +261,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 1330}
-  - name: Victorian Parallax_Frame_7
+  - name: Frame_7
     originalName: 
     pivot: {x: 0.5, y: 0.13145539}
     alignment: 9
@@ -272,7 +272,7 @@ ScriptedImporter:
       y: 1551
       width: 371
       height: 213
-    spriteID: 75f5b43b4f219c845a4c4132108e9518
+    spriteID: 13a45682db5a0a44fb409fc1051b16ff
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -281,7 +281,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 1551}
-  - name: Victorian Parallax_Frame_8
+  - name: Frame_8
     originalName: 
     pivot: {x: 0.5, y: 0.13145539}
     alignment: 9
@@ -292,7 +292,7 @@ ScriptedImporter:
       y: 1772
       width: 371
       height: 213
-    spriteID: 10de06f264661704f85e5378774d2b09
+    spriteID: 3eb7d0544a4d98f4796b67a95303c7df
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -301,7 +301,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 1772}
-  - name: Victorian Parallax_Frame_9
+  - name: Frame_9
     originalName: 
     pivot: {x: 0.5, y: 0.13145539}
     alignment: 9
@@ -312,7 +312,7 @@ ScriptedImporter:
       y: 4
       width: 371
       height: 213
-    spriteID: 72004bc937f8b8449b946ebdbadb6ae7
+    spriteID: 22f9ecccd85be574a9d80687c9c53a41
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -321,7 +321,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 383, y: 4}
-  - name: Victorian Parallax_Frame_10
+  - name: Frame_10
     originalName: 
     pivot: {x: 0.5, y: 0.13145539}
     alignment: 9
@@ -332,7 +332,7 @@ ScriptedImporter:
       y: 225
       width: 371
       height: 213
-    spriteID: db8b28dfa0341b74c8129ad1b31baf7b
+    spriteID: a5ea8cce6787e2e4f8be07b0e506b977
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -341,7 +341,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 383, y: 225}
-  - name: Victorian Parallax_Frame_11
+  - name: Frame_11
     originalName: 
     pivot: {x: 0.5, y: 0.13145539}
     alignment: 9
@@ -352,7 +352,7 @@ ScriptedImporter:
       y: 446
       width: 371
       height: 213
-    spriteID: 3affd37bdc494874f83ebeed222cacd5
+    spriteID: d3819506c62d9cc49910e5a3233d332b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -361,7 +361,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 383, y: 446}
-  - name: Victorian Parallax_Frame_12
+  - name: Frame_12
     originalName: 
     pivot: {x: 0.5, y: 0.13145539}
     alignment: 9
@@ -372,7 +372,7 @@ ScriptedImporter:
       y: 667
       width: 371
       height: 213
-    spriteID: c5f4facd041e4c24d8fbd14205cc459b
+    spriteID: 466a676582295fd44b25989301aef0b4
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -381,7 +381,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 383, y: 667}
-  - name: Victorian Parallax_Frame_13
+  - name: Frame_13
     originalName: 
     pivot: {x: 0.5, y: 0.13145539}
     alignment: 9
@@ -392,7 +392,7 @@ ScriptedImporter:
       y: 888
       width: 371
       height: 213
-    spriteID: ee759f14aa61ece46a45f93a5c63d5a1
+    spriteID: 2cb2389dd96f53a409e97ab75ff57a3c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -401,7 +401,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 383, y: 888}
-  - name: Victorian Parallax_Frame_14
+  - name: Frame_14
     originalName: 
     pivot: {x: 0.5, y: 0.13145539}
     alignment: 9
@@ -412,7 +412,7 @@ ScriptedImporter:
       y: 1109
       width: 371
       height: 213
-    spriteID: 29484e7e31cb4604683d72c095b1652b
+    spriteID: 1e4a39b2fe481674989391006d6946a9
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -421,7 +421,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 383, y: 1109}
-  - name: Victorian Parallax_Frame_15
+  - name: Frame_15
     originalName: 
     pivot: {x: 0.5, y: 0.13145539}
     alignment: 9
@@ -432,7 +432,7 @@ ScriptedImporter:
       y: 1330
       width: 371
       height: 213
-    spriteID: c81dc51c8345d874ebf3633e7ae4cb94
+    spriteID: e0e54932fc63a914288caa309ed1f1d1
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -441,7 +441,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 383, y: 1330}
-  - name: Victorian Parallax_Frame_16
+  - name: Frame_16
     originalName: 
     pivot: {x: 0.5, y: 0.13145539}
     alignment: 9
@@ -452,7 +452,7 @@ ScriptedImporter:
       y: 1551
       width: 371
       height: 213
-    spriteID: 4032fe3fa0af36f458df7c369b4d8ab4
+    spriteID: c9b5d0396323afc47b5d0ca841cde4a5
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -461,7 +461,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 383, y: 1551}
-  - name: Victorian Parallax_Frame_17
+  - name: Frame_17
     originalName: 
     pivot: {x: 0.5, y: 0.13145539}
     alignment: 9
@@ -472,7 +472,7 @@ ScriptedImporter:
       y: 1772
       width: 371
       height: 213
-    spriteID: 2d3ce73de31924e4798faf3e14a4da52
+    spriteID: 7ad08305ad342a74faf204e77b9d0973
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -484,8 +484,8 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 427006442
-    name: Victorian Parallax
+    guid: 378424249
+    name: Victorian Parallax 1
     layerFlags: 0
     layerType: 0
     blendMode: 0
@@ -498,7 +498,7 @@ ScriptedImporter:
         y: -28
         width: 371
         height: 213
-      spriteId: a4a7bb4acf2b67846a3dfb066b0d0504
+      spriteId: e2bfd7f4cdf331343aa66d0ea2a2714b
     - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
@@ -507,7 +507,7 @@ ScriptedImporter:
         y: -28
         width: 371
         height: 213
-      spriteId: e346541854c200f46af6f8da95e77e9a
+      spriteId: e9ff807329c2545439bbf5169240d214
     - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
@@ -516,7 +516,7 @@ ScriptedImporter:
         y: -28
         width: 371
         height: 213
-      spriteId: 6b4cc55c67e70a44188b73581c7f1276
+      spriteId: 78d555f6f05498e4388ad859d7c801c1
     - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
@@ -525,7 +525,7 @@ ScriptedImporter:
         y: -28
         width: 371
         height: 213
-      spriteId: 6d6e59750b11ae748adda389ae6d9fb7
+      spriteId: 9d5dac051f91265448a70f1e7ed63f06
     - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
@@ -534,7 +534,7 @@ ScriptedImporter:
         y: -28
         width: 371
         height: 213
-      spriteId: f7864875c5f87744ea2820d4f3b8767a
+      spriteId: 5290570fc1a0d3c4a8d10c2c891775e3
     - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
@@ -543,7 +543,7 @@ ScriptedImporter:
         y: -28
         width: 371
         height: 213
-      spriteId: fa4422429c84cc54aad1f5f6696d963d
+      spriteId: 683a2de2900353d48bd512cb9be1b989
     - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
@@ -552,7 +552,7 @@ ScriptedImporter:
         y: -28
         width: 371
         height: 213
-      spriteId: 750e5ba5efb3ae043bdfe5ff1e4c653e
+      spriteId: 4590a1f791f12644a98bc561412e8403
     - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
@@ -561,7 +561,7 @@ ScriptedImporter:
         y: -28
         width: 371
         height: 213
-      spriteId: 75f5b43b4f219c845a4c4132108e9518
+      spriteId: 13a45682db5a0a44fb409fc1051b16ff
     - name: Frame_8
       frameIndex: 8
       additiveSortOrder: 0
@@ -570,7 +570,7 @@ ScriptedImporter:
         y: -28
         width: 371
         height: 213
-      spriteId: 10de06f264661704f85e5378774d2b09
+      spriteId: 3eb7d0544a4d98f4796b67a95303c7df
     - name: Frame_9
       frameIndex: 9
       additiveSortOrder: 0
@@ -579,7 +579,7 @@ ScriptedImporter:
         y: -28
         width: 371
         height: 213
-      spriteId: 72004bc937f8b8449b946ebdbadb6ae7
+      spriteId: 22f9ecccd85be574a9d80687c9c53a41
     - name: Frame_10
       frameIndex: 10
       additiveSortOrder: 0
@@ -588,7 +588,7 @@ ScriptedImporter:
         y: -28
         width: 371
         height: 213
-      spriteId: db8b28dfa0341b74c8129ad1b31baf7b
+      spriteId: a5ea8cce6787e2e4f8be07b0e506b977
     - name: Frame_11
       frameIndex: 11
       additiveSortOrder: 0
@@ -597,7 +597,7 @@ ScriptedImporter:
         y: -28
         width: 371
         height: 213
-      spriteId: 3affd37bdc494874f83ebeed222cacd5
+      spriteId: d3819506c62d9cc49910e5a3233d332b
     - name: Frame_12
       frameIndex: 12
       additiveSortOrder: 0
@@ -606,7 +606,7 @@ ScriptedImporter:
         y: -28
         width: 371
         height: 213
-      spriteId: c5f4facd041e4c24d8fbd14205cc459b
+      spriteId: 466a676582295fd44b25989301aef0b4
     - name: Frame_13
       frameIndex: 13
       additiveSortOrder: 0
@@ -615,7 +615,7 @@ ScriptedImporter:
         y: -28
         width: 371
         height: 213
-      spriteId: ee759f14aa61ece46a45f93a5c63d5a1
+      spriteId: 2cb2389dd96f53a409e97ab75ff57a3c
     - name: Frame_14
       frameIndex: 14
       additiveSortOrder: 0
@@ -624,7 +624,7 @@ ScriptedImporter:
         y: -28
         width: 371
         height: 213
-      spriteId: 29484e7e31cb4604683d72c095b1652b
+      spriteId: 1e4a39b2fe481674989391006d6946a9
     - name: Frame_15
       frameIndex: 15
       additiveSortOrder: 0
@@ -633,7 +633,7 @@ ScriptedImporter:
         y: -28
         width: 371
         height: 213
-      spriteId: c81dc51c8345d874ebf3633e7ae4cb94
+      spriteId: e0e54932fc63a914288caa309ed1f1d1
     - name: Frame_16
       frameIndex: 16
       additiveSortOrder: 0
@@ -642,7 +642,7 @@ ScriptedImporter:
         y: -28
         width: 371
         height: 213
-      spriteId: 4032fe3fa0af36f458df7c369b4d8ab4
+      spriteId: c9b5d0396323afc47b5d0ca841cde4a5
     - name: Frame_17
       frameIndex: 17
       additiveSortOrder: 0
@@ -651,29 +651,17 @@ ScriptedImporter:
         y: -28
         width: 371
         height: 213
-      spriteId: 2d3ce73de31924e4798faf3e14a4da52
+      spriteId: 7ad08305ad342a74faf204e77b9d0973
     linkedCells: []
     parentIndex: -1
   platformSettings:
-  - name: DefaultTexturePlatform
+  - name: Default
     overridden: 0
     ignorePlatformSupport: 0
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
-  - name: Standalone
-    overridden: 0
-    ignorePlatformSupport: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     forceMaximumCompressionQuality_BC6H_BC7: 0
     crunchedCompression: 0
