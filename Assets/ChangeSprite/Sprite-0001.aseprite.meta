@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ce68ebd794a36514982666b433801d4c
+guid: 049c345a036b5f1448a83d56ee26991b
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -121,18 +121,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Assassin-Sheet
+  - name: Sprite-0001
     originalName: 
-    pivot: {x: 0.5048951, y: 0}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 715
-      height: 152
-    spriteID: 4b6936ed10646344faf5fcdf0a43f245
+      width: 314
+      height: 314
+    spriteID: c3e79dff40b353e45b3034ad3110a13e
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -140,25 +140,25 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 1, y: 4}
+    uvTransform: {x: 4, y: 4}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -421029071
-    name: Assassin-Sheet
+    guid: -572921211
+    name: Sprite-0001
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Assassin-Sheet
+    - name: Sprite-0001
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
-        width: 728
-        height: 152
-      spriteId: 4b6936ed10646344faf5fcdf0a43f245
+        width: 314
+        height: 314
+      spriteId: c3e79dff40b353e45b3034ad3110a13e
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -177,4 +177,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 728, y: 152}
+  canvasSize: {x: 314, y: 314}
