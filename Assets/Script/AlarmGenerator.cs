@@ -59,14 +59,13 @@ public class AlarmGenerator : MonoBehaviour
     void SpawnBranch()
     {
         randPos = Random.Range(0, 5);
-        Debug.Log(randPos);
         Instantiate(BranchAttack, pos[randPos], rotation[randPos]);
     }
 
     IEnumerator Delay()
     {
         isDelay = false;
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(5f);
         isDelay = true;
     }
 }

@@ -9,6 +9,7 @@ public class RedTreeController : MonoBehaviour
     Animator animator;
     SpriteRenderer spriteRenderer;
 
+    public GameObject AlarmGenerator;
     public GameObject Phase2;
     public GameObject LastDoor;
     TreeFireGenerator treeFireGenerator;
@@ -56,6 +57,7 @@ public class RedTreeController : MonoBehaviour
             poly2D.enabled = false;
             treeFireGenerator.enabled = false;
             LastDoor.SetActive(true);
+            Destroy(AlarmGenerator);
 
             if(LastDoor.transform.position.y < -4f)
             {
