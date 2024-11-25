@@ -8,12 +8,12 @@ public class BrachAttack : MonoBehaviour
     Animator animator;
 
     private bool isAppear = false;
-
+    private bool isDisappear = false;
     void Start()
     {
         box2D = GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
-
+        box2D.offset = new Vector2(0, 0);
         StartCoroutine(AlarmDelay());
     }
 
@@ -32,7 +32,7 @@ public class BrachAttack : MonoBehaviour
         {
             box2D.size += new Vector2(0, 0.06f);
         }
-        if(!isAppear)
+        if(!isAppear && isDisappear)
         {
             box2D.offset -= new Vector2(0, 0.03f);
             box2D.size -= new Vector2(0, 0.06f);
@@ -59,6 +59,7 @@ public class BrachAttack : MonoBehaviour
 
     IEnumerator DisAppearDelay()
     {
+        isDisappear = true;
         yield return new WaitForSeconds(1.5f);
         isAppear = false;
         animator.SetBool("isDisAppear", true);
