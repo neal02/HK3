@@ -62,7 +62,6 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
         jumpAttackTriggerObject.SetActive(false);
         poisonTriggerObject.SetActive(false);
         playerRigid = player.GetComponent<Rigidbody2D>();
-        summonObject.SetActive(false);
 
 
         isDetecting = false;
