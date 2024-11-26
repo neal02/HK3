@@ -11,6 +11,12 @@ public class playerControl : MonoBehaviour
     public float DashcoolTime = 3.0f;
     public float AttackcoolTime = 1.5f;
 
+    public AudioSource attackSound;
+    public AudioSource dashSound;
+    public AudioSource runSound;
+    public AudioSource jumpSound;
+
+
     bool isDashCool = true;
     bool isAttackCool = true;
     bool AttackDelay = true;
@@ -40,6 +46,12 @@ public class playerControl : MonoBehaviour
 
         // GameDirector 컴포넌트 찾기
         gameDirector = GameObject.FindObjectOfType<GameDirector>();
+
+        attackSound = GetComponent<AudioSource>();
+        dashSound = GetComponents<AudioSource>()[1];  // 두 번째 Audio Source 사용
+        runSound = GetComponents<AudioSource>()[2];  // 두 번째 Audio Source 사용
+        jumpSound = GetComponents<AudioSource>()[3];  // 두 번째 Audio Source 사용
+
     }
 
     void Update()
@@ -80,6 +92,7 @@ public class playerControl : MonoBehaviour
             dashcon = -0.5f;
             animator.SetFloat("isDash", dashcon);   // 대쉬 애니매이션이 모두 출력될 수 있도록 대쉬콘을 -0.5디폴트 값으로 하고 이게 0 밑일때 애니매이션 출력. 
             transform.position += new Vector3(dashSpeed * Input.GetAxisRaw("Horizontal"), 0, 0);
+            dashSound.Play();
             isDashCool = false;
             Debug.Log("이제부터 쿨");
             StartCoroutine(CooldownDash());
@@ -89,6 +102,7 @@ public class playerControl : MonoBehaviour
             firstattackcon = -0.5f;
             maxAttack--;
             animator.SetFloat("isAttack", firstattackcon);
+            attackSound.Play();
             AttackDelay = false;
             Debug.Log("공격");
             StartCoroutine(AttDelay());
@@ -98,6 +112,7 @@ public class playerControl : MonoBehaviour
             maxjump--;
             animator.SetBool("isJump", true);
             animator.SetBool("isRun", false);
+            jumpSound.Play();
             rigid2D.velocity = new Vector2(rigid2D.velocity.x, jumpSpeed);
             animator.SetBool("isFall", false);
         }
