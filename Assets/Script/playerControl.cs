@@ -11,12 +11,6 @@ public class playerControl : MonoBehaviour
     public float DashcoolTime = 3.0f;
     public float AttackcoolTime = 1.5f;
 
-    public AudioSource attackSound;
-    public AudioSource dashSound;
-    public AudioSource runSound;
-    public AudioSource jumpSound;
-
-
     bool isDashCool = true;
     bool isAttackCool = true;
     bool AttackDelay = true;
@@ -46,12 +40,6 @@ public class playerControl : MonoBehaviour
 
         // GameDirector 컴포넌트 찾기
         gameDirector = GameObject.FindObjectOfType<GameDirector>();
-
-        attackSound = GetComponent<AudioSource>();
-        dashSound = GetComponents<AudioSource>()[1];  // 두 번째 Audio Source 사용
-        runSound = GetComponents<AudioSource>()[2];  // 두 번째 Audio Source 사용
-        jumpSound = GetComponents<AudioSource>()[3];  // 두 번째 Audio Source 사용
-
     }
 
     void Update()
@@ -87,32 +75,30 @@ public class playerControl : MonoBehaviour
             maxjump = 2;
         }
 
-        if (Input.GetKeyDown(KeyCode.Z) && isDashCool)    // 대쉬
+        if (Input.GetKeyDown(KeyCode.Z) && isDashCool)  // 대쉬
         {
             dashcon = -0.5f;
-            animator.SetFloat("isDash", dashcon);   // 대쉬 애니매이션이 모두 출력될 수 있도록 대쉬콘을 -0.5디폴트 값으로 하고 이게 0 밑일때 애니매이션 출력. 
+            animator.SetFloat("isDash", dashcon);
             transform.position += new Vector3(dashSpeed * Input.GetAxisRaw("Horizontal"), 0, 0);
-            dashSound.Play();
+            AudioManager.instance.PlaySfx(AudioManager.Sfx.dash);  // AudioManager 사용
             isDashCool = false;
-            Debug.Log("이제부터 쿨");
             StartCoroutine(CooldownDash());
         }
-        else if (Input.GetKeyDown(KeyCode.X) && maxAttack > 0 && isAttackCool && AttackDelay)   // 공격
+        else if (Input.GetKeyDown(KeyCode.X) && maxAttack > 0 && isAttackCool && AttackDelay)  // 공격
         {
             firstattackcon = -0.5f;
             maxAttack--;
             animator.SetFloat("isAttack", firstattackcon);
-            attackSound.Play();
+            AudioManager.instance.PlaySfx(AudioManager.Sfx.Attack);  // AudioManager 사용
             AttackDelay = false;
-            Debug.Log("공격");
             StartCoroutine(AttDelay());
         }
-        else if (Input.GetKeyDown(KeyCode.C) && maxjump > 0)   // 점프
+        else if (Input.GetKeyDown(KeyCode.C) && maxjump > 0)  // 점프
         {
             maxjump--;
             animator.SetBool("isJump", true);
             animator.SetBool("isRun", false);
-            jumpSound.Play();
+            AudioManager.instance.PlaySfx(AudioManager.Sfx.Jump);  // AudioManager 사용
             rigid2D.velocity = new Vector2(rigid2D.velocity.x, jumpSpeed);
             animator.SetBool("isFall", false);
         }
@@ -148,13 +134,13 @@ public class playerControl : MonoBehaviour
         else
         {
             animator.SetTrigger("hit");  // 맞는 애니메이션 출력
+            AudioManager.instance.PlaySfx(AudioManager.Sfx.Hit);  // 맞을 때 효과음
         }
     }
 
     void Die()
     {
-        // 사망 처리 후 2초 뒤에 시작 씬으로 이동
-        // 이 시간을 조정하여 사망 애니메이션 후 씬 전환
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Death);  // 사망 효과음
         Invoke("LoadStartScene", 1f);
     }
 
@@ -167,7 +153,6 @@ public class playerControl : MonoBehaviour
     {
         yield return new WaitForSeconds(DashcoolTime);
         isDashCool = true;
-        Debug.Log("대쉬사용가능");
     }
 
     IEnumerator AttDelay()
