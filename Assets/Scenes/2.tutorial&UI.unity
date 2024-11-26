@@ -366,6 +366,71 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 779238703}
   m_SourcePrefab: {fileID: -8435245712485981826, guid: 7d497b9290214cb47bb3e0b5acc2eb41, type: 3}
+--- !u!1 &398772461
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 398772463}
+  - component: {fileID: 398772462}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &398772462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 398772461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66be030d3e9f93e4c83221457a21e459, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bgmClip: {fileID: 0}
+  bgmVolume: 5
+  sfxClips:
+  - {fileID: 8300000, guid: eec6a77876a9d5a4095ea5413dcfdd20, type: 3}
+  - {fileID: 8300000, guid: 7cd4717058f00d64489558607c74e213, type: 3}
+  - {fileID: 8300000, guid: 79e40675a810215429aeba9e6400197b, type: 3}
+  - {fileID: 8300000, guid: 9b5fc883f97a6d84391bdc4b1096333c, type: 3}
+  - {fileID: 8300000, guid: 199e46d3798e0614b947703dd6625c70, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  sfxVolume: 6
+  channels: 17
+--- !u!4 &398772463
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 398772461}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -42.03387, y: -2.2552652, z: -0.09994779}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &468244882
 GameObject:
   m_ObjectHideFlags: 0
@@ -408,10 +473,6 @@ MonoBehaviour:
   dashSpeed: 5
   DashcoolTime: 3
   AttackcoolTime: 1.5
-  attackSound: {fileID: 468244889}
-  dashSound: {fileID: 468244890}
-  runSound: {fileID: 468244891}
-  jumpSound: {fileID: 468244892}
   health: 100
   maxHealth: 100
 --- !u!50 &468244884
@@ -21232,3 +21293,4 @@ SceneRoots:
   - {fileID: 694224292}
   - {fileID: 217105287}
   - {fileID: 1023828827}
+  - {fileID: 398772463}
