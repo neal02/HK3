@@ -46,6 +46,7 @@ public class SceneTransition1chapter : MonoBehaviour
     {
         float elapsedTime = 0f;
         Color color = fadeImage.color;
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.black_out);
         while (elapsedTime < fadeDuration)
         {
             elapsedTime += Time.deltaTime;

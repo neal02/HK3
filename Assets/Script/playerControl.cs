@@ -70,13 +70,14 @@ public class playerControl : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Z) && isDashCool)    //대쉬
         {
-            rigid2D.AddForce(Vector2.right * dashSpeed*flip, ForceMode2D.Impulse); 
+            rigid2D.AddForce(Vector2.right * dashSpeed * flip, ForceMode2D.Impulse);
             dashcon = -0.5f;
-            animator.SetFloat("isDash", dashcon);   //대쉬 애니매이션이 모두 출력될 수 있도록 대쉬콘을 -0.5디폴트 값으로 하고 이게 0 밑일때 애니매이션 출력. 
-            //transform.position += new Vector3(dashSpeed * Input.GetAxisRaw("Horizontal"), 0, 0);
+            animator.SetFloat("isDash", dashcon);
             isDashCool = false;
-            Debug.Log("이제부터 쿨");
             StartCoroutine(CooldownDash());
+
+            // Play dash sound effect
+            AudioManager.instance.PlaySfx(AudioManager.Sfx.dash);
         }
         else if (Input.GetKeyDown(KeyCode.X) && maxAttack > 0 && isAttackCool && AttackDelay)   //공격
         {
@@ -84,8 +85,10 @@ public class playerControl : MonoBehaviour
             maxAttack--;
             animator.SetFloat("isAttack", firstattackcon);
             AttackDelay = false;
-            Debug.Log("공격");
             StartCoroutine(AttDelay());
+
+            // Play attack sound effect
+            AudioManager.instance.PlaySfx(AudioManager.Sfx.Attack);
         }
         else if (Input.GetKeyDown(KeyCode.C) && maxjump > 0)   //점프
         {
@@ -93,7 +96,9 @@ public class playerControl : MonoBehaviour
             animator.SetBool("isJump", true);
             animator.SetBool("isRun", false);
             rigid2D.velocity = new Vector2(rigid2D.velocity.x, jumpSpeed);
-            animator.SetBool("isFall", false);
+
+            // Play jump sound effect
+            AudioManager.instance.PlaySfx(AudioManager.Sfx.Jump);
         }
 
         if (animator.GetFloat("isDash") < 1)
@@ -107,12 +112,16 @@ public class playerControl : MonoBehaviour
             animator.SetFloat("isAttack", firstattackcon);
         }
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag.Equals("EnemyAttack")) {
+        if (collision.gameObject.tag.Equals("EnemyAttack"))
+        {
             animator.SetTrigger("Hit");
             Debug.Log("앗따겅");
 
+            // Play hit sound effect
+            AudioManager.instance.PlaySfx(AudioManager.Sfx.Hit);
         }
     }
 
@@ -129,14 +138,13 @@ public class playerControl : MonoBehaviour
         isAttackCool = true;
         maxAttack = 1;
         AttackDelay = true;
-        
     }
+
     public void StopMovement()
     {
         rigid2D.velocity = Vector2.zero;  // Rigidbody의 속도를 0으로 설정
     }
 
-    // 이동을 재개하는 함수
     public void ResumeMovement()
     {
         rigid2D.velocity = new Vector2(0, 0); // 원래대로 속도 설정 (혹은 원래 속도를 적용)

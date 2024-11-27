@@ -6849,7 +6849,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -37.922047, y: -0.66778994, z: -10}
+  m_LocalPosition: {x: -38.107613, y: -0.67017984, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13510,6 +13510,72 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &763805303
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 763805305}
+  - component: {fileID: 763805304}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &763805304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 763805303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66be030d3e9f93e4c83221457a21e459, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bgmClip: {fileID: 8300000, guid: c8467880217ec4547ad4c27093de7aeb, type: 3}
+  bgmVolume: 0.1
+  sfxClips:
+  - {fileID: 8300000, guid: eec6a77876a9d5a4095ea5413dcfdd20, type: 3}
+  - {fileID: 8300000, guid: 7cd4717058f00d64489558607c74e213, type: 3}
+  - {fileID: 8300000, guid: 50f849ba9ba1e374b8b4eff337d34589, type: 3}
+  - {fileID: 8300000, guid: 79e40675a810215429aeba9e6400197b, type: 3}
+  - {fileID: 8300000, guid: 9b5fc883f97a6d84391bdc4b1096333c, type: 3}
+  - {fileID: 8300000, guid: 199e46d3798e0614b947703dd6625c70, type: 3}
+  - {fileID: 8300000, guid: e527f3b7b4c795b4d945c4652a4440ad, type: 3}
+  - {fileID: 8300000, guid: 265b3af7439f98644a51d71b7e53f7ac, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  sfxVolume: 0.2
+  bossAttackVolume: 0.01
+  channels: 16
+--- !u!4 &763805305
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 763805303}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -63.105392, y: 2.072056, z: -0.20935926}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &841564705 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7878350319992209165, guid: 9a23135b4c7643344b7ffd8223f4934f, type: 3}
@@ -15268,7 +15334,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossCollider: {fileID: 985657754}
-  Bossflip: {fileID: 0}
+  Bossflip: {fileID: 985657748}
 --- !u!1 &1015317233
 GameObject:
   m_ObjectHideFlags: 0
@@ -30735,3 +30801,4 @@ SceneRoots:
   - {fileID: 333674511}
   - {fileID: 1321369635}
   - {fileID: 519420032}
+  - {fileID: 763805305}

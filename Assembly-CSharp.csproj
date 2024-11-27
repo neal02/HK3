@@ -55,7 +55,6 @@
     <UnityVersion>2022.3.51f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.51f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.51f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
@@ -71,14 +70,16 @@
     <Compile Include="Assets\Script\widerBoss\BA2.cs" />
     <Compile Include="Assets\Script\SceneTransition1chapter.cs" />
     <Compile Include="Assets\Script\PlayerAttack.cs" />
+    <Compile Include="Assets\Script\GameDirector.cs" />
     <Compile Include="Assets\Script\playerControl.cs" />
     <Compile Include="Assets\Script\widerBoss\EndBA3.cs" />
     <Compile Include="Assets\Script\widerBoss\BC.cs" />
+    <Compile Include="Assets\Script\AudioManager.cs" />
     <Compile Include="Assets\Script\TextScript.cs" />
     <Compile Include="Assets\Script\widerBoss\EndBA.cs" />
     <Compile Include="Assets\Script\widerBoss\DashAttack.cs" />
-    <Compile Include="Assets\Script\widerBoss\BC2.cs" />
     <Compile Include="Assets\Script\widerBoss\EndBC3.cs" />
+    <Compile Include="Assets\Script\widerBoss\BC2.cs" />
     <Compile Include="Assets\Script\widerBoss\EndBA4.cs" />
     <Compile Include="Assets\Script\widerBoss\BA.cs" />
     <Compile Include="Assets\Script\widerBoss\EndBC1.cs" />
