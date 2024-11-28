@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class playerControl : MonoBehaviour
@@ -30,6 +31,8 @@ public class playerControl : MonoBehaviour
 
     private static playerControl instance;
 
+    public Vector3 targetPosition = new Vector3(-5, -1, 0);
+
     void Awake()
     {
         if (instance == null)
@@ -40,6 +43,24 @@ public class playerControl : MonoBehaviour
         else
         {
             Destroy(gameObject);
+        }
+    }
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name == "ClearScene")
+        {
+            transform.position = targetPosition;
         }
     }
 

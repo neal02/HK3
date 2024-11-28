@@ -80,7 +80,7 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
         playerScript = player.GetComponent<playerControl>();
 
         moveSpeed = 10.0f;
-        hp = 1000.0f;
+        hp = 10.0f;
         StartCoroutine(RandomPatternRoutine());
     }
 
@@ -138,6 +138,7 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
                 StartCoroutine(Move());
                 break;
             case BossState.death:
+                hp = 1;
                 Death();
                 break;
             case BossState.exit:
@@ -155,7 +156,7 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
 
     void Death()
     {
-        anim.SetBool("isDied", true);
+        anim.SetTrigger("die");
         StartCoroutine(DeathSequence());   
     }
 
@@ -164,6 +165,13 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
         if (isAlive)
         {
             StateMachine(); 
+        }
+
+        if (hp <= 0)
+        {
+            isAlive = false;
+            ChangeState(BossState.death);
+            StateMachine();
         }
     }
 
