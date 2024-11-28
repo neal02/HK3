@@ -78,8 +78,8 @@
     <Compile Include="Assets\Script\TextScript.cs" />
     <Compile Include="Assets\Script\widerBoss\EndBA.cs" />
     <Compile Include="Assets\Script\widerBoss\DashAttack.cs" />
-    <Compile Include="Assets\Script\widerBoss\EndBC3.cs" />
     <Compile Include="Assets\Script\widerBoss\BC2.cs" />
+    <Compile Include="Assets\Script\widerBoss\EndBC3.cs" />
     <Compile Include="Assets\Script\widerBoss\EndBA4.cs" />
     <Compile Include="Assets\Script\widerBoss\BA.cs" />
     <Compile Include="Assets\Script\widerBoss\EndBC1.cs" />
