@@ -56,7 +56,7 @@ public class BA2 : MonoBehaviour
                 AudioManager.instance.PlaySfx(AudioManager.Sfx.Boss_Attack);  // 보스 공격 사운드 바로 재생
                 StartCoroutine(EnableBoxColliderWithDelay(0.5f)); // 0.5초 딜레이 후 BoxCollider 활성화
             }
-            StartCoroutine(EnableBoxColliderWithDelay(0.5f)); // 1초 딜레이 후 BoxCollider 활성화
+            //StartCoroutine(EnableBoxColliderWithDelay(0.5f)); // 1초 딜레이 후 BoxCollider 활성화
         }
         else {
             StopAllCoroutines(); // 공격이 중단되면 코루틴 중지

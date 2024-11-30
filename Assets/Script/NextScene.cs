@@ -9,7 +9,7 @@ public class NextScene : MonoBehaviour
         if (Input.anyKeyDown)
         {
             // 다음 씬으로 이동 (씬 이름 사용)
-            SceneManager.LoadScene("");
+            SceneManager.LoadScene("jjid");
         }
     }
 }

@@ -669,8 +669,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Press any key to play
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7aba46222550c0f4fbfa735e86f8d74f, type: 2}
-  m_sharedMaterial: {fileID: -3649672735344915780, guid: 7aba46222550c0f4fbfa735e86f8d74f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -967,8 +967,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 20291243
-  m_SortingLayer: -1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2efdcedcf5ee53549a1c20b408f5352c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1055,8 +1055,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: " Ehoes \n    Of\nMemory..."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1905e413f0d8d474790c0150968513e8, type: 2}
-  m_sharedMaterial: {fileID: -3398378923257446701, guid: 1905e413f0d8d474790c0150968513e8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

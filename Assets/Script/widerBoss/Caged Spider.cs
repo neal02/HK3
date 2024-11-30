@@ -26,6 +26,12 @@ public class CagedSpider : MonoBehaviour
         {
             animator.SetTrigger(animationTriggerName);  // 애니메이션 파라미터 설정
 
+            // 오브젝트가 파괴될 때 소리 재생
+            if (AudioManager.instance != null)
+            {
+                AudioManager.instance.PlaySfx(AudioManager.Sfx.destroy);  // 'destroy' 효과음 재생
+            }
+
             // 애니메이션 길이 확인 후 파괴
             AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
             float animationLength = stateInfo.length;
@@ -35,11 +41,7 @@ public class CagedSpider : MonoBehaviour
 
     private void OnDestroy()
     {
-        // 오브젝트가 파괴될 때 소리 재생
-        if (AudioManager.instance != null)
-        {
-            AudioManager.instance.PlaySfx(AudioManager.Sfx.destroy);  // 'destroy' 효과음 재생
-        }
+       
         // 오브젝트가 파괴될 때 타일맵 변경
         if (currentTilemap != null) {
             currentTilemap.gameObject.SetActive(false);  // 현재 타일맵 비활성화
