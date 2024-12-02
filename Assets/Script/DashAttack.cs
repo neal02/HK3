@@ -6,7 +6,6 @@ using UnityEngine;
 public class DashAttack : MonoBehaviour
 {
     BoxCollider2D boxCollider2D;
-    public GameObject boss;
     Boss bossScript;
 
     private bool delay = true;
@@ -15,7 +14,6 @@ public class DashAttack : MonoBehaviour
     {
         Application.targetFrameRate = 60;
         boxCollider2D = GetComponent<BoxCollider2D>();
-        bossScript = boss.GetComponent<Boss>();
     }
 
 

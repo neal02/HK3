@@ -31,7 +31,7 @@ public class playerControl : MonoBehaviour
 
     private static playerControl instance;
 
-    public Vector3 targetPosition = new Vector3(-5, -1, 0);
+    public Vector3 targetPosition = new Vector3(0, -6, 0);
 
     void Awake()
     {
@@ -58,7 +58,7 @@ public class playerControl : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (scene.name == "ClearScene")
+        if (scene.name == "BattleScene")
         {
             transform.position = targetPosition;
         }

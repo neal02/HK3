@@ -20,7 +20,6 @@ public class Portal : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("플레이어 들어옴");
             FindObjectOfType<SceneTransition>().EndBattleAndFadeOut("EndingScene");
         }
 
