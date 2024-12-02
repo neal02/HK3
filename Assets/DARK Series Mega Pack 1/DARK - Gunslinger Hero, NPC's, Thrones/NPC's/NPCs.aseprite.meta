@@ -2,7 +2,67 @@ fileFormatVersion: 2
 guid: e06aa67ba5777744187a1dd98715bd5d
 ScriptedImporter:
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Blink
+    second: {fileID: 7400000, guid: b0157d65956987f4089227740b82e235, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Masked Man
+    second: {fileID: 7400000, guid: 65aa59916c4d7ca49a19c8fe39764f41, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Old Man
+    second: {fileID: 7400000, guid: b74266b3ab61b7949a549bc448c7d5d3, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: State 1
+    second: {fileID: 7400000, guid: 3e4bf3f3167477e43a8305a87f15e32a, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: State 2
+    second: {fileID: 7400000, guid: fd084bdde1aafb84f9c9c486b0174948, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Three Faced Man
+    second: {fileID: 7400000, guid: eb3c21e95bb397b40816694c667c3e88, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Transition 1
+    second: {fileID: 7400000, guid: 4dc1af6c36a6b9541868f657165cbfda, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Transition 2
+    second: {fileID: 7400000, guid: 3481df263adc79f4a80e4acc7a6923ad, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: sleep
+    second: {fileID: 7400000, guid: e7f4a0f3f1143bd47908f1326e52d051, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: sleep breathe
+    second: {fileID: 7400000, guid: d5f5d72852c08aa43b0897014ee1ca33, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: trans
+    second: {fileID: 7400000, guid: a796cdb32016c784f957d73f3275f497, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: transition
+    second: {fileID: 7400000, guid: 7d7b5ed9aff986c429836d968e029d3b, type: 2}
   serializedVersion: 2
   userData: 
   assetBundleName: 
@@ -97,7 +157,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 0
+  platformSettingsDirtyTick: 638687601546871352
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -3525,7 +3585,43 @@ ScriptedImporter:
       spriteId: 4b3577591404a994090ed81778903407
     linkedCells: []
     parentIndex: -1
-  platformSettings: []
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Android
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 

@@ -123,15 +123,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Bomb droid_Frame_0
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.8666668, y: -4.15}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 4
-      width: 192
-      height: 192
+      x: 96
+      y: 380
+      width: 15
+      height: 20
     spriteID: b2e4814f0ef5c5f4cb6ea1928fad9959
     spriteBone: []
     spriteOutline: []
@@ -140,18 +140,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 4}
+    uvTransform: {x: 96, y: 380}
   - name: Bomb droid_Frame_31
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.8666668, y: -4.315789}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 204
-      width: 192
-      height: 192
+      x: 206
+      y: 47
+      width: 15
+      height: 19
     spriteID: b152cd2ba6a834945b9239de7ddd6955
     spriteBone: []
     spriteOutline: []
@@ -160,18 +160,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 204}
+    uvTransform: {x: 206, y: 47}
   - name: Bomb droid_Frame_32
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.8666668, y: -4.4210525}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 404
-      width: 192
-      height: 192
+      x: 206
+      y: 74
+      width: 15
+      height: 19
     spriteID: 4dd44ce3d55138c4d879da0ca07355e9
     spriteBone: []
     spriteOutline: []
@@ -180,18 +180,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 404}
+    uvTransform: {x: 206, y: 74}
   - name: Bomb droid_Frame_33
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.8666668, y: -4.611111}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 604
-      width: 192
-      height: 192
+      x: 206
+      y: 123
+      width: 15
+      height: 18
     spriteID: 694064c11f0c6f6439086a15ce642e92
     spriteBone: []
     spriteOutline: []
@@ -200,18 +200,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 604}
+    uvTransform: {x: 206, y: 123}
   - name: Bomb droid_Frame_34
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.8666668, y: -3.6818182}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 804
-      width: 192
-      height: 192
+      x: 96
+      y: 350
+      width: 15
+      height: 22
     spriteID: 48d0111583f73a544a1863a097203d50
     spriteBone: []
     spriteOutline: []
@@ -220,18 +220,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 804}
+    uvTransform: {x: 96, y: 350}
   - name: Bomb droid_Frame_35
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.8666668, y: -4.05}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 1004
-      width: 192
-      height: 192
+      x: 183
+      y: 4
+      width: 15
+      height: 20
     spriteID: f346f5e7230b2eb4582da3fb400ccc73
     spriteBone: []
     spriteOutline: []
@@ -240,18 +240,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 1004}
+    uvTransform: {x: 183, y: 4}
   - name: Bomb droid_Frame_36
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.9090909, y: -6.769231}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 1204
-      width: 192
-      height: 192
+      x: 206
+      y: 26
+      width: 22
+      height: 13
     spriteID: ffc9db619386df344b39425b5686ed26
     spriteBone: []
     spriteOutline: []
@@ -260,18 +260,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 1204}
+    uvTransform: {x: 206, y: 26}
   - name: Bomb droid_Frame_37
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.8749999, y: -5.666667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 1404
-      width: 192
-      height: 192
+      x: 206
+      y: 217
+      width: 16
+      height: 15
     spriteID: beb9c114836bc9d4d9836b70797d3c00
     spriteBone: []
     spriteOutline: []
@@ -280,18 +280,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 1404}
+    uvTransform: {x: 206, y: 217}
   - name: Bomb droid_Frame_38
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.88235295, y: -6.214286}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 1604
-      width: 192
-      height: 192
+      x: 235
+      y: 4
+      width: 17
+      height: 14
     spriteID: f0b7df1c68b6cfa4cb46815508eaf9d7
     spriteBone: []
     spriteOutline: []
@@ -300,18 +300,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 1604}
+    uvTransform: {x: 235, y: 4}
   - name: Bomb droid_Frame_39
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.88235295, y: -6.2857146}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 1804
-      width: 192
-      height: 192
+      x: 206
+      y: 264
+      width: 17
+      height: 14
     spriteID: 682772962220f3b4097b03f8a334cfc2
     spriteBone: []
     spriteOutline: []
@@ -320,18 +320,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 1804}
+    uvTransform: {x: 206, y: 264}
   - name: Bomb droid_Frame_40
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.888889, y: -6.214286}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 204
-      y: 4
-      width: 192
-      height: 192
+      x: 206
+      y: 175
+      width: 18
+      height: 14
     spriteID: 05a551f1b6a86b04a8ec836b62eefb42
     spriteBone: []
     spriteOutline: []
@@ -340,18 +340,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 204, y: 4}
+    uvTransform: {x: 206, y: 175}
   - name: Bomb droid_Frame_41
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.90000004, y: -6.142857}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 204
-      y: 204
-      width: 192
-      height: 192
+      x: 206
+      y: 101
+      width: 20
+      height: 14
     spriteID: ab6b45d9088a75641bf444dc22b70703
     spriteBone: []
     spriteOutline: []
@@ -360,18 +360,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 204, y: 204}
+    uvTransform: {x: 206, y: 101}
   - name: Bomb droid_Frame_42
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.904762, y: -6.214286}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 204
-      y: 404
-      width: 192
-      height: 192
+      x: 206
+      y: 4
+      width: 21
+      height: 14
     spriteID: 90ee7475623a33245a28f6b13b488085
     spriteBone: []
     spriteOutline: []
@@ -380,18 +380,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 204, y: 404}
+    uvTransform: {x: 206, y: 4}
   - name: Bomb droid_Frame_43
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.904762, y: -7.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 204
-      y: 604
-      width: 192
-      height: 192
+      x: 206
+      y: 197
+      width: 21
+      height: 12
     spriteID: 69acd25a13fd44e49b510aa199c77219
     spriteBone: []
     spriteOutline: []
@@ -400,18 +400,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 204, y: 604}
+    uvTransform: {x: 206, y: 197}
   - name: Bomb droid_Frame_44
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.8666668, y: -5.6875}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 204
-      y: 804
-      width: 192
-      height: 192
+      x: 206
+      y: 240
+      width: 15
+      height: 16
     spriteID: 89b53294dcf018b4489f958844be1cc7
     spriteBone: []
     spriteOutline: []
@@ -420,18 +420,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 204, y: 804}
+    uvTransform: {x: 206, y: 240}
   - name: Bomb droid_Frame_45
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.8666668, y: -5.055556}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 204
-      y: 1004
-      width: 192
-      height: 192
+      x: 206
+      y: 149
+      width: 15
+      height: 18
     spriteID: 5098fc050c818be4f92cb79aa5f3c357
     spriteBone: []
     spriteOutline: []
@@ -440,18 +440,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 204, y: 1004}
+    uvTransform: {x: 206, y: 149}
   - name: Bomb droid_Frame_46
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.8666668, y: -1.2708334}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 204
-      y: 1204
-      width: 192
-      height: 192
+      x: 96
+      y: 280
+      width: 15
+      height: 48
     spriteID: 74e7f01cc2f66c0448e7525a7ec33697
     spriteBone: []
     spriteOutline: []
@@ -460,18 +460,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 204, y: 1204}
+    uvTransform: {x: 96, y: 280}
   - name: Bomb droid_Frame_1
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.6363637, y: -0.78333336}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 204
-      y: 1404
-      width: 192
-      height: 192
+      x: 127
+      y: 369
+      width: 44
+      height: 60
     spriteID: 7f53891702b6c6e4192d7ff7667ade62
     spriteBone: []
     spriteOutline: []
@@ -480,18 +480,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 204, y: 1404}
+    uvTransform: {x: 127, y: 369}
   - name: Bomb droid_Frame_2
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.6363637, y: -0.7580645}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 204
-      y: 1604
-      width: 192
-      height: 192
+      x: 127
+      y: 224
+      width: 44
+      height: 62
     spriteID: dc506f62032c06746a26abfbb41657c8
     spriteBone: []
     spriteOutline: []
@@ -500,18 +500,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 204, y: 1604}
+    uvTransform: {x: 127, y: 224}
   - name: Bomb droid_Frame_3
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.63829786, y: -0.7580645}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 204
-      y: 1804
-      width: 192
-      height: 192
+      x: 127
+      y: 154
+      width: 47
+      height: 62
     spriteID: ed331fba35289b9408f88685ab2edec5
     spriteBone: []
     spriteOutline: []
@@ -520,18 +520,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 204, y: 1804}
+    uvTransform: {x: 127, y: 154}
   - name: Bomb droid_Frame_4
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.6415095, y: -0.7580645}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 404
-      y: 4
-      width: 192
-      height: 192
+      x: 4
+      y: 420
+      width: 53
+      height: 62
     spriteID: 8c6153f722cc2c54b988a74528551c6b
     spriteBone: []
     spriteOutline: []
@@ -540,18 +540,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 404, y: 4}
+    uvTransform: {x: 4, y: 420}
   - name: Bomb droid_Frame_5
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.609375, y: -0.7580645}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 404
-      y: 204
-      width: 192
-      height: 192
+      x: 4
+      y: 350
+      width: 64
+      height: 62
     spriteID: b190971cfd374884b96a6c0141b6474e
     spriteBone: []
     spriteOutline: []
@@ -560,18 +560,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 404, y: 204}
+    uvTransform: {x: 4, y: 350}
   - name: Bomb droid_Frame_6
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5714286, y: -0.7580645}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 404
-      y: 404
-      width: 192
-      height: 192
+      x: 4
+      y: 280
+      width: 84
+      height: 62
     spriteID: 14589f3d86c22d347b8221a0d4dd31b1
     spriteBone: []
     spriteOutline: []
@@ -580,18 +580,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 404, y: 404}
+    uvTransform: {x: 4, y: 280}
   - name: Bomb droid_Frame_7
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.542056, y: -0.7580645}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 404
-      y: 604
-      width: 192
-      height: 192
+      x: 4
+      y: 142
+      width: 107
+      height: 62
     spriteID: 00850a932393a4a4c9ab4205f0dd8734
     spriteBone: []
     spriteOutline: []
@@ -600,18 +600,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 404, y: 604}
+    uvTransform: {x: 4, y: 142}
   - name: Bomb droid_Frame_8
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.539823, y: -0.78333336}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 404
-      y: 804
-      width: 192
-      height: 192
+      x: 4
+      y: 74
+      width: 113
+      height: 60
     spriteID: 0cce2d58d68ee6148a09d81ec70801d6
     spriteBone: []
     spriteOutline: []
@@ -620,18 +620,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 404, y: 804}
+    uvTransform: {x: 4, y: 74}
   - name: Bomb droid_Frame_9
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.53913045, y: -0.7580645}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 404
-      y: 1004
-      width: 192
-      height: 192
+      x: 4
+      y: 4
+      width: 115
+      height: 62
     spriteID: 93c2cd32f4b489b44822a8eddb31dd08
     spriteBone: []
     spriteOutline: []
@@ -640,18 +640,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 404, y: 1004}
+    uvTransform: {x: 4, y: 4}
   - name: Bomb droid_Frame_10
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.6, y: -0.78333336}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 404
-      y: 1204
-      width: 192
-      height: 192
+      x: 4
+      y: 212
+      width: 105
+      height: 60
     spriteID: 6c3cfb68c33163840b03ae12ccb04273
     spriteBone: []
     spriteOutline: []
@@ -660,18 +660,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 404, y: 1204}
+    uvTransform: {x: 4, y: 212}
   - name: Bomb droid_Frame_11
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.8333335, y: -1.4047619}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 404
-      y: 1404
-      width: 192
-      height: 192
+      x: 76
+      y: 350
+      width: 12
+      height: 42
     spriteID: b669508db500a3243a0b559ef210e0a8
     spriteBone: []
     spriteOutline: []
@@ -680,18 +680,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 404, y: 1404}
+    uvTransform: {x: 76, y: 350}
   - name: Bomb droid_Frame_12
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.6, y: -0.47761196}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 404
-      y: 1604
-      width: 192
-      height: 192
+      x: 127
+      y: 294
+      width: 40
+      height: 67
     spriteID: 316d7f6f307196f47b73245002047a5a
     spriteBone: []
     spriteOutline: []
@@ -700,18 +700,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 404, y: 1604}
+    uvTransform: {x: 127, y: 294}
   - name: Bomb droid_Frame_13
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.6041666, y: -0.47761196}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 404
-      y: 1804
-      width: 192
-      height: 192
+      x: 127
+      y: 4
+      width: 48
+      height: 67
     spriteID: 97681579198e2f045820232b3055cff9
     spriteBone: []
     spriteOutline: []
@@ -720,18 +720,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 404, y: 1804}
+    uvTransform: {x: 127, y: 4}
   - name: Bomb droid_Frame_14
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.6086957, y: -0.47761196}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 604
-      y: 4
-      width: 192
-      height: 192
+      x: 127
+      y: 79
+      width: 46
+      height: 67
     spriteID: 12f7e9e8ee3596b4dbb8e84fb1ddafe0
     spriteBone: []
     spriteOutline: []
@@ -740,18 +740,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 604, y: 4}
+    uvTransform: {x: 127, y: 79}
   - name: Bomb droid_Frame_15
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.6041666, y: -0.47058827}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 604
-      y: 204
-      width: 192
-      height: 192
+      x: 65
+      y: 420
+      width: 48
+      height: 68
     spriteID: a674ee6223cdbf14cb5ffdfdfd171abb
     spriteBone: []
     spriteOutline: []
@@ -760,18 +760,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 604, y: 204}
+    uvTransform: {x: 65, y: 420}
   - name: Bomb droid_Frame_16
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5957447, y: -2.909091}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 604
-      y: 404
-      width: 192
-      height: 192
+      x: 4
+      y: 490
+      width: 47
+      height: 11
     spriteID: 8f6461018bcd512499ee190d4f978565
     spriteBone: []
     spriteOutline: []
@@ -780,18 +780,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 604, y: 404}
+    uvTransform: {x: 4, y: 490}
   - name: Bomb droid_Frame_17
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.6086957, y: -2.6666667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 604
-      y: 604
-      width: 192
-      height: 192
+      x: 65
+      y: 496
+      width: 46
+      height: 12
     spriteID: a7417779684316048955016212a0627c
     spriteBone: []
     spriteOutline: []
@@ -800,18 +800,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 604, y: 604}
+    uvTransform: {x: 65, y: 496}
   - name: Bomb droid_Frame_18
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.45454547, y: -2.4615386}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 604
-      y: 804
-      width: 192
-      height: 192
+      x: 127
+      y: 460
+      width: 33
+      height: 13
     spriteID: 53139828adf81824b9e032aac175c8a9
     spriteBone: []
     spriteOutline: []
@@ -820,18 +820,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 604, y: 804}
+    uvTransform: {x: 127, y: 460}
   - name: Bomb droid_Frame_19
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5333334, y: -2.2857144}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 604
-      y: 1004
-      width: 192
-      height: 192
+      x: 127
+      y: 481
+      width: 30
+      height: 14
     spriteID: 54047d0c39cb84b4ab78ec0d4685b909
     spriteBone: []
     spriteOutline: []
@@ -840,18 +840,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 604, y: 1004}
+    uvTransform: {x: 127, y: 481}
   - name: Bomb droid_Frame_20
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5333334, y: -2.1333334}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 604
-      y: 1204
-      width: 192
-      height: 192
+      x: 127
+      y: 437
+      width: 30
+      height: 15
     spriteID: 828d17d9269100a47ad483a59b5bbee1
     spriteBone: []
     spriteOutline: []
@@ -860,18 +860,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 604, y: 1204}
+    uvTransform: {x: 127, y: 437}
   - name: Bomb droid_Frame_21
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.8666668, y: -7.4166665}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 604
-      y: 1404
-      width: 192
-      height: 192
+      x: 206
+      y: 374
+      width: 15
+      height: 12
     spriteID: 9b55d2fb1977fa342b5e2e474c3fd465
     spriteBone: []
     spriteOutline: []
@@ -880,18 +880,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 604, y: 1404}
+    uvTransform: {x: 206, y: 374}
   - name: Bomb droid_Frame_22
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.8666668, y: -6.4285717}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 604
-      y: 1604
-      width: 192
-      height: 192
+      x: 206
+      y: 286
+      width: 15
+      height: 14
     spriteID: 89f04d53c30acf24c88bd99d91dad8f4
     spriteBone: []
     spriteOutline: []
@@ -900,18 +900,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 604, y: 1604}
+    uvTransform: {x: 206, y: 286}
   - name: Bomb droid_Frame_23
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.9230769, y: -6.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 604
-      y: 1804
-      width: 192
-      height: 192
+      x: 206
+      y: 330
+      width: 13
+      height: 14
     spriteID: 6e5363f15c487364b8befe1a99c2ff25
     spriteBone: []
     spriteOutline: []
@@ -920,18 +920,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 604, y: 1804}
+    uvTransform: {x: 206, y: 330}
   - name: Bomb droid_Frame_24
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.8666668, y: -6.714286}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 804
-      y: 4
-      width: 192
-      height: 192
+      x: 206
+      y: 308
+      width: 15
+      height: 14
     spriteID: 18312b101526fc34d9cbdbe7fadddab0
     spriteBone: []
     spriteOutline: []
@@ -940,18 +940,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 804, y: 4}
+    uvTransform: {x: 206, y: 308}
   - name: Bomb droid_Frame_25
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.8666668, y: -7.8333335}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 804
-      y: 204
-      width: 192
-      height: 192
+      x: 206
+      y: 394
+      width: 15
+      height: 12
     spriteID: a6f61f663baf7fe49889877f90e72c28
     spriteBone: []
     spriteOutline: []
@@ -960,18 +960,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 804, y: 204}
+    uvTransform: {x: 206, y: 394}
   - name: Bomb droid_Frame_26
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.9230769, y: -6.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 804
-      y: 404
-      width: 192
-      height: 192
+      x: 206
+      y: 352
+      width: 13
+      height: 14
     spriteID: 529e6308b9d51c24997fab2dc8545527
     spriteBone: []
     spriteOutline: []
@@ -980,18 +980,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 804, y: 404}
+    uvTransform: {x: 206, y: 352}
   - name: Bomb droid_Frame_27
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.8666668, y: -7.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 804
-      y: 604
-      width: 192
-      height: 192
+      x: 206
+      y: 414
+      width: 15
+      height: 12
     spriteID: 6c165b14254bd9940a09a56842a3d75d
     spriteBone: []
     spriteOutline: []
@@ -1000,18 +1000,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 804, y: 604}
+    uvTransform: {x: 206, y: 414}
   - name: Bomb droid_Frame_28
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.8666668, y: -7.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 804
-      y: 804
-      width: 192
-      height: 192
+      x: 206
+      y: 434
+      width: 15
+      height: 12
     spriteID: 65a552b4560ae3d4788cd908264ece58
     spriteBone: []
     spriteOutline: []
@@ -1020,18 +1020,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 804, y: 804}
+    uvTransform: {x: 206, y: 434}
   - name: Bomb droid_Frame_29
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.8666668, y: -7.4166665}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 804
-      y: 1004
-      width: 192
-      height: 192
+      x: 206
+      y: 454
+      width: 15
+      height: 12
     spriteID: 32dd4383c6ca679449b562f79ec4019e
     spriteBone: []
     spriteOutline: []
@@ -1040,18 +1040,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 804, y: 1004}
+    uvTransform: {x: 206, y: 454}
   - name: Bomb droid_Frame_30
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.8666668, y: -3.2000003}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 804
-      y: 1204
-      width: 192
-      height: 192
+      x: 206
+      y: 474
+      width: 15
+      height: 10
     spriteID: f67bf88d72e3df84ea0b795766bd147a
     spriteBone: []
     spriteOutline: []
@@ -1060,7 +1060,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 804, y: 1204}
+    uvTransform: {x: 206, y: 474}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -1070,428 +1070,428 @@ ScriptedImporter:
     layerType: 0
     blendMode: 0
     cells:
-    - name: Frame_0
-      frameIndex: 0
-      additiveSortOrder: 0
-      cellRect:
-        x: 0
-        y: 0
-        width: 192
-        height: 192
-      spriteId: b2e4814f0ef5c5f4cb6ea1928fad9959
-    - name: Frame_31
-      frameIndex: 31
-      additiveSortOrder: 0
-      cellRect:
-        x: 0
-        y: 0
-        width: 192
-        height: 192
-      spriteId: b152cd2ba6a834945b9239de7ddd6955
-    - name: Frame_32
-      frameIndex: 32
-      additiveSortOrder: 0
-      cellRect:
-        x: 0
-        y: 0
-        width: 192
-        height: 192
-      spriteId: 4dd44ce3d55138c4d879da0ca07355e9
-    - name: Frame_33
-      frameIndex: 33
-      additiveSortOrder: 0
-      cellRect:
-        x: 0
-        y: 0
-        width: 192
-        height: 192
-      spriteId: 694064c11f0c6f6439086a15ce642e92
-    - name: Frame_34
-      frameIndex: 34
-      additiveSortOrder: 0
-      cellRect:
-        x: 0
-        y: 0
-        width: 192
-        height: 192
-      spriteId: 48d0111583f73a544a1863a097203d50
-    - name: Frame_35
-      frameIndex: 35
-      additiveSortOrder: 0
-      cellRect:
-        x: 0
-        y: 0
-        width: 192
-        height: 192
-      spriteId: f346f5e7230b2eb4582da3fb400ccc73
-    - name: Frame_36
-      frameIndex: 36
-      additiveSortOrder: 0
-      cellRect:
-        x: 0
-        y: 0
-        width: 192
-        height: 192
-      spriteId: ffc9db619386df344b39425b5686ed26
-    - name: Frame_37
-      frameIndex: 37
-      additiveSortOrder: 0
-      cellRect:
-        x: 0
-        y: 0
-        width: 192
-        height: 192
-      spriteId: beb9c114836bc9d4d9836b70797d3c00
-    - name: Frame_38
-      frameIndex: 38
-      additiveSortOrder: 0
-      cellRect:
-        x: 0
-        y: 0
-        width: 192
-        height: 192
-      spriteId: f0b7df1c68b6cfa4cb46815508eaf9d7
-    - name: Frame_39
-      frameIndex: 39
-      additiveSortOrder: 0
-      cellRect:
-        x: 0
-        y: 0
-        width: 192
-        height: 192
-      spriteId: 682772962220f3b4097b03f8a334cfc2
-    - name: Frame_40
-      frameIndex: 40
-      additiveSortOrder: 0
-      cellRect:
-        x: 0
-        y: 0
-        width: 192
-        height: 192
-      spriteId: 05a551f1b6a86b04a8ec836b62eefb42
-    - name: Frame_41
-      frameIndex: 41
-      additiveSortOrder: 0
-      cellRect:
-        x: 0
-        y: 0
-        width: 192
-        height: 192
-      spriteId: ab6b45d9088a75641bf444dc22b70703
-    - name: Frame_42
-      frameIndex: 42
-      additiveSortOrder: 0
-      cellRect:
-        x: 0
-        y: 0
-        width: 192
-        height: 192
-      spriteId: 90ee7475623a33245a28f6b13b488085
-    - name: Frame_43
-      frameIndex: 43
-      additiveSortOrder: 0
-      cellRect:
-        x: 0
-        y: 0
-        width: 192
-        height: 192
-      spriteId: 69acd25a13fd44e49b510aa199c77219
-    - name: Frame_44
-      frameIndex: 44
-      additiveSortOrder: 0
-      cellRect:
-        x: 0
-        y: 0
-        width: 192
-        height: 192
-      spriteId: 89b53294dcf018b4489f958844be1cc7
-    - name: Frame_45
-      frameIndex: 45
-      additiveSortOrder: 0
-      cellRect:
-        x: 0
-        y: 0
-        width: 192
-        height: 192
-      spriteId: 5098fc050c818be4f92cb79aa5f3c357
-    - name: Frame_46
-      frameIndex: 46
-      additiveSortOrder: 0
-      cellRect:
-        x: 0
-        y: 0
-        width: 192
-        height: 192
-      spriteId: 74e7f01cc2f66c0448e7525a7ec33697
     - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 192
-        height: 192
-      spriteId: 7f53891702b6c6e4192d7ff7667ade62
+        x: 83
+        y: 83
+        width: 15
+        height: 20
+      spriteId: b2e4814f0ef5c5f4cb6ea1928fad9959
     - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 192
-        height: 192
-      spriteId: dc506f62032c06746a26abfbb41657c8
+        x: 83
+        y: 82
+        width: 15
+        height: 19
+      spriteId: b152cd2ba6a834945b9239de7ddd6955
     - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 192
-        height: 192
-      spriteId: ed331fba35289b9408f88685ab2edec5
+        x: 83
+        y: 84
+        width: 15
+        height: 19
+      spriteId: 4dd44ce3d55138c4d879da0ca07355e9
     - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 192
-        height: 192
-      spriteId: 8c6153f722cc2c54b988a74528551c6b
+        x: 83
+        y: 83
+        width: 15
+        height: 18
+      spriteId: 694064c11f0c6f6439086a15ce642e92
     - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 192
-        height: 192
-      spriteId: b190971cfd374884b96a6c0141b6474e
+        x: 83
+        y: 81
+        width: 15
+        height: 22
+      spriteId: 48d0111583f73a544a1863a097203d50
     - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 192
-        height: 192
-      spriteId: 14589f3d86c22d347b8221a0d4dd31b1
+        x: 83
+        y: 81
+        width: 15
+        height: 20
+      spriteId: f346f5e7230b2eb4582da3fb400ccc73
     - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 192
-        height: 192
-      spriteId: 00850a932393a4a4c9ab4205f0dd8734
+        x: 76
+        y: 88
+        width: 22
+        height: 13
+      spriteId: ffc9db619386df344b39425b5686ed26
     - name: Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 192
-        height: 192
-      spriteId: 0cce2d58d68ee6148a09d81ec70801d6
+        x: 82
+        y: 85
+        width: 16
+        height: 15
+      spriteId: beb9c114836bc9d4d9836b70797d3c00
     - name: Frame_9
       frameIndex: 9
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 192
-        height: 192
-      spriteId: 93c2cd32f4b489b44822a8eddb31dd08
+        x: 81
+        y: 87
+        width: 17
+        height: 14
+      spriteId: f0b7df1c68b6cfa4cb46815508eaf9d7
     - name: Frame_10
       frameIndex: 10
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 192
-        height: 192
-      spriteId: 6c3cfb68c33163840b03ae12ccb04273
+        x: 81
+        y: 88
+        width: 17
+        height: 14
+      spriteId: 682772962220f3b4097b03f8a334cfc2
     - name: Frame_11
       frameIndex: 11
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 192
-        height: 192
-      spriteId: b669508db500a3243a0b559ef210e0a8
+        x: 80
+        y: 87
+        width: 18
+        height: 14
+      spriteId: 05a551f1b6a86b04a8ec836b62eefb42
     - name: Frame_12
       frameIndex: 12
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 192
-        height: 192
-      spriteId: 316d7f6f307196f47b73245002047a5a
+        x: 78
+        y: 86
+        width: 20
+        height: 14
+      spriteId: ab6b45d9088a75641bf444dc22b70703
     - name: Frame_13
       frameIndex: 13
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 192
-        height: 192
-      spriteId: 97681579198e2f045820232b3055cff9
+        x: 77
+        y: 87
+        width: 21
+        height: 14
+      spriteId: 90ee7475623a33245a28f6b13b488085
     - name: Frame_14
       frameIndex: 14
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 192
-        height: 192
-      spriteId: 12f7e9e8ee3596b4dbb8e84fb1ddafe0
-    - name: Frame_15
-      frameIndex: 15
-      additiveSortOrder: 0
-      cellRect:
-        x: 0
-        y: 0
-        width: 192
-        height: 192
-      spriteId: a674ee6223cdbf14cb5ffdfdfd171abb
-    - name: Frame_16
-      frameIndex: 16
-      additiveSortOrder: 0
-      cellRect:
-        x: 0
-        y: 0
-        width: 192
-        height: 192
-      spriteId: 8f6461018bcd512499ee190d4f978565
-    - name: Frame_17
-      frameIndex: 17
-      additiveSortOrder: 0
-      cellRect:
-        x: 0
-        y: 0
-        width: 192
-        height: 192
-      spriteId: a7417779684316048955016212a0627c
+        x: 77
+        y: 90
+        width: 21
+        height: 12
+      spriteId: 69acd25a13fd44e49b510aa199c77219
     - name: Frame_18
       frameIndex: 18
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 192
-        height: 192
-      spriteId: 53139828adf81824b9e032aac175c8a9
+        x: 83
+        y: 91
+        width: 15
+        height: 16
+      spriteId: 89b53294dcf018b4489f958844be1cc7
     - name: Frame_19
       frameIndex: 19
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 192
-        height: 192
-      spriteId: 54047d0c39cb84b4ab78ec0d4685b909
+        x: 83
+        y: 91
+        width: 15
+        height: 18
+      spriteId: 5098fc050c818be4f92cb79aa5f3c357
     - name: Frame_20
       frameIndex: 20
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 192
-        height: 192
-      spriteId: 828d17d9269100a47ad483a59b5bbee1
+        x: 83
+        y: 61
+        width: 15
+        height: 48
+      spriteId: 74e7f01cc2f66c0448e7525a7ec33697
     - name: Frame_21
       frameIndex: 21
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 192
-        height: 192
-      spriteId: 9b55d2fb1977fa342b5e2e474c3fd465
+        x: 68
+        y: 47
+        width: 44
+        height: 60
+      spriteId: 7f53891702b6c6e4192d7ff7667ade62
     - name: Frame_22
       frameIndex: 22
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 192
-        height: 192
-      spriteId: 89f04d53c30acf24c88bd99d91dad8f4
+        x: 68
+        y: 47
+        width: 44
+        height: 62
+      spriteId: dc506f62032c06746a26abfbb41657c8
     - name: Frame_23
       frameIndex: 23
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 192
-        height: 192
-      spriteId: 6e5363f15c487364b8befe1a99c2ff25
+        x: 66
+        y: 47
+        width: 47
+        height: 62
+      spriteId: ed331fba35289b9408f88685ab2edec5
     - name: Frame_24
       frameIndex: 24
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 192
-        height: 192
-      spriteId: 18312b101526fc34d9cbdbe7fadddab0
+        x: 62
+        y: 47
+        width: 53
+        height: 62
+      spriteId: 8c6153f722cc2c54b988a74528551c6b
     - name: Frame_25
       frameIndex: 25
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 192
-        height: 192
-      spriteId: a6f61f663baf7fe49889877f90e72c28
+        x: 57
+        y: 47
+        width: 64
+        height: 62
+      spriteId: b190971cfd374884b96a6c0141b6474e
     - name: Frame_26
       frameIndex: 26
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 192
-        height: 192
-      spriteId: 529e6308b9d51c24997fab2dc8545527
+        x: 48
+        y: 47
+        width: 84
+        height: 62
+      spriteId: 14589f3d86c22d347b8221a0d4dd31b1
     - name: Frame_27
       frameIndex: 27
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 192
-        height: 192
-      spriteId: 6c165b14254bd9940a09a56842a3d75d
+        x: 38
+        y: 47
+        width: 107
+        height: 62
+      spriteId: 00850a932393a4a4c9ab4205f0dd8734
     - name: Frame_28
       frameIndex: 28
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 192
-        height: 192
-      spriteId: 65a552b4560ae3d4788cd908264ece58
+        x: 35
+        y: 47
+        width: 113
+        height: 60
+      spriteId: 0cce2d58d68ee6148a09d81ec70801d6
     - name: Frame_29
       frameIndex: 29
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 192
-        height: 192
-      spriteId: 32dd4383c6ca679449b562f79ec4019e
+        x: 34
+        y: 47
+        width: 115
+        height: 62
+      spriteId: 93c2cd32f4b489b44822a8eddb31dd08
     - name: Frame_30
       frameIndex: 30
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 192
-        height: 192
+        x: 33
+        y: 47
+        width: 105
+        height: 60
+      spriteId: 6c3cfb68c33163840b03ae12ccb04273
+    - name: Frame_36
+      frameIndex: 36
+      additiveSortOrder: 0
+      cellRect:
+        x: 86
+        y: 59
+        width: 12
+        height: 42
+      spriteId: b669508db500a3243a0b559ef210e0a8
+    - name: Frame_37
+      frameIndex: 37
+      additiveSortOrder: 0
+      cellRect:
+        x: 72
+        y: 32
+        width: 40
+        height: 67
+      spriteId: 316d7f6f307196f47b73245002047a5a
+    - name: Frame_38
+      frameIndex: 38
+      additiveSortOrder: 0
+      cellRect:
+        x: 67
+        y: 32
+        width: 48
+        height: 67
+      spriteId: 97681579198e2f045820232b3055cff9
+    - name: Frame_39
+      frameIndex: 39
+      additiveSortOrder: 0
+      cellRect:
+        x: 68
+        y: 32
+        width: 46
+        height: 67
+      spriteId: 12f7e9e8ee3596b4dbb8e84fb1ddafe0
+    - name: Frame_40
+      frameIndex: 40
+      additiveSortOrder: 0
+      cellRect:
+        x: 67
+        y: 32
+        width: 48
+        height: 68
+      spriteId: a674ee6223cdbf14cb5ffdfdfd171abb
+    - name: Frame_41
+      frameIndex: 41
+      additiveSortOrder: 0
+      cellRect:
+        x: 68
+        y: 32
+        width: 47
+        height: 11
+      spriteId: 8f6461018bcd512499ee190d4f978565
+    - name: Frame_42
+      frameIndex: 42
+      additiveSortOrder: 0
+      cellRect:
+        x: 68
+        y: 32
+        width: 46
+        height: 12
+      spriteId: a7417779684316048955016212a0627c
+    - name: Frame_43
+      frameIndex: 43
+      additiveSortOrder: 0
+      cellRect:
+        x: 81
+        y: 32
+        width: 33
+        height: 13
+      spriteId: 53139828adf81824b9e032aac175c8a9
+    - name: Frame_44
+      frameIndex: 44
+      additiveSortOrder: 0
+      cellRect:
+        x: 80
+        y: 32
+        width: 30
+        height: 14
+      spriteId: 54047d0c39cb84b4ab78ec0d4685b909
+    - name: Frame_45
+      frameIndex: 45
+      additiveSortOrder: 0
+      cellRect:
+        x: 80
+        y: 32
+        width: 30
+        height: 15
+      spriteId: 828d17d9269100a47ad483a59b5bbee1
+    - name: Frame_0
+      frameIndex: 0
+      additiveSortOrder: 0
+      cellRect:
+        x: 83
+        y: 89
+        width: 15
+        height: 12
+      spriteId: 9b55d2fb1977fa342b5e2e474c3fd465
+    - name: Frame_15
+      frameIndex: 15
+      additiveSortOrder: 0
+      cellRect:
+        x: 83
+        y: 90
+        width: 15
+        height: 14
+      spriteId: 89f04d53c30acf24c88bd99d91dad8f4
+    - name: Frame_16
+      frameIndex: 16
+      additiveSortOrder: 0
+      cellRect:
+        x: 84
+        y: 91
+        width: 13
+        height: 14
+      spriteId: 6e5363f15c487364b8befe1a99c2ff25
+    - name: Frame_17
+      frameIndex: 17
+      additiveSortOrder: 0
+      cellRect:
+        x: 83
+        y: 94
+        width: 15
+        height: 14
+      spriteId: 18312b101526fc34d9cbdbe7fadddab0
+    - name: Frame_31
+      frameIndex: 31
+      additiveSortOrder: 0
+      cellRect:
+        x: 83
+        y: 94
+        width: 15
+        height: 12
+      spriteId: a6f61f663baf7fe49889877f90e72c28
+    - name: Frame_32
+      frameIndex: 32
+      additiveSortOrder: 0
+      cellRect:
+        x: 84
+        y: 91
+        width: 13
+        height: 14
+      spriteId: 529e6308b9d51c24997fab2dc8545527
+    - name: Frame_33
+      frameIndex: 33
+      additiveSortOrder: 0
+      cellRect:
+        x: 83
+        y: 90
+        width: 15
+        height: 12
+      spriteId: 6c165b14254bd9940a09a56842a3d75d
+    - name: Frame_34
+      frameIndex: 34
+      additiveSortOrder: 0
+      cellRect:
+        x: 83
+        y: 90
+        width: 15
+        height: 12
+      spriteId: 65a552b4560ae3d4788cd908264ece58
+    - name: Frame_35
+      frameIndex: 35
+      additiveSortOrder: 0
+      cellRect:
+        x: 83
+        y: 89
+        width: 15
+        height: 12
+      spriteId: 32dd4383c6ca679449b562f79ec4019e
+    - name: Frame_46
+      frameIndex: 46
+      additiveSortOrder: 0
+      cellRect:
+        x: 83
+        y: 32
+        width: 15
+        height: 10
       spriteId: f67bf88d72e3df84ea0b795766bd147a
     linkedCells: []
     parentIndex: -1
