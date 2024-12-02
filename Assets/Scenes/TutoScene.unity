@@ -186,7 +186,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.2697929, y: 0.117492035}
+  m_Offset: {x: -0.27, y: 0.117492035}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -436,7 +436,7 @@ GameObject:
   - component: {fileID: 294815608}
   - component: {fileID: 294815607}
   m_Layer: 0
-  m_Name: ThreeFaceNPC (1)
+  m_Name: SleepNPC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -451,7 +451,7 @@ Transform:
   m_GameObject: {fileID: 294815605}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.43, y: -4, z: 0.1155633}
+  m_LocalPosition: {x: 12, y: -4, z: 0.1155633}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -763,7 +763,7 @@ Transform:
   m_GameObject: {fileID: 422381843}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 69.9, y: -3.62, z: 0}
+  m_LocalPosition: {x: -25, y: -4, z: 0}
   m_LocalScale: {x: 6, y: 6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1642,7 +1642,7 @@ Transform:
   m_GameObject: {fileID: 886573828}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 80, y: -4, z: 0.1155633}
+  m_LocalPosition: {x: 70, y: -4, z: 0.1155633}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1808,12 +1808,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StaightAttack: {fileID: 117350482}
-  AirAttack: {fileID: 1355841849}
   player: {fileID: 422381843}
   MaxHp: 4
   MaxSpeedX: 3
   AttackCool: 1
-  AirAttackCool: 1
 --- !u!1 &954201608
 GameObject:
   m_ObjectHideFlags: 0
@@ -8449,7 +8447,7 @@ Transform:
   m_GameObject: {fileID: 1675368036}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 19.332, y: -4, z: 0.1155633}
+  m_LocalPosition: {x: 22, y: 2.2, z: 0.1155633}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

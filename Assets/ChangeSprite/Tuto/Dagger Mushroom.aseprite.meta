@@ -1,0 +1,2042 @@
+fileFormatVersion: 2
+guid: 07880cd68cf86b8489b531b4ecb34dad
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Air attack
+    second: {fileID: 7400000, guid: e67b81a17df66b24e9e738ee7ffd8632, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: 'Attacks '
+    second: {fileID: 7400000, guid: 4126a3bcb32a2844b8e693666eb378a1, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Death
+    second: {fileID: 7400000, guid: bf1cb5cccd772ba41b2e252ddf3f2724, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Idle
+    second: {fileID: 7400000, guid: 0d9f9cbf5199e4041b0bd4eb9dffbfba, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: RUN
+    second: {fileID: 7400000, guid: 2cd50ed71d92b8c4baf7d66be53a5a51, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: RUN fast
+    second: {fileID: 7400000, guid: 37463e390da495e45820d9bba2191dfb, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: damaged
+    second: {fileID: 7400000, guid: 4e5cbc555e35af245890c97a544ebe8f, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: throw
+    second: {fileID: 7400000, guid: 5537edb53dd44ae47ac4741b1b3e56d0, type: 2}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 638687531294446845
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: Dagger Mushroom_Frame_0
+    originalName: 
+    pivot: {x: 0.53838825, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 95
+      y: 185
+      width: 24
+      height: 24
+    spriteID: 64a9bafb6f753df43938a4749e24696c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 95, y: 185}
+  - name: Dagger Mushroom_Frame_1
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 7
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 167
+      y: 288
+      width: 24
+      height: 23
+    spriteID: 2e80ae5e76ceaf7439591da0c0b85ed0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 167, y: 288}
+  - name: Dagger Mushroom_Frame_2
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 7
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 129
+      y: 470
+      width: 24
+      height: 24
+    spriteID: d64fb00ce83fc0f4c8064ac8cb530931
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 129, y: 470}
+  - name: Dagger Mushroom_Frame_3
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 7
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 167
+      y: 37
+      width: 24
+      height: 24
+    spriteID: 5c996ed60c1489b4c8538e6b452ccc74
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 167, y: 37}
+  - name: Dagger Mushroom_Frame_4
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 7
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 167
+      y: 165
+      width: 23
+      height: 25
+    spriteID: 0f02706f83f55314a9f93cdc8e867aa6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 167, y: 165}
+  - name: Dagger Mushroom_Frame_5
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 7
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 167
+      y: 319
+      width: 23
+      height: 24
+    spriteID: 199fa6ff1ab8a6446ae3f25917e92173
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 167, y: 319}
+  - name: Dagger Mushroom_Frame_6
+    originalName: 
+    pivot: {x: 0.5736053, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 88
+      y: 255
+      width: 22
+      height: 21
+    spriteID: 0562d95b64bbf0247b90826026c15b42
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 88, y: 255}
+  - name: Dagger Mushroom_Frame_7
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 7
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 206
+      y: 122
+      width: 22
+      height: 20
+    spriteID: 130cad87d0a3773498f6d2a0a8704313
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 206, y: 122}
+  - name: Dagger Mushroom_Frame_8
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 7
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 167
+      y: 351
+      width: 24
+      height: 23
+    spriteID: 6ab2f417dc268b747b6da48d60585f04
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 167, y: 351}
+  - name: Dagger Mushroom_Frame_9
+    originalName: 
+    pivot: {x: 0.53466797, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 129
+      y: 38
+      width: 22
+      height: 33
+    spriteID: 921f6b8af0bed4149ab610d1d4ffd08a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 129, y: 38}
+  - name: Dagger Mushroom_Frame_10
+    originalName: 
+    pivot: {x: 0.58412963, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 88
+      y: 217
+      width: 28
+      height: 30
+    spriteID: 777af916df57bda449b426b53c829b80
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 88, y: 217}
+  - name: Dagger Mushroom_Frame_11
+    originalName: 
+    pivot: {x: 0.6113182, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 68
+      y: 416
+      width: 26
+      height: 30
+    spriteID: 542b48840c104514db9ebd29ec3f9f74
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 68, y: 416}
+  - name: Dagger Mushroom_Frame_12
+    originalName: 
+    pivot: {x: 0.6406728, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 95
+      y: 145
+      width: 26
+      height: 32
+    spriteID: b14a68d3ba3c4984fa247fc7963dced4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 95, y: 145}
+  - name: Dagger Mushroom_Frame_13
+    originalName: 
+    pivot: {x: 0.56639534, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 129
+      y: 434
+      width: 21
+      height: 28
+    spriteID: e0d7e3c262fbbc9418fb7b593b1deefb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 129, y: 434}
+  - name: Dagger Mushroom_Frame_14
+    originalName: 
+    pivot: {x: 0.48935127, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 167
+      y: 69
+      width: 24
+      height: 24
+    spriteID: 4ee51ad3830f9964d93cc855ce06d2c9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 167, y: 69}
+  - name: Dagger Mushroom_Frame_15
+    originalName: 
+    pivot: {x: 0.4792684, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 167
+      y: 101
+      width: 24
+      height: 24
+    spriteID: e70a139fb70b3d6489c78ddf809c617f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 167, y: 101}
+  - name: Dagger Mushroom_Frame_16
+    originalName: 
+    pivot: {x: 0.27076715, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 284
+      width: 87
+      height: 18
+    spriteID: 740dc03cc708cbb4aa98ad4eefcafeda
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 284}
+  - name: Dagger Mushroom_Frame_17
+    originalName: 
+    pivot: {x: 0.2503529, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 391
+      width: 56
+      height: 19
+    spriteID: 19c3bf0343b6ff347b3e189c2505d4ca
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 391}
+  - name: Dagger Mushroom_Frame_18
+    originalName: 
+    pivot: {x: 0.334145, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 445
+      width: 46
+      height: 19
+    spriteID: 53ed331cb1f6b034b868667705433877
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 445}
+  - name: Dagger Mushroom_Frame_19
+    originalName: 
+    pivot: {x: 0.31594354, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 68
+      y: 488
+      width: 40
+      height: 19
+    spriteID: a5511eabb84964348ad9d1b5f8c47857
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 68, y: 488}
+  - name: Dagger Mushroom_Frame_20
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 7
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 129
+      y: 374
+      width: 28
+      height: 22
+    spriteID: 9fb51c029bb019343ab7348af8607e28
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 129, y: 374}
+  - name: Dagger Mushroom_Frame_21
+    originalName: 
+    pivot: {x: 0.62746453, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 129
+      y: 79
+      width: 29
+      height: 25
+    spriteID: 8ae8a9264276ecc49bef9c8f47c5218c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 129, y: 79}
+  - name: Dagger Mushroom_Frame_22
+    originalName: 
+    pivot: {x: 0.53094155, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 68
+      y: 454
+      width: 30
+      height: 26
+    spriteID: f10a61a37dd36994eac60676f7d3f2d8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 68, y: 454}
+  - name: Dagger Mushroom_Frame_23
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 7
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 167
+      y: 4
+      width: 31
+      height: 25
+    spriteID: 195c07300b7a60c4289d54d198138d54
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 167, y: 4}
+  - name: Dagger Mushroom_Frame_24
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 7
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 167
+      y: 198
+      width: 26
+      height: 22
+    spriteID: e84a20babf71e98429efe68640640b63
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 167, y: 198}
+  - name: Dagger Mushroom_Frame_25
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 7
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 129
+      y: 308
+      width: 26
+      height: 25
+    spriteID: f96cfeb05632d4e4d99bdcb74e547c1e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 129, y: 308}
+  - name: Dagger Mushroom_Frame_26
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 7
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 129
+      y: 145
+      width: 27
+      height: 26
+    spriteID: c13683c40e71f914ab8347e7ca84159e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 129, y: 145}
+  - name: Dagger Mushroom_Frame_27
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 7
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 129
+      y: 213
+      width: 28
+      height: 25
+    spriteID: b966925a8d809b042862ac9b32474a5a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 129, y: 213}
+  - name: Dagger Mushroom_Frame_28
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 7
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 129
+      y: 404
+      width: 28
+      height: 22
+    spriteID: e993f34d662f49641b785f23b28f0fb2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 129, y: 404}
+  - name: Dagger Mushroom_Frame_29
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 7
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 129
+      y: 112
+      width: 29
+      height: 25
+    spriteID: d14476eb90006434c82c242dafa729aa
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 129, y: 112}
+  - name: Dagger Mushroom_Frame_30
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 7
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 129
+      y: 4
+      width: 30
+      height: 26
+    spriteID: 43c8610d44741884d938f89add83ce7b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 129, y: 4}
+  - name: Dagger Mushroom_Frame_31
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 7
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 167
+      y: 228
+      width: 26
+      height: 22
+    spriteID: 3075d48d99929ef4ba4c169a738a4561
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 167, y: 228}
+  - name: Dagger Mushroom_Frame_32
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 7
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 129
+      y: 341
+      width: 26
+      height: 25
+    spriteID: 559943abe0f5f0a458959362e1c2cfc9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 129, y: 341}
+  - name: Dagger Mushroom_Frame_33
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 7
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 129
+      y: 179
+      width: 27
+      height: 26
+    spriteID: 0054a4b69c246074fb0e3ac2efd4ef07
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 129, y: 179}
+  - name: Dagger Mushroom_Frame_34
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 7
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 206
+      y: 64
+      width: 22
+      height: 21
+    spriteID: 0430014f18880474db77618276ac869e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 206, y: 64}
+  - name: Dagger Mushroom_Frame_35
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 7
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 206
+      y: 150
+      width: 22
+      height: 20
+    spriteID: 65b96985a7f572f449cb40e9314158c5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 206, y: 150}
+  - name: Dagger Mushroom_Frame_36
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 7
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 129
+      y: 246
+      width: 29
+      height: 23
+    spriteID: caadad24a2560ad48bdcbe84cbd58704
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 129, y: 246}
+  - name: Dagger Mushroom_Frame_37
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 7
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 129
+      y: 277
+      width: 29
+      height: 23
+    spriteID: 75cda5ec4848e1144b0827593ff7f710
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 129, y: 277}
+  - name: Dagger Mushroom_Frame_38
+    originalName: 
+    pivot: {x: 0.18196666, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 337
+      width: 76
+      height: 19
+    spriteID: a88db164304017847a867c219e9fc929
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 337}
+  - name: Dagger Mushroom_Frame_39
+    originalName: 
+    pivot: {x: 0.18941106, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 364
+      width: 76
+      height: 19
+    spriteID: b068aac925711984f8520d384d1583d9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 364}
+  - name: Dagger Mushroom_Frame_40
+    originalName: 
+    pivot: {x: 0.15851192, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 310
+      width: 80
+      height: 19
+    spriteID: 9787fd532aa4fcd468b0120961422e88
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 310}
+  - name: Dagger Mushroom_Frame_41
+    originalName: 
+    pivot: {x: 0.52283686, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 206
+      y: 93
+      width: 22
+      height: 21
+    spriteID: 123aa70528875b944839dda2fc61d02b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 206, y: 93}
+  - name: Dagger Mushroom_Frame_42
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 7
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 167
+      y: 382
+      width: 24
+      height: 23
+    spriteID: 39f4953077fa1184d9b88d1bce19e41e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 167, y: 382}
+  - name: Dagger Mushroom_Frame_43
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 7
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 167
+      y: 133
+      width: 24
+      height: 24
+    spriteID: 7e2c4253cab6fd04c8e6cc38a8c2c23c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 167, y: 133}
+  - name: Dagger Mushroom_Frame_44
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 7
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 167
+      y: 413
+      width: 24
+      height: 23
+    spriteID: 6fc99f8f6777aa74f8a6bf178cc42af5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 167, y: 413}
+  - name: Dagger Mushroom_Frame_45
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 7
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 167
+      y: 444
+      width: 25
+      height: 22
+    spriteID: fb627e992e76a224c9fe78d85e4ffee3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 167, y: 444}
+  - name: Dagger Mushroom_Frame_46
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 7
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 167
+      y: 258
+      width: 26
+      height: 22
+    spriteID: 925377b2685a20549aba4a2af1f4550d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 167, y: 258}
+  - name: Dagger Mushroom_Frame_47
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 7
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 167
+      y: 474
+      width: 25
+      height: 22
+    spriteID: b97d74a002c72a845b9e9bb4cda1c8fb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 167, y: 474}
+  - name: Dagger Mushroom_Frame_48
+    originalName: 
+    pivot: {x: 0.49041566, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 206
+      y: 4
+      width: 25
+      height: 22
+    spriteID: 6fba7dcb8908ba648a0bf247f00a7428
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 206, y: 4}
+  - name: Dagger Mushroom_Frame_49
+    originalName: 
+    pivot: {x: 0.49041688, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 206
+      y: 34
+      width: 25
+      height: 22
+    spriteID: f5be4bb519d21fd4eb77811c05570a3c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 206, y: 34}
+  - name: Dagger Mushroom_Frame_50
+    originalName: 
+    pivot: {x: 0.49824658, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 206
+      y: 236
+      width: 34
+      height: 11
+    spriteID: 7c4dcea8f4927114caa8baef615d7b22
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 206, y: 236}
+  - name: Dagger Mushroom_Frame_51
+    originalName: 
+    pivot: {x: 0.48400965, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 206
+      y: 255
+      width: 35
+      height: 10
+    spriteID: af0a5d9b9638ad8488fbec3b60baf923
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 206, y: 255}
+  - name: Dagger Mushroom_Frame_52
+    originalName: 
+    pivot: {x: 0.5271397, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 206
+      y: 178
+      width: 35
+      height: 12
+    spriteID: d4f8679647407344b81d5bb3f98edeb3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 206, y: 178}
+  - name: Dagger Mushroom_Frame_53
+    originalName: 
+    pivot: {x: 0.5185146, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 206
+      y: 217
+      width: 35
+      height: 11
+    spriteID: f8f2a21660e034a479ca0d177830ceee
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 206, y: 217}
+  - name: Dagger Mushroom_Frame_54
+    originalName: 
+    pivot: {x: 0.5208838, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 206
+      y: 198
+      width: 36
+      height: 11
+    spriteID: d7608d047d55a30459ada6fb887f2442
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 206, y: 198}
+  - name: Dagger Mushroom_Frame_55
+    originalName: 
+    pivot: {x: 0.5485508, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 145
+      width: 83
+      height: 64
+    spriteID: f7c6f9f7812ac5a409ae583c37b45d05
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 145}
+  - name: Dagger Mushroom_Frame_56
+    originalName: 
+    pivot: {x: 0.4559769, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 418
+      width: 53
+      height: 19
+    spriteID: cda3f47f56df5414a90e274d71d05c18
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 418}
+  - name: Dagger Mushroom_Frame_57
+    originalName: 
+    pivot: {x: 0.29834664, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 68
+      y: 391
+      width: 46
+      height: 17
+    spriteID: 9f625c179db229b419a4bf730cdd23ae
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 68, y: 391}
+  - name: Dagger Mushroom_Frame_58
+    originalName: 
+    pivot: {x: 0.34278455, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 472
+      width: 45
+      height: 19
+    spriteID: 2b16663c9cedb674580abaff5dfa7e44
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 472}
+  - name: Dagger Mushroom_Frame_59
+    originalName: 
+    pivot: {x: 0.5064435, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 92
+      y: 310
+      width: 25
+      height: 19
+    spriteID: c5ef9bc785ea4bd47909875cc80835ba
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 92, y: 310}
+  - name: Dagger Mushroom_Frame_60
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 7
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 117
+      height: 64
+    spriteID: 4fe088f2b1557824f955ee8adcec5db2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: Dagger Mushroom_Frame_61
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 7
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 76
+      width: 100
+      height: 61
+    spriteID: d197e3e56fa71e747af411c03638bfaa
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 76}
+  - name: Dagger Mushroom_Frame_62
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 7
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 217
+      width: 76
+      height: 59
+    spriteID: af757544bf4c382498b18699fbdf1718
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 217}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 658320478
+    name: Dagger Mushroom
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Frame_0
+      frameIndex: 0
+      additiveSortOrder: 0
+      cellRect:
+        x: 39
+        y: 96
+        width: 24
+        height: 24
+      spriteId: 64a9bafb6f753df43938a4749e24696c
+    - name: Frame_1
+      frameIndex: 1
+      additiveSortOrder: 0
+      cellRect:
+        x: 39
+        y: 96
+        width: 24
+        height: 23
+      spriteId: 2e80ae5e76ceaf7439591da0c0b85ed0
+    - name: Frame_2
+      frameIndex: 2
+      additiveSortOrder: 0
+      cellRect:
+        x: 39
+        y: 96
+        width: 24
+        height: 24
+      spriteId: d64fb00ce83fc0f4c8064ac8cb530931
+    - name: Frame_3
+      frameIndex: 3
+      additiveSortOrder: 0
+      cellRect:
+        x: 39
+        y: 96
+        width: 24
+        height: 24
+      spriteId: 5c996ed60c1489b4c8538e6b452ccc74
+    - name: Frame_4
+      frameIndex: 4
+      additiveSortOrder: 0
+      cellRect:
+        x: 39
+        y: 96
+        width: 23
+        height: 25
+      spriteId: 0f02706f83f55314a9f93cdc8e867aa6
+    - name: Frame_5
+      frameIndex: 5
+      additiveSortOrder: 0
+      cellRect:
+        x: 39
+        y: 96
+        width: 23
+        height: 24
+      spriteId: 199fa6ff1ab8a6446ae3f25917e92173
+    - name: Frame_6
+      frameIndex: 6
+      additiveSortOrder: 0
+      cellRect:
+        x: 39
+        y: 96
+        width: 22
+        height: 21
+      spriteId: 0562d95b64bbf0247b90826026c15b42
+    - name: Frame_7
+      frameIndex: 7
+      additiveSortOrder: 0
+      cellRect:
+        x: 39
+        y: 96
+        width: 22
+        height: 20
+      spriteId: 130cad87d0a3773498f6d2a0a8704313
+    - name: Frame_8
+      frameIndex: 8
+      additiveSortOrder: 0
+      cellRect:
+        x: 39
+        y: 96
+        width: 24
+        height: 23
+      spriteId: 6ab2f417dc268b747b6da48d60585f04
+    - name: Frame_9
+      frameIndex: 9
+      additiveSortOrder: 0
+      cellRect:
+        x: 46
+        y: 117
+        width: 22
+        height: 33
+      spriteId: 921f6b8af0bed4149ab610d1d4ffd08a
+    - name: Frame_10
+      frameIndex: 10
+      additiveSortOrder: 0
+      cellRect:
+        x: 41
+        y: 144
+        width: 28
+        height: 30
+      spriteId: 777af916df57bda449b426b53c829b80
+    - name: Frame_11
+      frameIndex: 11
+      additiveSortOrder: 0
+      cellRect:
+        x: 42
+        y: 145
+        width: 26
+        height: 30
+      spriteId: 542b48840c104514db9ebd29ec3f9f74
+    - name: Frame_12
+      frameIndex: 12
+      additiveSortOrder: 0
+      cellRect:
+        x: 41
+        y: 144
+        width: 26
+        height: 32
+      spriteId: b14a68d3ba3c4984fa247fc7963dced4
+    - name: Frame_13
+      frameIndex: 13
+      additiveSortOrder: 0
+      cellRect:
+        x: 46
+        y: 143
+        width: 21
+        height: 28
+      spriteId: e0d7e3c262fbbc9418fb7b593b1deefb
+    - name: Frame_18
+      frameIndex: 18
+      additiveSortOrder: 0
+      cellRect:
+        x: 39
+        y: 96
+        width: 24
+        height: 24
+      spriteId: 4ee51ad3830f9964d93cc855ce06d2c9
+    - name: Frame_19
+      frameIndex: 19
+      additiveSortOrder: 0
+      cellRect:
+        x: 39
+        y: 96
+        width: 24
+        height: 24
+      spriteId: e70a139fb70b3d6489c78ddf809c617f
+    - name: Frame_20
+      frameIndex: 20
+      additiveSortOrder: 0
+      cellRect:
+        x: 45
+        y: 97
+        width: 87
+        height: 18
+      spriteId: 740dc03cc708cbb4aa98ad4eefcafeda
+    - name: Frame_21
+      frameIndex: 21
+      additiveSortOrder: 0
+      cellRect:
+        x: 80
+        y: 96
+        width: 56
+        height: 19
+      spriteId: 19c3bf0343b6ff347b3e189c2505d4ca
+    - name: Frame_22
+      frameIndex: 22
+      additiveSortOrder: 0
+      cellRect:
+        x: 80
+        y: 96
+        width: 46
+        height: 19
+      spriteId: 53ed331cb1f6b034b868667705433877
+    - name: Frame_23
+      frameIndex: 23
+      additiveSortOrder: 0
+      cellRect:
+        x: 80
+        y: 96
+        width: 40
+        height: 19
+      spriteId: a5511eabb84964348ad9d1b5f8c47857
+    - name: Frame_28
+      frameIndex: 28
+      additiveSortOrder: 0
+      cellRect:
+        x: 35
+        y: 96
+        width: 28
+        height: 22
+      spriteId: 9fb51c029bb019343ab7348af8607e28
+    - name: Frame_29
+      frameIndex: 29
+      additiveSortOrder: 0
+      cellRect:
+        x: 34
+        y: 96
+        width: 29
+        height: 25
+      spriteId: 8ae8a9264276ecc49bef9c8f47c5218c
+    - name: Frame_30
+      frameIndex: 30
+      additiveSortOrder: 0
+      cellRect:
+        x: 33
+        y: 96
+        width: 30
+        height: 26
+      spriteId: f10a61a37dd36994eac60676f7d3f2d8
+    - name: Frame_31
+      frameIndex: 31
+      additiveSortOrder: 0
+      cellRect:
+        x: 32
+        y: 96
+        width: 31
+        height: 25
+      spriteId: 195c07300b7a60c4289d54d198138d54
+    - name: Frame_32
+      frameIndex: 32
+      additiveSortOrder: 0
+      cellRect:
+        x: 35
+        y: 96
+        width: 26
+        height: 22
+      spriteId: e84a20babf71e98429efe68640640b63
+    - name: Frame_33
+      frameIndex: 33
+      additiveSortOrder: 0
+      cellRect:
+        x: 35
+        y: 96
+        width: 26
+        height: 25
+      spriteId: f96cfeb05632d4e4d99bdcb74e547c1e
+    - name: Frame_34
+      frameIndex: 34
+      additiveSortOrder: 0
+      cellRect:
+        x: 34
+        y: 96
+        width: 27
+        height: 26
+      spriteId: c13683c40e71f914ab8347e7ca84159e
+    - name: Frame_35
+      frameIndex: 35
+      additiveSortOrder: 0
+      cellRect:
+        x: 33
+        y: 96
+        width: 28
+        height: 25
+      spriteId: b966925a8d809b042862ac9b32474a5a
+    - name: Frame_36
+      frameIndex: 36
+      additiveSortOrder: 0
+      cellRect:
+        x: 35
+        y: 96
+        width: 28
+        height: 22
+      spriteId: e993f34d662f49641b785f23b28f0fb2
+    - name: Frame_37
+      frameIndex: 37
+      additiveSortOrder: 0
+      cellRect:
+        x: 34
+        y: 96
+        width: 29
+        height: 25
+      spriteId: d14476eb90006434c82c242dafa729aa
+    - name: Frame_38
+      frameIndex: 38
+      additiveSortOrder: 0
+      cellRect:
+        x: 33
+        y: 96
+        width: 30
+        height: 26
+      spriteId: 43c8610d44741884d938f89add83ce7b
+    - name: Frame_39
+      frameIndex: 39
+      additiveSortOrder: 0
+      cellRect:
+        x: 35
+        y: 96
+        width: 26
+        height: 22
+      spriteId: 3075d48d99929ef4ba4c169a738a4561
+    - name: Frame_40
+      frameIndex: 40
+      additiveSortOrder: 0
+      cellRect:
+        x: 35
+        y: 96
+        width: 26
+        height: 25
+      spriteId: 559943abe0f5f0a458959362e1c2cfc9
+    - name: Frame_41
+      frameIndex: 41
+      additiveSortOrder: 0
+      cellRect:
+        x: 34
+        y: 96
+        width: 27
+        height: 26
+      spriteId: 0054a4b69c246074fb0e3ac2efd4ef07
+    - name: Frame_42
+      frameIndex: 42
+      additiveSortOrder: 0
+      cellRect:
+        x: 39
+        y: 96
+        width: 22
+        height: 21
+      spriteId: 0430014f18880474db77618276ac869e
+    - name: Frame_43
+      frameIndex: 43
+      additiveSortOrder: 0
+      cellRect:
+        x: 39
+        y: 96
+        width: 22
+        height: 20
+      spriteId: 65b96985a7f572f449cb40e9314158c5
+    - name: Frame_44
+      frameIndex: 44
+      additiveSortOrder: 0
+      cellRect:
+        x: 34
+        y: 96
+        width: 29
+        height: 23
+      spriteId: caadad24a2560ad48bdcbe84cbd58704
+    - name: Frame_45
+      frameIndex: 45
+      additiveSortOrder: 0
+      cellRect:
+        x: 34
+        y: 96
+        width: 29
+        height: 23
+      spriteId: 75cda5ec4848e1144b0827593ff7f710
+    - name: Frame_46
+      frameIndex: 46
+      additiveSortOrder: 0
+      cellRect:
+        x: 42
+        y: 96
+        width: 76
+        height: 19
+      spriteId: a88db164304017847a867c219e9fc929
+    - name: Frame_47
+      frameIndex: 47
+      additiveSortOrder: 0
+      cellRect:
+        x: 42
+        y: 96
+        width: 76
+        height: 19
+      spriteId: b068aac925711984f8520d384d1583d9
+    - name: Frame_48
+      frameIndex: 48
+      additiveSortOrder: 0
+      cellRect:
+        x: 42
+        y: 96
+        width: 80
+        height: 19
+      spriteId: 9787fd532aa4fcd468b0120961422e88
+    - name: Frame_49
+      frameIndex: 49
+      additiveSortOrder: 0
+      cellRect:
+        x: 39
+        y: 96
+        width: 22
+        height: 21
+      spriteId: 123aa70528875b944839dda2fc61d02b
+    - name: Frame_50
+      frameIndex: 50
+      additiveSortOrder: 0
+      cellRect:
+        x: 39
+        y: 96
+        width: 24
+        height: 23
+      spriteId: 39f4953077fa1184d9b88d1bce19e41e
+    - name: Frame_51
+      frameIndex: 51
+      additiveSortOrder: 0
+      cellRect:
+        x: 39
+        y: 96
+        width: 24
+        height: 24
+      spriteId: 7e2c4253cab6fd04c8e6cc38a8c2c23c
+    - name: Frame_52
+      frameIndex: 52
+      additiveSortOrder: 0
+      cellRect:
+        x: 39
+        y: 96
+        width: 24
+        height: 23
+      spriteId: 6fc99f8f6777aa74f8a6bf178cc42af5
+    - name: Frame_53
+      frameIndex: 53
+      additiveSortOrder: 0
+      cellRect:
+        x: 38
+        y: 96
+        width: 25
+        height: 22
+      spriteId: fb627e992e76a224c9fe78d85e4ffee3
+    - name: Frame_54
+      frameIndex: 54
+      additiveSortOrder: 0
+      cellRect:
+        x: 37
+        y: 96
+        width: 26
+        height: 22
+      spriteId: 925377b2685a20549aba4a2af1f4550d
+    - name: Frame_55
+      frameIndex: 55
+      additiveSortOrder: 0
+      cellRect:
+        x: 38
+        y: 96
+        width: 25
+        height: 22
+      spriteId: b97d74a002c72a845b9e9bb4cda1c8fb
+    - name: Frame_56
+      frameIndex: 56
+      additiveSortOrder: 0
+      cellRect:
+        x: 38
+        y: 96
+        width: 25
+        height: 22
+      spriteId: 6fba7dcb8908ba648a0bf247f00a7428
+    - name: Frame_57
+      frameIndex: 57
+      additiveSortOrder: 0
+      cellRect:
+        x: 38
+        y: 96
+        width: 25
+        height: 22
+      spriteId: f5be4bb519d21fd4eb77811c05570a3c
+    - name: Frame_58
+      frameIndex: 58
+      additiveSortOrder: 0
+      cellRect:
+        x: 38
+        y: 96
+        width: 34
+        height: 11
+      spriteId: 7c4dcea8f4927114caa8baef615d7b22
+    - name: Frame_59
+      frameIndex: 59
+      additiveSortOrder: 0
+      cellRect:
+        x: 38
+        y: 96
+        width: 35
+        height: 10
+      spriteId: af0a5d9b9638ad8488fbec3b60baf923
+    - name: Frame_60
+      frameIndex: 60
+      additiveSortOrder: 0
+      cellRect:
+        x: 38
+        y: 96
+        width: 35
+        height: 12
+      spriteId: d4f8679647407344b81d5bb3f98edeb3
+    - name: Frame_61
+      frameIndex: 61
+      additiveSortOrder: 0
+      cellRect:
+        x: 38
+        y: 96
+        width: 35
+        height: 11
+      spriteId: f8f2a21660e034a479ca0d177830ceee
+    - name: Frame_62
+      frameIndex: 62
+      additiveSortOrder: 0
+      cellRect:
+        x: 38
+        y: 96
+        width: 36
+        height: 11
+      spriteId: d7608d047d55a30459ada6fb887f2442
+    - name: Frame_15
+      frameIndex: 15
+      additiveSortOrder: 0
+      cellRect:
+        x: 92
+        y: 96
+        width: 83
+        height: 64
+      spriteId: f7c6f9f7812ac5a409ae583c37b45d05
+    - name: Frame_24
+      frameIndex: 24
+      additiveSortOrder: 0
+      cellRect:
+        x: 84
+        y: 96
+        width: 53
+        height: 19
+      spriteId: cda3f47f56df5414a90e274d71d05c18
+    - name: Frame_25
+      frameIndex: 25
+      additiveSortOrder: 0
+      cellRect:
+        x: 93
+        y: 96
+        width: 46
+        height: 17
+      spriteId: 9f625c179db229b419a4bf730cdd23ae
+    - name: Frame_26
+      frameIndex: 26
+      additiveSortOrder: 0
+      cellRect:
+        x: 93
+        y: 96
+        width: 45
+        height: 19
+      spriteId: 2b16663c9cedb674580abaff5dfa7e44
+    - name: Frame_27
+      frameIndex: 27
+      additiveSortOrder: 0
+      cellRect:
+        x: 93
+        y: 96
+        width: 25
+        height: 19
+      spriteId: c5ef9bc785ea4bd47909875cc80835ba
+    - name: Frame_14
+      frameIndex: 14
+      additiveSortOrder: 0
+      cellRect:
+        x: 59
+        y: 97
+        width: 117
+        height: 64
+      spriteId: 4fe088f2b1557824f955ee8adcec5db2
+    - name: Frame_16
+      frameIndex: 16
+      additiveSortOrder: 0
+      cellRect:
+        x: 65
+        y: 97
+        width: 100
+        height: 61
+      spriteId: d197e3e56fa71e747af411c03638bfaa
+    - name: Frame_17
+      frameIndex: 17
+      additiveSortOrder: 0
+      cellRect:
+        x: 72
+        y: 99
+        width: 76
+        height: 59
+      spriteId: af757544bf4c382498b18699fbdf1718
+    linkedCells: []
+    parentIndex: -1
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Android
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 192, y: 192}
