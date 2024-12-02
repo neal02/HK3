@@ -18,6 +18,6 @@ public class NextStage : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        SceneManager.LoadScene("TreeScenes");
+        SceneManager.LoadScene("PathTreeScene");
     }
 }

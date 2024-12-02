@@ -9,7 +9,6 @@ public class AttackTutoMob : MonoBehaviour
     SpriteRenderer spriteRenderer;
 
     public BoxCollider2D StaightAttack;
-    public BoxCollider2D AirAttack;
     public GameObject player;
 
     public int MaxHp = 2;
@@ -17,7 +16,6 @@ public class AttackTutoMob : MonoBehaviour
 
     private bool AttackMode = false;
     public bool AttackCool = true;
-    public bool AirAttackCool = true;
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -48,34 +46,28 @@ public class AttackTutoMob : MonoBehaviour
             {
                 rigid2D.velocity = new Vector3(MaxSpeedX * -1, 0, 0);
                 spriteRenderer.flipX = true;
+                StaightAttack.offset = new Vector2(-0.27f, StaightAttack.offset.y);
                 if (transform.position.x - player.transform.position.x < 3 && transform.position.x - player.transform.position.x > 1 && AttackCool)
                 {
                     StartCoroutine(AttackDelay());
-                }
-                else if (transform.position.x - player.transform.position.x < 3 && AirAttackCool)
-                {
-                    StartCoroutine(AirAttackDelay());
                 }
             } 
             else if (transform.position.x - player.transform.position.x < -0.3)
             {
                 rigid2D.velocity = new Vector3(MaxSpeedX, 0, 0);
                 spriteRenderer.flipX = false;
+                StaightAttack.offset = new Vector2(0.27f, StaightAttack.offset.y);
                 if (transform.position.x - player.transform.position.x > -3 && transform.position.x - player.transform.position.x < -1 && AttackCool)
                 {
                     StartCoroutine(AttackDelay());
                 } 
-                else if (transform.position.x - player.transform.position.x > -1 && AirAttackCool)
-                {
-                    StartCoroutine(AirAttackDelay());
-                }
             }
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Attack") && this.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Attack") && !StaightAttack.enabled)
         {
             if (MaxHp > 0)
             {
@@ -102,29 +94,12 @@ public class AttackTutoMob : MonoBehaviour
         animator.SetBool("isAttack", false);
     }
 
-    IEnumerator AirAttackDelay()
-    {
-        animator.SetBool("isAirAttack", true);
-        AirAttack.enabled = true;
-        yield return new WaitForSeconds(0.67f);
-        AirAttack.enabled = false;
-        StartCoroutine(AirAttackCooled());
-        animator.SetBool("isAirAttack", false);
-    }
-
     IEnumerator AttackCooled()
     {
         AttackCool = false;
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
         AttackCool = true;
         yield return new WaitForSeconds(0.1f);
     }
 
-    IEnumerator AirAttackCooled()
-    {
-        AirAttackCool = false;
-        yield return new WaitForSeconds(3f);
-        AirAttackCool = true;
-        yield return new WaitForSeconds(0.1f);
-    }
 }
