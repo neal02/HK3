@@ -181,7 +181,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -458,7 +458,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: fd382f39e380bb94faa50fa07e97936d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -921,7 +921,7 @@ RectTransform:
   m_Children:
   - {fileID: 1799974830}
   - {fileID: 1641080132}
-  m_Father: {fileID: 1737315071}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1009,8 +1009,7 @@ Transform:
   m_LocalPosition: {x: 0.25, y: 0.55, z: 0}
   m_LocalScale: {x: 0.92718756, y: 0.8421631, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1734146136}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1799974829
@@ -1252,3 +1251,4 @@ SceneRoots:
   - {fileID: 1718925937}
   - {fileID: 1531076254}
   - {fileID: 635189233}
+  - {fileID: 1734146136}
