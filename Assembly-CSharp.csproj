@@ -86,6 +86,8 @@
     <Compile Include="Assets\Script\playerControl.cs" />
     <Compile Include="Assets\Scenes\SZ\Script\TreePath\TreePathCamera.cs" />
     <Compile Include="Assets\Scenes\SZ\Script\TreePath\LeftTree.cs" />
+    <Compile Include="Assets\Script\TutoScript\TutoMobController.cs" />
+    <Compile Include="Assets\Script\TutoScript\AttackTutoMob.cs" />
     <Compile Include="Assets\Script\SH\Boss\JumpAttack_Trigger.cs" />
     <Compile Include="Assets\Scenes\SZ\Script\StraightFire.cs" />
     <Compile Include="Assets\Script\widerBoss\EndBA3.cs" />
@@ -95,6 +97,7 @@
     <Compile Include="Assets\Scenes\SZ\Script\TreeFireGenerator.cs" />
     <Compile Include="Assets\Script\SH\Boss\Thrust_Trigger.cs" />
     <Compile Include="Assets\Scenes\SZ\Script\Animal.cs" />
+    <Compile Include="Assets\Script\TutoScript\TutoCamera.cs" />
     <Compile Include="Assets\Scenes\SZ\Script\fireFlower.cs" />
     <Compile Include="Assets\Script\TextScript.cs" />
     <Compile Include="Assets\Script\widerBoss\EndBA.cs" />
@@ -104,13 +107,15 @@
     <Compile Include="Assets\Scenes\SZ\Script\BrachAttack.cs" />
     <Compile Include="Assets\Script\SH\FallingObjectGenerator.cs" />
     <Compile Include="Assets\Script\widerBoss\DashAttack.cs" />
-    <Compile Include="Assets\Script\widerBoss\BC2.cs" />
     <Compile Include="Assets\Script\widerBoss\EndBC3.cs" />
+    <Compile Include="Assets\Script\widerBoss\BC2.cs" />
     <Compile Include="Assets\Script\widerBoss\EndBA4.cs" />
     <Compile Include="Assets\Script\widerBoss\BA.cs" />
     <Compile Include="Assets\Scenes\SZ\Script\TreePath\RightTree.cs" />
     <Compile Include="Assets\Script\widerBoss\EndBC1.cs" />
     <Compile Include="Assets\Script\SH\Boss\Poison_Damage_Trigger.cs" />
+    <Compile Include="Assets\Script\TutoScript\NextStage.cs" />
+    <Compile Include="Assets\Script\TutoScript\HpUi.cs" />
     <Compile Include="Assets\Scenes\SZ\Script\FlowerGenerator.cs" />
     <Compile Include="Assets\Scenes\SZ\Script\TreePath\PortalPath.cs" />
     <Compile Include="Assets\Script\SH\Boss\Boss.cs" />
@@ -1048,6 +1053,10 @@
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.VisualScripting.Flow.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.InternalAPIEngineBridge.001">
       <HintPath>Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll</HintPath>
       <Private>False</Private>
@@ -1056,12 +1065,12 @@
       <HintPath>Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.VisualScripting.Flow.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.2D.Common.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Extras.Editor">
@@ -1070,10 +1079,6 @@
     </Reference>
     <Reference Include="Unity.Timeline">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
