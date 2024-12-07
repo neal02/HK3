@@ -7,6 +7,7 @@ public class SceneTransition1chapter : MonoBehaviour
 {
     public Image fadeImage; // 검은 이미지를 참조
     public float fadeDuration = 1.5f; // 페이드 시간
+    public string nextSceneName; // 다음 씬 이름 (유니티 에디터에서 설정 가능)
 
     private void Start()
     {
@@ -37,12 +38,12 @@ public class SceneTransition1chapter : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag.Equals("Player")) {
-            StartCoroutine(FadeOut("Main"));
+            StartCoroutine(FadeOut(nextSceneName));
 
         }
     }
 
-    IEnumerator FadeOut(string nextSceneName)
+    IEnumerator FadeOut(string nextScene)
     {
         float elapsedTime = 0f;
         Color color = fadeImage.color;
@@ -57,6 +58,6 @@ public class SceneTransition1chapter : MonoBehaviour
         fadeImage.color = color;
 
         // 씬 전환
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene(nextScene);
     }
 }

@@ -21,33 +21,31 @@ public class CagedSpider : MonoBehaviour
     // 트리거 충돌 감지
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // 충돌한 오브젝트의 태그가 특정 태그인지 확인 후 애니메이션 재생
-        if (other.CompareTag("Attack"))  // 필요한 태그로 교체 가능
-        {
-            animator.SetTrigger(animationTriggerName);  // 애니메이션 파라미터 설정
+        if (other.CompareTag("Attack")) {
+            animator.SetTrigger(animationTriggerName);
 
-            // 애니메이션 길이 확인 후 파괴
-            AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
-            float animationLength = stateInfo.length;
-            Destroy(gameObject, 0.6f);// 애니메이션이 끝난 후 오브젝트 파괴
+            // 애니메이션 길이 확인 후 코루틴으로 처리
+            StartCoroutine(DestroyAfterDelay(0.6f));
         }
     }
 
-    private void OnDestroy()
+    private IEnumerator DestroyAfterDelay(float delay)
     {
-        // 오브젝트가 파괴될 때 타일맵 변경
-        if (currentTilemap != null) {
-            currentTilemap.gameObject.SetActive(false);  // 현재 타일맵 비활성화
-        }
+        // 타일맵 변경 작업
+        if (currentTilemap != null)
+            currentTilemap.gameObject.SetActive(false);
 
-        if (DestroyTilemap != null) {
-            DestroyTilemap.gameObject.SetActive(false);  // 현재 타일맵 비활성화
-        }
-        if (nextTilemap != null) {
-            nextTilemap.gameObject.SetActive(true);      // 다음 타일맵 활성화
-        }
-        if (nextTilemap2 != null) {
-            nextTilemap2.gameObject.SetActive(true);      // 다음 타일맵 활성화
-        }
+        if (DestroyTilemap != null)
+            DestroyTilemap.gameObject.SetActive(false);
+
+        if (nextTilemap != null)
+            nextTilemap.gameObject.SetActive(true);
+
+        if (nextTilemap2 != null)
+            nextTilemap2.gameObject.SetActive(true);
+
+        // 일정 시간 후 오브젝트 파괴
+        yield return new WaitForSeconds(delay);
+        Destroy(gameObject);
     }
 }
