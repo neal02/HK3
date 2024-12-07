@@ -89,11 +89,13 @@
     <Compile Include="Assets\Script\TutoScript\TutoMobController.cs" />
     <Compile Include="Assets\Script\TutoScript\AttackTutoMob.cs" />
     <Compile Include="Assets\Script\SH\Boss\JumpAttack_Trigger.cs" />
+    <Compile Include="Assets\Script\SH\GateScene.cs" />
     <Compile Include="Assets\Scenes\SZ\Script\StraightFire.cs" />
     <Compile Include="Assets\Script\widerBoss\EndBA3.cs" />
     <Compile Include="Assets\Scenes\SZ\Script\TreePath\PathAnimal.cs" />
     <Compile Include="Assets\Script\widerBoss\BC.cs" />
     <Compile Include="Assets\Script\SH\GameManager.cs" />
+    <Compile Include="Assets\Script\TutoScript\CameraController.cs" />
     <Compile Include="Assets\Scenes\SZ\Script\TreeFireGenerator.cs" />
     <Compile Include="Assets\Script\SH\Boss\Thrust_Trigger.cs" />
     <Compile Include="Assets\Scenes\SZ\Script\Animal.cs" />

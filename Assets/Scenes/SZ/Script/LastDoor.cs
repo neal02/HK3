@@ -26,7 +26,7 @@ public class LastDoor : MonoBehaviour
 
         if (isRange && Input.GetKeyDown(KeyCode.Space))
         {
-            SceneManager.LoadScene("PathTreeScene");
+            SceneManager.LoadScene("GateScene");
         }
     }
 

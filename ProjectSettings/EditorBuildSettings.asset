@@ -11,4 +11,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PathTreeScene.unity
     guid: 3366ad852d1c075488767f8fd3685073
+  - enabled: 1
+    path: Assets/Scenes/SZ/TutoScene.unity
+    guid: f34cda5b4483c104db55599bdb30a6b4
+  - enabled: 1
+    path: Assets/Scenes/SZ/TreeScenes.unity
+    guid: 5317c5ae768be2946b1dd970e71d108c
+  - enabled: 1
+    path: Assets/Scenes/SH/GateScene.unity
+    guid: f5fc2990e62a2ff418280edd52dd2258
+  - enabled: 1
+    path: Assets/Scenes/SH/BattleScene.unity
+    guid: 5c53f1e9feced4e47b9da5b993e71f50
+  - enabled: 1
+    path: Assets/Scenes/SH/EndingScene.unity
+    guid: 32d68e74bcd061e4f8ed117f2af40b68
   m_configObjects: {}
