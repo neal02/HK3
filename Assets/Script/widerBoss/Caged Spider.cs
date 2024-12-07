@@ -31,6 +31,7 @@ public class CagedSpider : MonoBehaviour
 
     private IEnumerator DestroyAfterDelay(float delay)
     {
+        yield return new WaitForSeconds(delay);
         // 타일맵 변경 작업
         if (currentTilemap != null)
             currentTilemap.gameObject.SetActive(false);
@@ -45,7 +46,6 @@ public class CagedSpider : MonoBehaviour
             nextTilemap2.gameObject.SetActive(true);
 
         // 일정 시간 후 오브젝트 파괴
-        yield return new WaitForSeconds(delay);
         Destroy(gameObject);
     }
 }
