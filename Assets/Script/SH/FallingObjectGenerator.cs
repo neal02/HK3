@@ -14,9 +14,17 @@ public class FallingObjectGenerator : MonoBehaviour
 
     private List<Vector3> spawnPositions = new List<Vector3>(); // 이미 사용된 위치 저장
 
+    public GameObject boss;
+    public Boss bossScript;
+
+    void Start()
+    {
+        bossScript = boss.GetComponent<Boss>();
+    }
+
     void Update()
     {
-        if (!isCooldown)
+        if (!isCooldown && bossScript.isAlive)
         {
             StartCoroutine(SpawnObjectsSequentially());
             StartCooldown();

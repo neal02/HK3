@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scenes\SZ\Script\BloodTTTT.cs" />
     <Compile Include="Assets\Script\widerBoss\EndBA2.cs" />
     <Compile Include="Assets\Scenes\SZ\Script\AnimalGenerator.cs" />
+    <Compile Include="Assets\Script\SH\Portal.cs" />
     <Compile Include="Assets\Script\widerBoss\EndBC4.cs" />
     <Compile Include="Assets\Scenes\SZ\Script\AlarmGenerator.cs" />
     <Compile Include="Assets\Script\Enemy.cs" />
@@ -80,7 +81,6 @@
     <Compile Include="Assets\Scenes\SZ\Script\TreePath\TorchPath.cs" />
     <Compile Include="Assets\Script\widerBoss\BA2.cs" />
     <Compile Include="Assets\Script\SceneTransition1chapter.cs" />
-    <Compile Include="Assets\Script\SH\test.cs" />
     <Compile Include="Assets\Scenes\SZ\Script\TorchController.cs" />
     <Compile Include="Assets\Script\PlayerAttack.cs" />
     <Compile Include="Assets\Script\playerControl.cs" />
@@ -95,6 +95,7 @@
     <Compile Include="Assets\Scenes\SZ\Script\TreePath\PathAnimal.cs" />
     <Compile Include="Assets\Script\widerBoss\BC.cs" />
     <Compile Include="Assets\Script\SH\GameManager.cs" />
+    <Compile Include="Assets\Script\SH\SoundController.cs" />
     <Compile Include="Assets\Script\TutoScript\CameraController.cs" />
     <Compile Include="Assets\Scenes\SZ\Script\TreeFireGenerator.cs" />
     <Compile Include="Assets\Script\SH\Boss\Thrust_Trigger.cs" />
@@ -103,6 +104,7 @@
     <Compile Include="Assets\Scenes\SZ\Script\fireFlower.cs" />
     <Compile Include="Assets\Script\TextScript.cs" />
     <Compile Include="Assets\Script\widerBoss\EndBA.cs" />
+    <Compile Include="Assets\Script\TutoScript\CameraControllerSH.cs" />
     <Compile Include="Assets\Scenes\SZ\Script\BloodTree.cs" />
     <Compile Include="Assets\Script\SH\SceneTransition.cs" />
     <Compile Include="Assets\Scenes\SZ\Script\RedTreeController.cs" />
@@ -112,7 +114,9 @@
     <Compile Include="Assets\Script\widerBoss\BC2.cs" />
     <Compile Include="Assets\Script\widerBoss\EndBC3.cs" />
     <Compile Include="Assets\Script\widerBoss\EndBA4.cs" />
+    <Compile Include="Assets\Script\DontDestroy.cs" />
     <Compile Include="Assets\Script\widerBoss\BA.cs" />
+    <Compile Include="Assets\Script\SH\NPC.cs" />
     <Compile Include="Assets\Scenes\SZ\Script\TreePath\RightTree.cs" />
     <Compile Include="Assets\Script\widerBoss\EndBC1.cs" />
     <Compile Include="Assets\Script\SH\Boss\Poison_Damage_Trigger.cs" />

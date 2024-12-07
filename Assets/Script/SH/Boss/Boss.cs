@@ -14,12 +14,12 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
     public GameObject player;
     private Collider2D playerCollider, bossCollider;
     private SpriteRenderer sprite;
-
     public GameObject jumpAttackTriggerObject;
     public GameObject attackTriggerObject;
     public GameObject thrustTriggerObject;
     public GameObject poisonTriggerObject;
-    public GameObject summonObject;
+
+    public AudioSource[] bossAudioSources;
 
     Thrust_Trigger thrustTrigger;
     playerControl playerScript;
@@ -31,7 +31,7 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
 
     public bool isDetecting;
     public bool isFirstDetecting;
-    private bool isAlive;
+    public bool isAlive;
 
     public bool isAttacking = false;
     public bool isJumpAttacking = false;
@@ -49,7 +49,7 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
 
     private float patternChangeTime = 2f;
 
-    void Start()
+    void Awake()
     {
         Application.targetFrameRate = 60;
         rigid = GetComponent<Rigidbody2D>();
@@ -62,6 +62,7 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
         jumpAttackTriggerObject.SetActive(false);
         poisonTriggerObject.SetActive(false);
         playerRigid = player.GetComponent<Rigidbody2D>();
+        bossAudioSources = GetComponents<AudioSource>();
 
 
         isDetecting = false;
@@ -80,7 +81,8 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
         playerScript = player.GetComponent<playerControl>();
 
         moveSpeed = 10.0f;
-        hp = 1000.0f;
+        hp = 10.0f;
+
         StartCoroutine(RandomPatternRoutine());
     }
 
@@ -90,6 +92,8 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
         {
             // 일정 시간마다 랜덤으로 패턴을 선택
             yield return new WaitForSeconds(patternChangeTime);
+
+            if (OtherAct()) continue;
 
             // 랜덤으로 4개 패턴 중 하나를 선택
             int pattern = Random.Range(0, 5);
@@ -138,6 +142,7 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
                 StartCoroutine(Move());
                 break;
             case BossState.death:
+                hp = 1;
                 Death();
                 break;
             case BossState.exit:
@@ -155,7 +160,8 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
 
     void Death()
     {
-        anim.SetBool("isDied", true);
+        bossAudioSources[4].Play();
+        anim.SetTrigger("die");
         StartCoroutine(DeathSequence());   
     }
 
@@ -164,6 +170,13 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
         if (isAlive)
         {
             StateMachine(); 
+        }
+
+        if (hp <= 0)
+        {
+            isAlive = false;
+            ChangeState(BossState.death);
+            StateMachine();
         }
     }
 
@@ -214,6 +227,8 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
 
         isFlippingBlocked = true;
 
+        bossAudioSources[2].Play();
+
         yield return new WaitForSeconds(1.9f);
 
         isFlippingBlocked = false;
@@ -232,6 +247,8 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
         isPoison = true;
 
         isFlippingBlocked = true;
+
+        bossAudioSources[1].Play();
 
         yield return new WaitForSeconds(1.6f);
 
@@ -255,14 +272,9 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
     void ChangeState(BossState newState)
     {
         currentState = newState;
-
-        if(newState == BossState.exit)
-        {
-            // 보스 사망 시 호출
-            FindObjectOfType<SceneTransition>().EndBattleAndFadeOut("ClearScene");
-
-        }
     }
+
+    
 
     void CheckFliping()
     {
@@ -305,9 +317,11 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
 
         isFlippingBlocked = true;
 
-        //attackTrigger.SetActive(false);
+        bossAudioSources[3].Play();
 
         yield return new WaitForSeconds(1.6f);
+
+        bossAudioSources[3].Play();
 
         anim.SetTrigger("UptoDown");
         Vector3 teleportPosition = new Vector3(player.transform.position.x, -7f, 0);
@@ -354,6 +368,8 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
         anim.SetBool("isThrusting", true);
 
         isFlippingBlocked = true;
+
+        bossAudioSources[5].Play();
 
         yield return new WaitForSeconds(1.6f);
 

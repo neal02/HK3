@@ -194,6 +194,7 @@ GameObject:
   - component: {fileID: 7728720165280017193}
   - component: {fileID: 6100304981697222228}
   - component: {fileID: 4273443339170371312}
+  - component: {fileID: 2339241826969468285}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -371,3 +372,18 @@ MonoBehaviour:
   DashcoolTime: 3
   AttackcoolTime: 1.5
   flip: 0
+--- !u!114 &2339241826969468285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8738281312413029849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43684aae9e75ed14a944f8f129a68536, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hpBar: {fileID: 0}
+  dashIcon: {fileID: 0}
+  maxHealth: 100

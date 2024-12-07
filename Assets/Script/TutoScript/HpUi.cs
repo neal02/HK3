@@ -18,6 +18,10 @@ public class PlayerHealth : MonoBehaviour
         ResetDashIcon();
     }
 
+    void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Z) && !isDashing)
