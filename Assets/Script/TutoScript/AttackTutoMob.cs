@@ -75,7 +75,7 @@ public class AttackTutoMob : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Attack") && !StaightAttack.enabled)
+        if (collision.gameObject.CompareTag("Attack"))
         {
             if (MaxHp > 0)
             {
