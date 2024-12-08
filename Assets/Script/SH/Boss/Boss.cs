@@ -69,7 +69,7 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
         playerScript = player.GetComponent<playerControl>();
 
         moveSpeed = 10.0f;
-        hp = 1000.0f;
+        hp = 500.0f;
 
         StartCoroutine(RandomPatternRoutine());
     }
@@ -437,7 +437,7 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
     {
         if(other.tag == "Attack")
         {
-            hp -= 1000;
+            hp -= 10;
             Debug.Log("현재 체력: " + hp);
         }
     }

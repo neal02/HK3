@@ -12,6 +12,7 @@ public class PlayerHealth : MonoBehaviour
     public float maxHealth = 100f;
     private float currentHealth;
     private bool isDashing = false;
+    private bool isPlayerDead = false;
 
     void Start()
     {
@@ -22,27 +23,27 @@ public class PlayerHealth : MonoBehaviour
 
     void OnEnable()
     {
-        SceneManager.sceneLoaded += OnSceneLoaded; // ¾ÀÀÌ ·ÎµåµÇ¾úÀ» ¶§ È£ÃâµÉ ÀÌº¥Æ® µî·Ï
+        SceneManager.sceneLoaded += OnSceneLoaded; // ï¿½ï¿½ï¿½ï¿½ ï¿½Îµï¿½Ç¾ï¿½ï¿½ï¿½ ï¿½ï¿½ È£ï¿½ï¿½ï¿½ ï¿½Ìºï¿½Æ® ï¿½ï¿½ï¿½
     }
 
     void OnDisable()
     {
-        SceneManager.sceneLoaded -= OnSceneLoaded; // ÀÌº¥Æ® ÇØÁ¦
+        SceneManager.sceneLoaded -= OnSceneLoaded; // ï¿½Ìºï¿½Æ® ï¿½ï¿½ï¿½ï¿½
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        // »õ·Î¿î ¾À¿¡¼­ ÇÃ·¹ÀÌ¾îÀÇ À§Ä¡¸¦ ÃÊ±âÈ­
+        // ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½Ê±ï¿½È­
         SetPlayerPosition(scene.name);
         AssignCameraToPlayer();
     }
 
     void AssignCameraToPlayer()
     {
-        // ¾À¿¡¼­ Cinemachine Virtual Camera Ã£±â
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Cinemachine Virtual Camera Ã£ï¿½ï¿½
         CinemachineVirtualCamera virtualCamera = FindObjectOfType<CinemachineVirtualCamera>();
         if (virtualCamera != null) {
-            // ¹öÃò¾ó Ä«¸Þ¶óÀÇ Follow Å¸°ÙÀ» ÇöÀç ÇÃ·¹ÀÌ¾î·Î ¼³Á¤
+            // ï¿½ï¿½ï¿½ï¿½ï¿½ Ä«ï¿½Þ¶ï¿½ï¿½ï¿½ Follow Å¸ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
             virtualCamera.Follow = this.transform;
         }
     }
@@ -51,6 +52,13 @@ public class PlayerHealth : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Z) && !isDashing) {
             StartCoroutine(DashCooldown());
+        }
+
+        if (currentHealth <= 0 && !isPlayerDead) // if player is die
+        {
+            Debug.Log("ì‚¬ë§");
+            isPlayerDead = true;
+            FindObjectOfType<SceneTransition>().EndBattleAndFadeOut("TutoScene");
         }
     }
 
@@ -114,31 +122,31 @@ public class PlayerHealth : MonoBehaviour
 
     void SetPlayerPosition(string sceneName)
     {
-        // ¾À ÀÌ¸§¿¡ µû¶ó ÃÊ±â À§Ä¡ ¼³Á¤
+        // ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê±ï¿½ ï¿½ï¿½Ä¡ ï¿½ï¿½ï¿½ï¿½
         switch (sceneName) {
             case "TutoScene":
-                transform.position = new Vector3(-26, 0, 0); // Level1ÀÇ ½ÃÀÛ À§Ä¡
+                transform.position = new Vector3(-26, 0, 0); // Level1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡
                 break;
             case "Main":
-                transform.position = new Vector3(-40, 0, 0); // Level2ÀÇ ½ÃÀÛ À§Ä¡
+                transform.position = new Vector3(-40, 0, 0); // Level2ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡
                 break;
             case "PathTreeScene":
-                transform.position = new Vector3(-2, 21, 0); // BossRoomÀÇ ½ÃÀÛ À§Ä¡
+                transform.position = new Vector3(-2, 21, 0); // BossRoomï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡
                 break;
             case "TreeScenes":
-                transform.position = new Vector3(23, 0); // BossRoomÀÇ ½ÃÀÛ À§Ä¡
+                transform.position = new Vector3(23, 0); // BossRoomï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡
                 break;
             case "GateScene":
-                transform.position = new Vector3(-7, -5, 0); // BossRoomÀÇ ½ÃÀÛ À§Ä¡
+                transform.position = new Vector3(-7, -5, 0); // BossRoomï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡
                 break;
             case "BattleScene":
-                transform.position = new Vector3(19, -6, 0); // BossRoomÀÇ ½ÃÀÛ À§Ä¡
+                transform.position = new Vector3(19, -6, 0); // BossRoomï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡
                 break;
             case "EndingScene":
-                transform.position = new Vector3(4, -8, 0); // BossRoomÀÇ ½ÃÀÛ À§Ä¡
+                transform.position = new Vector3(4, -8, 0); // BossRoomï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡
                 break;
             default:
-                transform.position = new Vector3(0, 0, 0); // ±âº» À§Ä¡
+                transform.position = new Vector3(0, 0, 0); // ï¿½âº» ï¿½ï¿½Ä¡
                 break;
         }
     }
