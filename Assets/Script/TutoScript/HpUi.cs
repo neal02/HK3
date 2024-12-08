@@ -3,30 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Cinemachine;
-
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public static PlayerHealth Instance; // 싱글톤 인스턴스
     public Image hpBar;
     public Image dashIcon;
     public float maxHealth = 100f;
     private float currentHealth;
     private bool isDashing = false;
-
-    void Awake()
-    {
-        if (Instance == null) {
-            Instance = this; // 현재 객체를 싱글톤 인스턴스로 설정
-            DontDestroyOnLoad(gameObject); // 파괴되지 않도록 설정
-        }
-        else {
-            Destroy(gameObject); // 새로 생성된 객체는 삭제
-            return;
-        }
-    }
 
     void Start()
     {
@@ -50,8 +35,8 @@ public class PlayerHealth : MonoBehaviour
         // 새로운 씬에서 플레이어의 위치를 초기화
         SetPlayerPosition(scene.name);
         AssignCameraToPlayer();
-
     }
+
     void AssignCameraToPlayer()
     {
         // 씬에서 Cinemachine Virtual Camera 찾기
@@ -61,6 +46,7 @@ public class PlayerHealth : MonoBehaviour
             virtualCamera.Follow = this.transform;
         }
     }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Z) && !isDashing) {
@@ -140,10 +126,10 @@ public class PlayerHealth : MonoBehaviour
                 transform.position = new Vector3(-2, 21, 0); // BossRoom의 시작 위치
                 break;
             case "TreeScenes":
-                transform.position = new Vector3(23,-2, 0); // BossRoom의 시작 위치
+                transform.position = new Vector3(23, 0); // BossRoom의 시작 위치
                 break;
             case "GateScene":
-                transform.position = new Vector3(-7, -8, 0); // BossRoom의 시작 위치
+                transform.position = new Vector3(-7, -5, 0); // BossRoom의 시작 위치
                 break;
             case "BattleScene":
                 transform.position = new Vector3(19, -6, 0); // BossRoom의 시작 위치

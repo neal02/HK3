@@ -694,6 +694,8 @@ MonoBehaviour:
   DestroyTilemap: {fileID: 284889880}
   nextTilemap: {fileID: 1681787261}
   nextTilemap2: {fileID: 0}
+  bossObject: {fileID: 0}
+  bossObject2: {fileID: 0}
 --- !u!61 &78970356
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9799,6 +9801,8 @@ MonoBehaviour:
   DestroyTilemap: {fileID: 0}
   nextTilemap: {fileID: 712565648}
   nextTilemap2: {fileID: 0}
+  bossObject: {fileID: 0}
+  bossObject2: {fileID: 0}
 --- !u!1 &711008385
 GameObject:
   m_ObjectHideFlags: 0
@@ -13581,6 +13585,8 @@ MonoBehaviour:
   DestroyTilemap: {fileID: 0}
   nextTilemap: {fileID: 469687527}
   nextTilemap2: {fileID: 0}
+  bossObject: {fileID: 0}
+  bossObject2: {fileID: 0}
 --- !u!1 &916509137
 GameObject:
   m_ObjectHideFlags: 0
@@ -13761,6 +13767,8 @@ MonoBehaviour:
   DestroyTilemap: {fileID: 0}
   nextTilemap: {fileID: 2019348595}
   nextTilemap2: {fileID: 0}
+  bossObject: {fileID: 0}
+  bossObject2: {fileID: 0}
 --- !u!61 &920824282
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14255,6 +14263,8 @@ MonoBehaviour:
   DestroyTilemap: {fileID: 0}
   nextTilemap: {fileID: 2096090201}
   nextTilemap2: {fileID: 284889880}
+  bossObject: {fileID: 1084946704}
+  bossObject2: {fileID: 210756949}
 --- !u!61 &990452531
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15052,6 +15062,8 @@ MonoBehaviour:
   DestroyTilemap: {fileID: 0}
   nextTilemap: {fileID: 137902519}
   nextTilemap2: {fileID: 0}
+  bossObject: {fileID: 0}
+  bossObject2: {fileID: 0}
 --- !u!61 &1157290561
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15908,6 +15920,8 @@ MonoBehaviour:
   DestroyTilemap: {fileID: 0}
   nextTilemap: {fileID: 599487880}
   nextTilemap2: {fileID: 0}
+  bossObject: {fileID: 0}
+  bossObject2: {fileID: 0}
 --- !u!1 &1268972952
 GameObject:
   m_ObjectHideFlags: 0
