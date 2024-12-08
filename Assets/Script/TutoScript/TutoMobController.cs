@@ -5,21 +5,25 @@ using UnityEngine;
 public class TutoMobController : MonoBehaviour
 {
     Animator animator;
+    AudioSource audioSource;
 
     public int MaxHp = 2;
+    private bool isMobDead = false;
 
     void Start()
     {
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
     {
-        if(MaxHp <= 0)
+        if(MaxHp <= 0 && !isMobDead)
         {
             StartCoroutine(DeathDelay());
+            audioSource.Play();
+            isMobDead = true;
         }
-
     }
 
     private void FixedUpdate()

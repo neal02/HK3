@@ -7,8 +7,10 @@ public class AttackTutoMob : MonoBehaviour
     Animator animator;
     Rigidbody2D rigid2D;
     SpriteRenderer spriteRenderer;
+    AudioSource[] audioSource;
 
     public BoxCollider2D StaightAttack;
+    public GameObject StaightAttackObject;
     public GameObject player;
 
     public int MaxHp = 2;
@@ -16,20 +18,26 @@ public class AttackTutoMob : MonoBehaviour
 
     private bool AttackMode = false;
     public bool AttackCool = true;
+    private bool isMobDead = false;
+
     void Start()
     {
         animator = GetComponent<Animator>();
         rigid2D = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        audioSource = GetComponents<AudioSource>();
+        StaightAttackObject.SetActive(false);
     }
 
     void Update()
     {
-        if (MaxHp <= 0)
+        if (MaxHp <= 0 && !isMobDead)
         {
             AttackMode = false;
             animator.SetBool("isDeath", true);
             rigid2D.velocity = Vector3.zero;
+            audioSource[0].Play();
+            isMobDead = true;
         }
         if(transform.position.x - player.transform.position.x < 10)
         {
@@ -87,11 +95,20 @@ public class AttackTutoMob : MonoBehaviour
     IEnumerator AttackDelay()
     {
         animator.SetBool("isAttack", true);
-        StaightAttack.enabled = true;
+        audioSource[1].Play();
         yield return new WaitForSeconds(0.67f);
-        StaightAttack.enabled = false;
         StartCoroutine(AttackCooled());
         animator.SetBool("isAttack", false);
+    }
+
+    void EnableStaightAttack()
+    {
+        StaightAttackObject.SetActive(true);
+    }
+
+    void DisableStaightAttack()
+    {
+        StaightAttackObject.SetActive(false);
     }
 
     IEnumerator AttackCooled()
