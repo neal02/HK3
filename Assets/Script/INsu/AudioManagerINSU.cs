@@ -19,7 +19,7 @@ public class AudioManagerINSU : MonoBehaviour
     AudioSource[] sfxPlayers;
     int channelIndex;
 
-    public enum Sfx { Attack, dash, Death, Hit, Jump, Run, destroy, Boss_Attack, black_out };
+    public enum Sfx { Attack, dash, Death, Hit, Jump, Run, destroy, Boss_Attack, black_out, MushHit, MushDie };
 
     void Awake()
     {
