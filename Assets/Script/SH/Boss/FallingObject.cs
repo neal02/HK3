@@ -13,7 +13,7 @@ public class FallingObject : MonoBehaviour
 
     void Update()
     {
-        if(transform.position.y <= -9.0f)
+        if(transform.position.y <= -12.0f)
         {
             Destroy(gameObject);
         }

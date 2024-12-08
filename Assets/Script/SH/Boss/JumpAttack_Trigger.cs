@@ -13,12 +13,12 @@ public class JumpAttack_Trigger : MonoBehaviour
 
     void Update()
     {
-        transform.position = new Vector3(boss.transform.position.x, -6.5f, 0);
+        transform.position = new Vector3(boss.transform.position.x, -9.5f, 0);
     }
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Player") && other.gameObject.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
             Debug.Log("점프 공격 맞음");
         }

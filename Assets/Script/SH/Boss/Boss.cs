@@ -15,13 +15,10 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
     private Collider2D playerCollider, bossCollider;
     private SpriteRenderer sprite;
     public GameObject jumpAttackTriggerObject;
-    public GameObject attackTriggerObject;
-    public GameObject thrustTriggerObject;
     public GameObject poisonTriggerObject;
 
     public AudioSource[] bossAudioSources;
 
-    Thrust_Trigger thrustTrigger;
     playerControl playerScript;
 
     public enum BossState { idle, attack, jumpAttack, move, thrust, poison, death, exit }
@@ -69,19 +66,10 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
         isFirstDetecting = false;
         isAlive = true;
 
-        foreach (Transform child in transform)
-        {
-            if (child.CompareTag("Trigger"))
-            {
-                triggers.Add(child);
-            }
-        }
-
-        thrustTrigger = thrustTriggerObject.GetComponent<Thrust_Trigger>();
         playerScript = player.GetComponent<playerControl>();
 
         moveSpeed = 10.0f;
-        hp = 10.0f;
+        hp = 1000.0f;
 
         StartCoroutine(RandomPatternRoutine());
     }
@@ -324,7 +312,7 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
         bossAudioSources[3].Play();
 
         anim.SetTrigger("UptoDown");
-        Vector3 teleportPosition = new Vector3(player.transform.position.x, -7f, 0);
+        Vector3 teleportPosition = new Vector3(player.transform.position.x, -10f, 0);
 
         sprite.enabled = false;
         bossCollider.enabled = false;
@@ -409,33 +397,6 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
         playerRigid.AddForce(Vector2.up * force, ForceMode2D.Impulse);
     }
 
-    /*IEnumerator AttackSplit()
-    {
-        if (OtherAct() || isAttackSpliting) 
-        {
-            yield break;
-        }
-
-        isAttackSpliting = true;
-
-        anim.SetBool("isMoving", false);
-        anim.SetBool("isStanding", false);
-        anim.SetBool("isAttackSpliting", true);
-
-        isFlippingBlocked = true;
-
-        yield return new WaitForSeconds(1.9f);
-
-        // 애니메이션이 끝난 후 플립 재개
-        isFlippingBlocked = false;
-        CheckFliping();
-        Debug.Log("침 뱉기");
-        anim.SetBool("isAttackSpliting", false);
-        anim.SetBool("isStanding", true);
-        isAttackSpliting = false;
-        ChangeState(BossState.idle);
-    }*/
-
     IEnumerator PushPlayerSmoothly(Rigidbody2D playerRigidbody, Vector2 direction, float pushForce, float duration)
     {
         float elapsedTime = 0f;
@@ -476,20 +437,9 @@ public class Boss : MonoBehaviour //보스의 본체 스크립트, 본체 스크
     {
         if(other.tag == "Attack")
         {
-            //StartCoroutine(AttackedAnimation());
-            hp -= 10;
+            hp -= 1000;
             Debug.Log("현재 체력: " + hp);
         }
     }
-
-    /*IEnumerator AttackedAnimation()
-    {
-        anim.SetTrigger("isAttacked");
-        yield return new WaitForSeconds(0.1f);
-        anim.SetTrigger("attackedReturn");
-        
-    }*/
-
-    
 }
 

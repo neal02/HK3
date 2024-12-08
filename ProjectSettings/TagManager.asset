@@ -8,6 +8,10 @@ TagManager:
   - Attack
   - EnemyAttack
   - Quest
+  - Boss
+  - Trigger
+  - Ground
+  - Healing
   layers:
   - Default
   - TransparentFX
