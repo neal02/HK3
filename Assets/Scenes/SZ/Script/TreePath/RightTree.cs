@@ -6,6 +6,7 @@ public class RightTree : MonoBehaviour
 {
     BoxCollider2D box2D;
     Animator animator;
+    AudioSource audioSource;
 
     public GameObject AnimalPrefab1;
     public GameObject AnimalPrefab2;
@@ -26,6 +27,7 @@ public class RightTree : MonoBehaviour
     {
         box2D = GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
         pos = new Vector3[4];
         ConditionPrefab = new GameObject[4];
         pos[0] = new Vector3(48, -3f, 0);
@@ -53,6 +55,7 @@ public class RightTree : MonoBehaviour
         {
             isDes2 = false;
             animator.SetBool("isPerfect", true);
+            audioSource.enabled = true;
         }
     }
 

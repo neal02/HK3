@@ -25,10 +25,12 @@ public class fireFlower : MonoBehaviour
     {
         pos = transform.position;
         spriteRenderer = GetComponent<SpriteRenderer>();
+
         animator = GetComponent<Animator>();
         rigid2D = GetComponent<Rigidbody2D>();
         Invoke("Think", 2);
         spriteRenderer.color = new Color(213f / 255f, 73f / 255f, 74f / 255f, invisible);
+
     }
 
     void Update()
@@ -53,6 +55,7 @@ public class fireFlower : MonoBehaviour
          
             animator.SetBool("isDeath2", true);
             animator.SetFloat("isDeath", deathcon);
+            AudioManagerINSU.instance.PlaySfx(AudioManagerINSU.Sfx.MushDie);
             if (animator.GetFloat("isDeath") > 0)
             {
                 Destroy(gameObject);
@@ -86,6 +89,7 @@ public class fireFlower : MonoBehaviour
         isdelay = false;
         firecon = -0.5f;
         animator.SetFloat("isFire", firecon);
+        
         yield return new WaitForSeconds(fireGap);
         Instantiate(firePrefab, pos, rotation);
         
@@ -113,7 +117,8 @@ public class fireFlower : MonoBehaviour
             hitcon = -0.8f;
             animator.SetFloat("isHit", hitcon);
             flowerHP--;
-            if(flowerHP <= 0)
+            AudioManagerINSU.instance.PlaySfx(AudioManagerINSU.Sfx.MushHit);
+            if (flowerHP <= 0)
             {
                 deathcon = -0.5f;
             }

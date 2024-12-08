@@ -6,7 +6,7 @@ public class LeftTree : MonoBehaviour
 {
     BoxCollider2D box2D;
     Animator animator;
-
+    AudioSource audioSource;
     public GameObject AnimalPrefab1;
     public GameObject AnimalPrefab2;
     public GameObject FlowerPrefab1;
@@ -26,6 +26,7 @@ public class LeftTree : MonoBehaviour
     {
         box2D = GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
         pos = new Vector3[4];
         ConditionPrefab = new GameObject[4];
         pos[0] = new Vector3(-2, -3f, 0);
@@ -52,6 +53,7 @@ public class LeftTree : MonoBehaviour
         else if (PortalPath.PathCondition == 42 && !isFirst && isDes2)
         {
             isDes2 = false;
+            audioSource.enabled = true;
             animator.SetBool("isPerfect", true);
         }
     }
