@@ -9,6 +9,7 @@ public class BA : MonoBehaviour
     public Transform bossCollider;
     public GameObject Bossflip;  // Inspector에서 직접 할당
     private Animator bossAnimator;
+    private bool isPlayingAttackSound = false;  // 공격 소리가 재생 중인지 체크
 
     // Start is called before the first frame update
     void Start()
@@ -47,13 +48,28 @@ public class BA : MonoBehaviour
         }
         bool isAttacking = bossAnimator.GetCurrentAnimatorStateInfo(0).IsName("Attack"); // "BossAttackAnimation"은 애니메이션 이름
         if (isAttacking) {
-            StartCoroutine(EnableBoxColliderWithDelay(0.5f)); // 1초 딜레이 후 BoxCollider 활성화
+            if (!isPlayingAttackSound)  // 소리가 재생되지 않았을 경우에만 재생
+            {
+                isPlayingAttackSound = true;
+                AudioManagerINSU.instance.StopSfx(AudioManagerINSU.Sfx.Boss_Attack);  // 이전 사운드 멈추기
+                AudioManagerINSU.instance.PlaySfx(AudioManagerINSU.Sfx.Boss_Attack);  // 보스 공격 사운드 바로 재생
+                StartCoroutine(EnableBoxColliderWithDelay(0.5f)); // 0.5초 딜레이 후 BoxCollider 활성화
+            }
         }
         else {
             StopAllCoroutines(); // 공격이 중단되면 코루틴 중지
             BoxCollider2D.enabled = false;
+            isPlayingAttackSound = false;  // 소리 재생 중지
         }
+    }
 
+    private void PlayAttackSound()
+    {
+        if (AudioManagerINSU.instance != null) {
+            // 이전 사운드가 끝나지 않아도 새로 시작되게 함
+            AudioManagerINSU.instance.StopSfx(AudioManagerINSU.Sfx.Boss_Attack);  // 이전 사운드 중단
+            AudioManagerINSU.instance.PlaySfx(AudioManagerINSU.Sfx.Boss_Attack);  // 새로 사운드 재생
+        }
     }
     private IEnumerator EnableBoxColliderWithDelay(float delay)
     {

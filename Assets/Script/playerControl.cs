@@ -77,6 +77,8 @@ public class playerControl : MonoBehaviour
             isDashCool = false;
             Debug.Log("ÀÌÁ¦ºÎÅÍ Äð");
             StartCoroutine(CooldownDash());
+            AudioManagerINSU.instance.PlaySfx(AudioManagerINSU.Sfx.dash);
+
         }
         else if (Input.GetKeyDown(KeyCode.X) && maxAttack > 0 && isAttackCool && AttackDelay)   //°ø°Ý
         {
@@ -86,6 +88,8 @@ public class playerControl : MonoBehaviour
             AttackDelay = false;
             Debug.Log("°ø°Ý");
             StartCoroutine(AttDelay());
+            AudioManagerINSU.instance.PlaySfx(AudioManagerINSU.Sfx.Attack);
+
         }
         else if (Input.GetKeyDown(KeyCode.C) && maxjump > 0)   //Á¡ÇÁ
         {
@@ -94,6 +98,8 @@ public class playerControl : MonoBehaviour
             animator.SetBool("isRun", false);
             rigid2D.velocity = new Vector2(rigid2D.velocity.x, jumpSpeed);
             animator.SetBool("isFall", false);
+            AudioManagerINSU.instance.PlaySfx(AudioManagerINSU.Sfx.Jump);
+
         }
 
         if (animator.GetFloat("isDash") < 1)
@@ -112,6 +118,7 @@ public class playerControl : MonoBehaviour
         if (collision.gameObject.tag.Equals("EnemyAttack")) {
             animator.SetTrigger("Hit");
             Debug.Log("¾Ñµû°Ï");
+            AudioManagerINSU.instance.PlaySfx(AudioManagerINSU.Sfx.Hit);
 
         }
     }

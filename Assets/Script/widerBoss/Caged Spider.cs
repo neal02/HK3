@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
-
+using System;
 public class CagedSpider : MonoBehaviour
 {
     private Animator animator;
@@ -41,6 +41,7 @@ public class CagedSpider : MonoBehaviour
 
         if (nextTilemap != null)
             nextTilemap.gameObject.SetActive(true);
+
 
         if (nextTilemap2 != null)
             nextTilemap2.gameObject.SetActive(true);
