@@ -70,20 +70,20 @@ public class TreeFireGenerator : MonoBehaviour
 
     void DecideLeftPos()
     {
-        Leftpos[0] = new Vector3(-7.2f, 3.6f, 0);
-        Leftpos[1] = new Vector3(-7.2f, 2.1f, 0);
-        Leftpos[2] = new Vector3(-7.2f, 0.6f, 0);
-        Leftpos[3] = new Vector3(-7.2f, -0.9f, 0);
-        Leftpos[4] = new Vector3(-7.2f, -1.4f, 0);
+        Leftpos[0] = new Vector3(16.2f, 3.6f, 0);
+        Leftpos[1] = new Vector3(16.2f, 2.1f, 0);
+        Leftpos[2] = new Vector3(16.2f, 0.6f, 0);
+        Leftpos[3] = new Vector3(16.2f, -0.9f, 0);
+        Leftpos[4] = new Vector3(16.2f, -1.4f, 0);
     }
 
     void DecideRightPos()
     {
-        Rightpos[0] = new Vector3(7.2f, 3.6f, 0);
-        Rightpos[1] = new Vector3(7.2f, 2.1f, 0);
-        Rightpos[2] = new Vector3(7.2f, 0.6f, 0);
-        Rightpos[3] = new Vector3(7.2f, -0.9f, 0);
-        Rightpos[4] = new Vector3(7.2f, -1.4f, 0);
+        Rightpos[0] = new Vector3(29.2f, 3.6f, 0);
+        Rightpos[1] = new Vector3(29.2f, 2.1f, 0);
+        Rightpos[2] = new Vector3(29.2f, 0.6f, 0);
+        Rightpos[3] = new Vector3(29.2f, -0.9f, 0);
+        Rightpos[4] = new Vector3(29.2f, -1.4f, 0);
     }
 
     IEnumerator SpawnDelay()

@@ -40,11 +40,11 @@ public class AlarmGenerator : MonoBehaviour
 
     void SpecPos()
     {
-        pos[0] = new Vector3(8.5f, 5, 0);
-        pos[1] = new Vector3(11.5f, -3, 0);
-        pos[2] = new Vector3(-7f, 5.5f, 0);
-        pos[3] = new Vector3(-10.5f, 2.5f, 0);
-        pos[4] = new Vector3(-8.5f, 5, 0);
+        pos[0] = new Vector3(31.5f, 5, 0);
+        pos[1] = new Vector3(34.5f, -3, 0);
+        pos[2] = new Vector3(16f, 5.5f, 0);
+        pos[3] = new Vector3(13.5f, 2.5f, 0);
+        pos[4] = new Vector3(15.5f, 5, 0);
     }
 
     void SpecRot()

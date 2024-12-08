@@ -228,7 +228,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2738680163839710330, guid: eb1ca069ae5c6404abb164913482c4db, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 14.7
+      value: 21.63
       objectReference: {fileID: 0}
     - target: {fileID: 2738680163839710330, guid: eb1ca069ae5c6404abb164913482c4db, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8796,6 +8796,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PortalIcon: {fileID: 1642266740}
+  FlowerPrefab: {fileID: 8996525827602110944, guid: e4a030beb1872a042a9c21d6292b28c9, type: 3}
   SpaceClick: {fileID: 1882296192}
 --- !u!1 &1766420451
 GameObject:

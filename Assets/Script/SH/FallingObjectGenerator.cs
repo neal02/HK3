@@ -62,7 +62,7 @@ public class FallingObjectGenerator : MonoBehaviour
 
         do
         {
-            float randomX = Random.Range(-4f, 41f);
+            float randomX = Random.Range(10f, 60f);
             position = new Vector3(randomX, 9, 0);
 
             attempts++;
