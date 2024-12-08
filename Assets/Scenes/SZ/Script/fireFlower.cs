@@ -13,6 +13,8 @@ public class fireFlower : MonoBehaviour
     public float flowerSpeed = 0.8f;
     public int flowerHP = 2;
 
+    public AudioClip[] fireflowerAudio;
+
     private float firecon = -0.5f;
     private float deathcon = -0.5f;
     private float hitcon = -0.5f;
@@ -25,10 +27,13 @@ public class fireFlower : MonoBehaviour
     {
         pos = transform.position;
         spriteRenderer = GetComponent<SpriteRenderer>();
+
+        fireflowerAudio = new AudioClip[2];
         animator = GetComponent<Animator>();
         rigid2D = GetComponent<Rigidbody2D>();
         Invoke("Think", 2);
         spriteRenderer.color = new Color(213f / 255f, 73f / 255f, 74f / 255f, invisible);
+
     }
 
     void Update()
@@ -53,6 +58,7 @@ public class fireFlower : MonoBehaviour
          
             animator.SetBool("isDeath2", true);
             animator.SetFloat("isDeath", deathcon);
+
             if (animator.GetFloat("isDeath") > 0)
             {
                 Destroy(gameObject);
@@ -86,6 +92,7 @@ public class fireFlower : MonoBehaviour
         isdelay = false;
         firecon = -0.5f;
         animator.SetFloat("isFire", firecon);
+
         yield return new WaitForSeconds(fireGap);
         Instantiate(firePrefab, pos, rotation);
         

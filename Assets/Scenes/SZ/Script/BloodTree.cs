@@ -6,7 +6,7 @@ public class BloodTree : MonoBehaviour
 {
     Animator animator;
     SpriteRenderer spriteRenderer;
-
+    AudioSource audioSource;
     public static bool isSeal;
     public static int clearSeal;
     public int test;
@@ -18,8 +18,10 @@ public class BloodTree : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        audioSource = GetComponent<AudioSource>();
         clearSeal = 50;
         isPerfectCalled = false;
+        audioSource.enabled = false;
     }
 
     void Update()
@@ -34,6 +36,7 @@ public class BloodTree : MonoBehaviour
         if (clearSeal == -50 && !isPerfectCalled)
         {
             //Debug.Log("¿ÞÂÊ ³¡");
+            audioSource.enabled = true;
             animator.SetBool("isPerfect", true);
             isPerfectCalled = true; 
         }
