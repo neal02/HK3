@@ -6312,7 +6312,7 @@ MonoBehaviour:
   AlarmGenerator: {fileID: 652724672}
   Phase2: {fileID: 682388347}
   LastDoor: {fileID: 1714486856}
-  MaxTreeHp: 100
+  MaxTreeHp: 200
 --- !u!60 &1868560142
 PolygonCollider2D:
   m_ObjectHideFlags: 0
