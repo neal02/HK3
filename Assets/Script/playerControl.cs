@@ -113,6 +113,7 @@ public class playerControl : MonoBehaviour
             animator.SetFloat("isAttack", firstattackcon);
         }
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag.Equals("EnemyAttack")) {

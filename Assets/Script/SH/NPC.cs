@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class NPC : MonoBehaviour
 {
@@ -44,6 +45,10 @@ public class NPC : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                SceneManager.LoadScene("1.Start");
+
+            }
+            if (Input.GetKeyDown(KeyCode.Escape)) {
                 QuitGame();
             }
         }
