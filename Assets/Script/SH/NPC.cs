@@ -45,7 +45,7 @@ public class NPC : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                SceneManager.LoadScene("1.Start");
+                SceneManager.LoadScene("Ending");
 
             }
             if (Input.GetKeyDown(KeyCode.Escape)) {
@@ -87,7 +87,9 @@ public class NPC : MonoBehaviour
         }
         else
         {
-            EndDialogue();
+            SceneManager.LoadScene("Ending");
+            //EndDialogue();
+
         }
     }
 

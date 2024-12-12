@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Insu/1.Start.unity
     guid: 8c2bc5a8f8584434983386d859968eac
   - enabled: 1
+    path: Assets/Scenes/Insu/Ending.unity
+    guid: d4c0c91963736b24ca573b3c524e187c
+  - enabled: 1
     path: Assets/Scenes/SH/EndingScene.unity
     guid: 32d68e74bcd061e4f8ed117f2af40b68
   m_configObjects: {}

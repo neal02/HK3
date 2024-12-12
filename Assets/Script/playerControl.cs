@@ -46,7 +46,11 @@ public class playerControl : MonoBehaviour
             flip = 1;
         }
 
-        float horizontal = Input.GetAxis("Horizontal");
+        float horizontal = Input.GetAxisRaw("Horizontal");
+        if (horizontal != 0) {
+            flip = horizontal > 0 ? 1 : -1;
+        }
+
         rigid2D.velocity = new Vector2(horizontal * moveSpeed, rigid2D.velocity.y);
 
         if (horizontal == 0) //달리기
@@ -68,17 +72,8 @@ public class playerControl : MonoBehaviour
             maxjump = 2;
         }
 
-        if (Input.GetKeyDown(KeyCode.Z) && isDashCool)    //대쉬
-        {
-            rigid2D.AddForce(Vector2.right * dashSpeed*flip, ForceMode2D.Impulse); 
-            dashcon = -0.5f;
-            animator.SetFloat("isDash", dashcon);   //대쉬 애니매이션이 모두 출력될 수 있도록 대쉬콘을 -0.5디폴트 값으로 하고 이게 0 밑일때 애니매이션 출력. 
-            //transform.position += new Vector3(dashSpeed * Input.GetAxisRaw("Horizontal"), 0, 0);
-            isDashCool = false;
-            Debug.Log("이제부터 쿨");
-            StartCoroutine(CooldownDash());
-            AudioManagerINSU.instance.PlaySfx(AudioManagerINSU.Sfx.dash);
-
+        if (Input.GetKeyDown(KeyCode.Z) && isDashCool && Mathf.Abs(rigid2D.velocity.x) > 0.1f) {
+            StartDash();
         }
         else if (Input.GetKeyDown(KeyCode.X) && maxAttack > 0 && isAttackCool && AttackDelay)   //공격
         {
@@ -123,7 +118,16 @@ public class playerControl : MonoBehaviour
 
         }
     }
-
+    private void StartDash()
+    {
+        rigid2D.velocity = new Vector2(flip * dashSpeed, rigid2D.velocity.y); // 대쉬 속도 적용
+        dashcon = -0.5f; // 애니메이션 변수 초기화
+        animator.SetFloat("isDash", dashcon); // 대쉬 애니메이션 실행
+        isDashCool = false; // 대쉬 쿨타임 시작
+        Debug.Log("대쉬 시작");
+        StartCoroutine(CooldownDash());
+        AudioManagerINSU.instance.PlaySfx(AudioManagerINSU.Sfx.dash);
+    }
     IEnumerator CooldownDash()
     {
         yield return new WaitForSeconds(DashcoolTime);

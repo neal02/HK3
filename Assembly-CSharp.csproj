@@ -63,6 +63,7 @@
     <Compile Include="Assets\Script\widerBoss\BossEnemy.cs" />
     <Compile Include="Assets\Scenes\SZ\Script\TreePath\TreeManager.cs" />
     <Compile Include="Assets\Script\SH\Boss\FallingObject.cs" />
+    <Compile Include="Assets\Script\INsu\EndingScene.cs" />
     <Compile Include="Assets\Scenes\SZ\Script\BloodTTTT.cs" />
     <Compile Include="Assets\Script\widerBoss\EndBA2.cs" />
     <Compile Include="Assets\Scenes\SZ\Script\AnimalGenerator.cs" />
